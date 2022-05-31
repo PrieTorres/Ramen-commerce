@@ -1,0 +1,25 @@
+.conteudo-principal-topo{
+
+}
+
+.conteudo-principal-topo__container-bg{
+    width: 100vw;
+    height: 100vh;
+    background: url('../../img/ramens/ramen-2068052_1920.jpg') no-repeat;
+    background-size: cover;
+}
+.conteudo-principal-topo__container{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(200,200,200,0.2), rgba(255,255,255,0.9) 70%);
+    padding: 120px 50px;
+}
+
+.conteudo-principal-topo__container-texto{
+    width: 300px;
+    float: right;
+    font-family: 'Blaka', 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    font-weight: 100;
+}

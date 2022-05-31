@@ -3,6 +3,10 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    position: absolute;
+    top: 0%;
+    width: 100vw;
+    box-sizing: border-box;
 }
 
 
@@ -52,9 +56,15 @@
     text-decoration: none;
     color: #eee;
     padding: 10px;
-    background-color: red;
+    background-color: rgb(211, 0, 0);
     display: block;
     font-weight: bold;
     margin: 0px 10px;
     border-radius: 5px;
+    border: 2px solid #eee;
+    transition: all .5s; 
+}
+
+.cabecalho-principal__nav-lista-link:hover{
+    background-color: rgb(255, 43, 43);
 }
