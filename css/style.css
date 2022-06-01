@@ -1,3 +1,14 @@
+:root{
+    --branco: #eee;
+    --branco-translucido: #ffffffe6;
+    --botao-base: #d30000;
+    --botao-hover: #000;
+    --cinza-transparente: #7e7e7e40;
+    --preto: #000;
+    --shadow: #242424cc;
+}
+
+
 *{
     margin: 0;
     padding: 0;

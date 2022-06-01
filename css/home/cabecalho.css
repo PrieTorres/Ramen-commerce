@@ -7,13 +7,12 @@
     top: 0%;
     width: 100vw;
     box-sizing: border-box;
+    box-shadow: 5px 0px 10px 10px var(--shadow);
 }
 
-
-
 .cabecalho-principal__titulo{
-    font-size: 30px;
-    color: #eee;
+    font-size: 2.5rem;
+    color: var(--branco);
     margin-left: 10px;
     display: inline-block;
     padding: 10px;
@@ -54,17 +53,18 @@
 
 .cabecalho-principal__nav-lista-link{
     text-decoration: none;
-    color: #eee;
+    color: var(--branco);
     padding: 10px;
-    background-color: rgb(211, 0, 0);
+    font-size: 1.25rem;
+    background-color: var(--botao-base);
     display: block;
     font-weight: bold;
     margin: 0px 10px;
     border-radius: 5px;
-    border: 2px solid #eee;
+    border: 2px solid var(--branco);
     transition: all .5s; 
 }
 
 .cabecalho-principal__nav-lista-link:hover{
-    background-color: rgb(255, 43, 43);
+    background-color: var(--botao-hover);
 }
