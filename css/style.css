@@ -1,11 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Blaka&display=swap');
+
 :root{
+    --amarelo: #c29311;
     --branco: #eee;
     --branco-translucido: #ffffffe6;
+    --branco-transparente: #ffffff77;
     --botao-base: #d30000;
+    --botao-ativo: #b90000;
     --botao-hover: #000;
     --cinza-transparente: #7e7e7e40;
     --preto: #000;
-    --shadow: #242424cc;
+    --preto-transparente: #000000af;
+    --shadow: #242424a4;
+    --vermelho-bg: #a31e1ec5;
+
+
+    --fonte-padrao: 'Blaka', 'Times New Roman', Times, serif;
+
+    --linear-preto-Mbranco: linear-gradient(90deg, #7e7e7e40, #ffffffe6 70%);
+
+
+
+    --imagem-noodles-set-1: url("../../img/noodles/macarrao-instantaneo-sabor-galinha.png")no-repeat, var(--amarelo);
+    --imagem-noodles-set-2: url('../../img/noodles/calabresa\ \(00000002\).png')no-repeat, var(--vermelho-bg);
 }
 
 
@@ -14,3 +31,4 @@
     padding: 0;
     overflow-x: hidden;
 }
+

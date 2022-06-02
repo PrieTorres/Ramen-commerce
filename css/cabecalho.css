@@ -25,7 +25,7 @@
     display: inline-block;
     width: 50px;
     min-height: 30px;
-    background-image: url('../../img/webp/Item_Ramen_Tonkotsu.webp');
+    background-image: url('../img/webp/Item_Ramen_Tonkotsu.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -67,4 +67,8 @@
 
 .cabecalho-principal__nav-lista-link:hover{
     background-color: var(--botao-hover);
+}
+
+.cabecalho-principal__nav-lista-link.ativo{
+    background-color: var(--botao-ativo);
 }

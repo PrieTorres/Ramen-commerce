@@ -1,12 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monte o seu Rámen</title>
+    <title>Monte o seu Rámen!</title>
+    <link rel="shortcut icon" href="img/webp/Item_Ramen_Tonkotsu.webp" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/montagem/conteudo-principal.css">
+    <link rel="stylesheet" href="css/montagem/formulario-principal.css">
 </head>
 <body>
-    
+    <header class="cabecalho-principal">
+        <h1 class="cabecalho-principal__titulo"><span class="cabecalho-principal__titulo-content">Monta-Rámen</span></h1>
+        <nav class="cabecalho-principal__nav">
+            <ul class="cabecalho-principal__nav-lista">
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="index.html">Home</a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link ativo" href="montagem.html">Monte o seu Rámen!</a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="pratos_prontos.html">Combos</a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="trabalhe_conosco.html">Trabalhe conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="conteudo-principal">
+        <div class="conteudo-principal__banner-bg">
+            <div class="conteudo-principal__banner"></div>
+        </div>
+        <form action="" method="get" class="formulario-principal">
+            
+            <fieldset class="escolha-carne">
+                <legend>carne desejada:</legend> 
+                <label>Chashu (carne de porco)
+                    <input name="carne" value="porco" type="radio">
+                </label><br>
+                <label>Nitamago (porco e ovos)
+                    <input name="carne" value="porco" type="radio">
+                </label><br>
+                <label>Frango
+                    <input name="carne" value="porco" type="radio">
+                </label><br>
+                <label>Bacon
+                    <input name="carne" value="porco" type="radio">
+                </label><br>
+                <label>Vegetariano
+                    <input name="carne" value="porco" type="radio">
+                </label>
+            </fieldset>
+            <fieldset class="escolha-caldo">
+                <legend>caldo desejado:</legend> 
+                <label>Agridoce
+                    <input name="caldo" value="porco" type="radio">
+                </label><br>
+                <label>Tradicional
+                    <input name="caldo" value="porco" type="radio">
+                </label><br>
+                <label>Apimentado leve
+                    <input name="caldo" value="porco" type="radio">
+                </label><br>
+                <label>Apimentado
+                    <input name="caldo" value="porco" type="radio">
+                </label>
+            </fieldset>
+            <fieldset class="escolha-legumes">
+                <legend>complementos desejados:</legend> 
+                <label>Cebolinha
+                    <input name="Cebolinha" value="Cebolinha" type="checkbox">
+                </label><br>
+                <label>Shitake (cogumelo)
+                    <input name="Shitake" value="Shitake" type="checkbox">
+                </label><br>
+                <label>Batata doce 
+                    <input name="Batata" value="Batata" type="checkbox">
+                </label><br>
+                <label>Kombu (alga)
+                    <input name="Kombu" value="Kombu" type="checkbox">
+                </label><br>
+                <label>Gergelim
+                    <input name="Gergelim" value="Gergelim" type="checkbox">
+                </label><br>
+                <label>Cebola crispy
+                    <input name="Cebola" value="Cebola" type="checkbox">
+                </label><br>
+                <label>Menma (brotos de bambu)
+                    <input name="Menma" value="Menma" type="checkbox">
+                </label><br>
+                <label>Nori
+                    <input name="nori" value="nori" type="checkbox">
+                </label><br>
+            </fieldset>
+
+            <input type="submit" value="Pronto!">
+        </form>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>

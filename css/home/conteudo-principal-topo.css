@@ -8,7 +8,7 @@
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    background: linear-gradient(90deg, #7e7e7e40, #ffffffe6 70%);
+    background: var(--linear-preto-Mbranco);
     padding: 120px 50px;
 }
 
@@ -18,8 +18,8 @@
 }
 
 .conteudo-principal-topo__container--texto{
-    font-family: 'Blaka', 'Times New Roman', Times, serif;
-    font-size: 5.625rem;
+    font-family: var(--fonte-padrao);
+    font-size: 5.62rem;
     font-weight: 100;
 }
 
