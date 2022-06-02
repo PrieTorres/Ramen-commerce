@@ -1,0 +1,25 @@
+.conteudo-principal__ofertas{
+    width: 80vw;
+    height: 600px;
+    box-shadow: inset 0px 0px 30px 5px var(--shadow);
+    background-color: var(--branco);
+    padding: 30px 10vw;
+    /*display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;*/
+}
+.conteudo-principal__ofertas-oferta--principal{
+    background-color: blue;
+    min-height: 300px;
+    min-width: 48%;
+    float: left;
+}
+.conteudo-principal__ofertas-oferta--secundaria{
+    background-color: red;
+    height: 200px;
+    min-width: 48%;
+    float: right;
+}
+.conteudo-principal__ofertas-oferta--secundaria:first-of-type{
+    margin-bottom: 20px;
+}
