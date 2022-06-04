@@ -10,10 +10,6 @@
     justify-content: space-between;*/
 }
 
-.conteudo-principal__ofertas *{
-    box-shadow: 0px 0px 10px 3px var(--shadow), inset 0px 0px 2000px 30px var(--preto-transparente);
-}
-
 .conteudo-principal__ofertas-oferta--principal{
     min-height: 420px;
     min-width: 48%;
@@ -21,6 +17,7 @@
     background: url('../../img/ramens/ramen-porco.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    box-shadow: 0px 0px 10px 3px var(--shadow), inset 0px 0px 2000px 100px var(--preto-bg);
 }
 .conteudo-principal__ofertas-oferta--secundaria{
     background-color: red;
@@ -37,4 +34,13 @@
     background: var(--imagem-noodles-set-2);
     background-size: 300px auto;
     background-position: left;
+}
+
+.conteudo-principal__ofertas-oferta--secundaria-texto{
+    float: right;
+    max-width: 40%;
+    padding: 30px 20px;
+    font-family: fantasy;
+    font-size: 1.625rem;
+    font-weight: 500;
 }

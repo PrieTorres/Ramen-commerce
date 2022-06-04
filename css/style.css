@@ -11,7 +11,7 @@
     --cinza-transparente: #7e7e7e40;
     --preto: #000;
     --preto-transparente: #000000af;
-    --preto-bg: rgba(0, 0, 0, 0.733);
+    --preto-bg: #000000bb;
     --shadow: #242424a4;
     --vermelho-bg: #a31e1ec5;
 
@@ -31,5 +31,13 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+.preco-destaque{
+    display: block;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: fantasy;
+    font-weight: 500;
 }
 
