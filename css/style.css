@@ -6,11 +6,12 @@
     --branco-translucido: #ffffffe6;
     --branco-transparente: #ffffff77;
     --botao-base: #d30000;
-    --botao-ativo: #b90000;
+    --botao-ativo: #a50000;
     --botao-hover: #000;
     --cinza-transparente: #7e7e7e40;
     --preto: #000;
     --preto-transparente: #000000af;
+    --preto-bg: rgba(0, 0, 0, 0.733);
     --shadow: #242424a4;
     --vermelho-bg: #a31e1ec5;
 
