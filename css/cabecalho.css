@@ -1,5 +1,5 @@
 .cabecalho-principal{
-    background-color: #000;
+    background-color: var(--cabecalho-e-footer);
     display: flex;
     justify-content: space-between;
     padding: 20px 5vw;

@@ -1,0 +1,7 @@
+.rodape-principal{
+    background: var(--cabecalho-e-footer);
+    color: var(--branco);
+}
+.rodape-principal__texto{
+    padding: 10vh;
+}
