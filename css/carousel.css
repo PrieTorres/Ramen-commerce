@@ -1,0 +1,13 @@
+.scrollbar{
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+.botao-carousel{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+.botao-carousel.ativo{
+    background-color: black;
+}
