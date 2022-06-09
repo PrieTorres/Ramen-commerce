@@ -1,0 +1,27 @@
+.conteudo_principal_ramens{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+}
+.conteudo_principal_ramens-container{/*carrossel aqui*/
+    overflow-x: scroll;
+    display: flex;
+}
+.conteudo_principal_ramens-container-caixa{
+    width: 300px;
+    height: auto;
+    border: 1px solid black;
+    flex: 0 0 auto; 
+}
+.conteudo_principal_ramens-container-caixa .ramens-caixa-titulo{
+    display: inline-block;
+}
+.conteudo_principal_ramens-container-caixa .ramens-caixa-imagem{
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 300px;
+}
+.conteudo_principal_ramens-container-caixa .ramens-caixa_preco{
+    display: inline-block;
+}
