@@ -1,7 +1,5 @@
-<h1>
-  Rámen-Ecommerce
-</h1>
-<h2>Sua loja virtual de rámens<h2>
+<h1>Rámen-Ecommerce</h1>
+<h2>Sua loja virtual de rámens</h2>
 !!!!Projeto ainda em andamento!!!
 <hr>
 
@@ -15,13 +13,13 @@ Este projeto foi feito inteiramnete para treino de habilidades adquiridas atrav�
 <ul>
     <li>Html e css (flexbox, arquitetura css)</li>
     <li>SEO</li>
-    <li>Javascript DOM<li>
-    <li>acessibilidade Web<li>
+    <li>Javascript DOM</li>
+    <li>acessibilidade Web</li>
     <li>Figma - básico</li>
 </ul>
 <hr>
 
-<h2>habilidades que serão futuramente implementadas:
+<h2>habilidades que serão futuramente implementadas:</h2>
 <ul>
     <li>Javascript orientado a objetos</li>
     <li>PHP</li>
