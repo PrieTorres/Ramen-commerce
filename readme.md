@@ -22,7 +22,6 @@ Este projeto foi feito inteiramnete para treino de habilidades adquiridas atravÃ
 <h2>habilidades que serÃ£o futuramente implementadas:</h2>
 <ul>
     <li>Javascript orientado a objetos</li>
-    <li>PHP</li>
     <li>Responsividade</li>
 </ul>
 

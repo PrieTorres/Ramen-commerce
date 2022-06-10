@@ -27,74 +27,87 @@
         <div class="conteudo-principal__banner-bg">
             <div class="conteudo-principal__banner"></div>
         </div>
-        <form action="" method="get" class="formulario-principal">
+        <div class="formulario-principal">
             
             <fieldset class="escolha-carne">
                 <legend>carne desejada:</legend> 
                 <label>Chashu (carne de porco)
-                    <input name="carne" value="Chashu" type="radio">
+                    <input class="carne" name="carne" value="Chashu" type="radio">
                 </label><br>
                 <label>Nitamago (porco e ovos)
-                    <input name="carne" value="Nitamago" type="radio">
+                    <input class="carne" name="carne" value="Nitamago" type="radio">
                 </label><br>
                 <label>Frango
-                    <input name="carne" value="Frango" type="radio">
+                    <input class="carne" name="carne" value="Frango" type="radio">
                 </label><br>
                 <label>Bacon
-                    <input name="carne" value="Bacon" type="radio">
+                    <input class="carne" name="carne" value="Bacon" type="radio">
                 </label><br>
                 <label>Vegetariano
-                    <input name="carne" value="Vegetariano" type="radio">
+                    <input class="carne" name="carne" value="Vegetariano" type="radio">
                 </label>
             </fieldset>
             <fieldset class="escolha-caldo">
                 <legend>caldo desejado:</legend> 
                 <label>Agridoce
-                    <input name="caldo" value="Agridoce" type="radio">
+                    <input class="caldo" name="caldo" value="Agridoce" type="radio">
                 </label><br>
                 <label>Tradicional
-                    <input name="caldo" value="Tradicional" type="radio">
+                    <input class="caldo" name="caldo" value="Tradicional" type="radio">
                 </label><br>
                 <label>Apimentado leve
-                    <input name="caldo" value="Apimentado leve" type="radio">
+                    <input class="caldo" name="caldo" value="Apimentado leve" type="radio">
                 </label><br>
                 <label>Apimentado
-                    <input name="caldo" value="Apimentado" type="radio">
+                    <input class="caldo" name="caldo" value="Apimentado" type="radio">
                 </label>
             </fieldset>
             <fieldset class="escolha-legumes">
                 <legend>complementos desejados:</legend> 
                 <label>Cebolinha
-                    <input name="Cebolinha" value="Cebolinha" type="checkbox">
+                    <input class="complementos" name="complemento" value="Cebolinha" type="checkbox">
                 </label><br>
                 <label>Shitake (cogumelo)
-                    <input name="Shitake" value="Shitake" type="checkbox">
+                    <input class="complementos" name="complemento" value="Shitake" type="checkbox">
                 </label><br>
                 <label>Batata doce 
-                    <input name="Batata" value="Batata" type="checkbox">
+                    <input class="complementos" name="complemento" value="Batata" type="checkbox">
                 </label><br>
                 <label>Kombu (alga)
-                    <input name="Kombu" value="Kombu" type="checkbox">
+                    <input class="complementos" name="complemento" value="Kombu" type="checkbox">
                 </label><br>
                 <label>Gergelim
-                    <input name="Gergelim" value="Gergelim" type="checkbox">
+                    <input class="complementos" name="complemento" value="Gergelim" type="checkbox">
                 </label><br>
                 <label>Cebola crispy
-                    <input name="Cebola" value="Cebola" type="checkbox">
+                    <input class="complementos" name="complemento" value="Cebola" type="checkbox">
                 </label><br>
                 <label>Menma (brotos de bambu)
-                    <input name="Menma" value="Menma" type="checkbox">
+                    <input class="complementos" name="complemento" value="Menma" type="checkbox">
                 </label><br>
                 <label>Nori
-                    <input name="nori" value="nori" type="checkbox">
+                    <input class="complementos" name="complemento" value="nori" type="checkbox">
                 </label><br>
             </fieldset>
+            <fieldset class="escolha-tamanho">
+                <legend>tamanho desejado:</legend> 
+                <label>P (200g)
+                    <input class="tamanho" name="tam" value="pequeno" type="radio">
+                </label><br>
+                <label>M (350g)
+                    <input class="tamanho" name="tam" value="medio" type="radio">
+                </label><br>
+                <label>G (480g)
+                    <input class="tamanho" name="tam" value="grande" type="radio">
+                </label>
+            </fieldset>
 
-            <input type="submit" value="Pronto!">
-        </form>
+            <button onclick="montarRamen()">Pronto!</button>
+        </div>
     </main>
     <footer>
 
     </footer>
+    <script src="js/montagem.js"></script>
 </body>
 </html>
