@@ -9,5 +9,5 @@
     border-radius: 100%;
 }
 .botao-carousel.ativo{
-    background-color: black;
+    background-color: var(--preto);
 }

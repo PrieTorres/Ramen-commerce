@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="css/home/conteudo-principal_ramens.css">
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/home/descrisao-ramen.css">
 </head>
-<body>
+<body onload="trocarImagem()">
     <header class="cabecalho-principal">
         <h1 class="cabecalho-principal__titulo"><span class="cabecalho-principal__titulo-content">Ramen-lhama</span></h1>
         <nav class="cabecalho-principal__nav">
@@ -41,51 +42,52 @@
         </section><!--fim container topo-->
         <!--inicio ramens principais-->
         <section class="conteudo_principal_ramens">
+            <h1 class="conteudo_principal_ramens-titulo">Mais Pedidos</h1>
             <div class="conteudo_principal_ramens-container">
                 <div class="conteudo_principal_ramens-container-caixa">
                     <h2 class="ramens-caixa-titulo">Ramen 1</h2>
                     <img src="img/ramens/ramen_1.png" alt="ramen sabor 1" class="ramens-caixa-imagem">
-                    <span class="ramens-caixa_preco">R$--,--</span>
+                    <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
                 <div class="conteudo_principal_ramens-container-caixa">
                     <h2 class="ramens-caixa-titulo">Ramen 2</h2>
                     <img src="img/ramens/ramen_cima_2.png" alt="ramen sabor 2" class="ramens-caixa-imagem">
-                    <span class="ramens-caixa_preco">R$--,--</span>
+                    <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
                 <div class="conteudo_principal_ramens-container-caixa">
                     <h2 class="ramens-caixa-titulo">Ramen 3</h2>
-                    <img src="img/ramens/ramen_3.png" alt="ramen sabor 3" class="ramens-caixa-imagem">
-                    <span class="ramens-caixa_preco">R$--,--</span>
+                    <img src="img/ramens/ramen_11.png" alt="ramen sabor 3" class="ramens-caixa-imagem">
+                    <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
                 <div class="conteudo_principal_ramens-container-caixa">
                     <h2 class="ramens-caixa-titulo">Ramen 4</h2>
                     <img src="img/ramens/ramen_4.png" alt="ramen sabor 4" class="ramens-caixa-imagem">
-                    <span class="ramens-caixa_preco">R$--,--</span>
+                    <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
                 <div class="conteudo_principal_ramens-container-caixa">
                     <h2 class="ramens-caixa-titulo">Ramen 5</h2>
                     <img src="img/ramens/ramen_5.png" alt="ramen sabor 5" class="ramens-caixa-imagem">
-                    <span class="ramens-caixa_preco">R$--,--</span>
+                    <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
                 <div class="conteudo_principal_ramens-container-caixa">
                     <h2 class="ramens-caixa-titulo">Ramen 6</h2>
                     <img src="img/ramens/ramen_6.png" alt="ramen sabor 6" class="ramens-caixa-imagem">
-                    <span class="ramens-caixa_preco">R$--,--</span>
+                    <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
                 <div class="conteudo_principal_ramens-container-caixa">
                     <h2 class="ramens-caixa-titulo">Ramen 7</h2>
                     <img src="img/ramens/ramen_7.png" alt="ramen sabor 7" class="ramens-caixa-imagem">
-                    <span class="ramens-caixa_preco">R$--,--</span>
+                    <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
                 <div class="conteudo_principal_ramens-container-caixa">
                     <h2 class="ramens-caixa-titulo">Ramen 8</h2>
                     <img src="img/ramens/ramen_8.png" alt="ramen sabor 8" class="ramens-caixa-imagem">
-                    <span class="ramens-caixa_preco">R$--,--</span>
+                    <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
                 <div class="conteudo_principal_ramens-container-caixa">
                     <h2 class="ramens-caixa-titulo">Ramen 9</h2>
                     <img src="img/ramens/ramen_9.png" alt="ramen sabor 9" class="ramens-caixa-imagem">
-                    <span class="ramens-caixa_preco">R$--,--</span>
+                    <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
             </div>
             <div class="scrollbar">
@@ -150,11 +152,24 @@
 
         </section>
         <!--fim populares-->
+        <section class="descrisao-ramen">
+            <div class="descrisao-ramen__container">
+                <h1 class="descrisao-ramen__container-titulo">O que é Rámen?</h1>
+                <div class="descrisao-ramen__container-caixa-texto">
+                    <div class="descrisao-ramen__container-imagem" ></div>
+                    <h3 class="descrisao-ramen__container-texto">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a justo odio. Sed pellentesque pharetra magna, eget convallis tellus sagittis et. Donec consectetur felis sed ex tempus, eget pharetra tellus commodo. Integer eget odio iaculis erat finibus lobortis. Cras ac risus vel risus pellentesque consectetur ac eu arcu. Proin aliquet, sapien vel laoreet posuere, massa erat elementum quam, id tristique erat velit sed diam. Vestibulum nunc dolor, mattis eget cursus non, eleifend ut dolor.
+                        In interdum libero diam, sed facilisis erat condimentum nec. Duis auctor mi felis, sit amet consectetur elit hendrerit sit amet. Vivamus euismod risus a ullamcorper tincidunt. Maecenas finibus mollis est, id sollicitudin nisi malesuada ac. Pellentesque vitae accumsan urna, id luctus leo. Pellentesque vel condimentum est. Quisque ut justo sed nunc mattis efficitur eget interdum erat. Mauris sagittis, lectus eget suscipit mattis, dolor turpis fringilla mi, id malesuada nibh tortor et nisl.
+                    </h3>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="rodape-principal">
         <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
     </footer>
 
     <script src="js/carousel.js"></script>
+    <script src="js/troca_imagem_timer.js"></script>
 </body>
 </html>

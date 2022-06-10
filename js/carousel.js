@@ -22,7 +22,7 @@ function movedorCarrousel(local){
     if(local == 'meio'){
         scrolldiv.scrollTo({
             top:0,
-            left: (scrolldivWidth/2)-(scrolldivWidth/6),
+            left: (scrolldivWidth/2)-(scrolldivWidth/5.94),
             behavior: 'smooth'
         });
     }

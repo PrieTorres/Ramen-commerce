@@ -1,0 +1,38 @@
+.descrisao-ramen{
+
+}
+.descrisao-ramen__container{
+    background: var(--branco);
+    width: 60vw;
+    padding: 70px 20vw;
+    padding-bottom: 100px;
+}
+.descrisao-ramen__container-titulo{
+    text-align: center;
+    font-size: 5rem;
+    font-family: var(--fonte-padrao);
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+.descrisao-ramen__container-caixa-texto{
+    width: 100%;
+    display:flex;
+}
+.descrisao-ramen__container-imagem{
+    width: 30%;
+    min-height: 200px;
+    margin-right: 20px;
+    display: block;
+    background: url('../../img/ramens/dish-6799805_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-grow: 2;
+    flex-shrink: 2;
+    transition: all 1.6s ease-in-out; 
+}
+.descrisao-ramen__container-texto{
+    font-weight: 400;
+    flex-grow: 1;
+    width: 50%;
+}
