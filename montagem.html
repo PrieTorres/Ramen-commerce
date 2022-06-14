@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/cabecalho.css">
     <link rel="stylesheet" href="css/montagem/conteudo-principal.css">
     <link rel="stylesheet" href="css/montagem/formulario-principal.css">
+    <link rel="stylesheet" href="css/carrinho.css">
 </head>
 <body>
     <header class="cabecalho-principal">
@@ -71,7 +72,7 @@
                     <input class="complementos" name="complemento" value="Shitake" type="checkbox">
                 </label><br>
                 <label>Batata doce 
-                    <input class="complementos" name="complemento" value="Batata" type="checkbox">
+                    <input class="complementos" name="complemento" value="Batata doce" type="checkbox">
                 </label><br>
                 <label>Kombu (alga)
                     <input class="complementos" name="complemento" value="Kombu" type="checkbox">
@@ -104,10 +105,17 @@
 
             <button onclick="montarRamen()">Pronto!</button>
         </div>
+        
     </main>
     <footer>
 
     </footer>
-    <script src="js/montagem.js"></script>
+    <div class="carrinho_container" >
+        <span></span>
+        <button>ir ao carrinho</button>
+        <button onclick="fecharCarrinho()">fechar</button>
+    </div>
+    <script src="js/fecharCarrinho.js"></script>
+    <script src="js/oo/montagem.js"></script>
 </body>
 </html>

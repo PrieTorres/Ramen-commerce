@@ -3,8 +3,6 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 5vw;
-    position: absolute;
-    top: 0%;
     width: 100vw;
     box-sizing: border-box;
     box-shadow: 5px 0px 10px 10px var(--shadow);

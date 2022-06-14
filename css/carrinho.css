@@ -1,0 +1,10 @@
+.carrinho_container{
+    width: 60vw;
+    display: flex;
+    height: 80vh;
+    background-color: var(--branco);
+    border: 1px solid black;
+    position: absolute;
+    left: calc(50% - 30vw);
+    top: calc(50% - 40vh);
+}
