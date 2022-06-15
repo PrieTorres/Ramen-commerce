@@ -14,7 +14,6 @@ Este projeto foi feito inteiramnete para treino de habilidades adquiridas atravÃ
     <li>Html e css (flexbox, arquitetura css)</li>
     <li>SEO</li>
     <li>Javascript DOM</li>
-    <li>acessibilidade Web</li>
     <li>Figma - bÃ¡sico</li>
 </ul>
 <hr>
@@ -23,6 +22,7 @@ Este projeto foi feito inteiramnete para treino de habilidades adquiridas atravÃ
 <ul>
     <li>Javascript orientado a objetos</li>
     <li>Responsividade</li>
+    <li>acessibilidade Web</li>
 </ul>
 
 <hr>
