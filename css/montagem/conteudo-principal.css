@@ -1,6 +1,5 @@
 .conteudo-principal{
     background-color: var(--branco);
-    padding-top: 100px;
     box-sizing: content-box;
 }
 .conteudo-principal__banner-bg{

@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="css/cabecalho.css">
     <link rel="stylesheet" href="css/montagem/conteudo-principal.css">
     <link rel="stylesheet" href="css/montagem/formulario-principal.css">
-    <link rel="stylesheet" href="css/carrinho.css">
+    <link rel="stylesheet" href="css/carrinho-alert.css">
+    <!--scripts apenas com objetos, não é necessário carregamento da página e é importante que estejam antes dos demais scripts que fazem uso desses objetos-->
+    <script src="js/oo/Ramen.js"></script>
 </head>
-<body>
+<body style="transition: all .8s ease;">
     <header class="cabecalho-principal">
         <h1 class="cabecalho-principal__titulo"><span class="cabecalho-principal__titulo-content">Monta-Rámen</span></h1>
         <nav class="cabecalho-principal__nav">
@@ -103,19 +105,21 @@
                 </label>
             </fieldset>
 
-            <button onclick="montarRamen()">Pronto!</button>
+            <button onclick="montarRamen(), abrirCarrinho()">Pronto!</button>
         </div>
         
     </main>
     <footer>
 
     </footer>
-    <div class="carrinho_container" >
-        <span></span>
-        <button>ir ao carrinho</button>
-        <button onclick="fecharCarrinho()">fechar</button>
+    <div class="carrinho-alert" >
+        <span class="carrinho-alert__confere">✔️</span>
+        <p class="carrinho-alert__texto">item adicionado ao carrinho!</p>
+        <button class="carrinho-alert__botao">ir ao carrinho</button>
+        <button class="carrinho-alert__botao" onclick="fecharCarrinho()">fechar</button>
     </div>
     <script src="js/fecharCarrinho.js"></script>
-    <script src="js/oo/montagem.js"></script>
+    <script src="js/montagem.js"></script>
+    <script src="js/abrirCarrinho.js"></script>
 </body>
 </html>

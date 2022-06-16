@@ -1,4 +1,4 @@
-export class Ramen {
+class Ramen {
     constructor(caldo, carne, tamanho){
         this.caldo = caldo;
         this.carne = carne;
