@@ -11,5 +11,7 @@ function montarRamen(){
     }
 
     let ramen = new Ramen(caldo, carne, tamanho);
-    ramen.complementos.push(complementos)
+    ramen.complementos.push(complementos);
+
+    
 }
