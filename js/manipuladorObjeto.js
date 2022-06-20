@@ -1,3 +1,5 @@
+//https://blog.logrocket.com/storing-retrieving-javascript-objects-localstorage/
+
 function salvarObjeto(objeto){
     window.localStorage.setItem("objeto", JSON.stringify(objeto));
 }
