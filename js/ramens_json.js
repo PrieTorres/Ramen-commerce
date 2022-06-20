@@ -68,3 +68,4 @@ let ramensJson = [
         descricao: 'Um ramen tradicional pra você que sempre teve um pouco de curiosidade para provar como é e quer provar o sabor mais próximo de como é servido na China, divirta-se'
     }
 ]
+let ramensJson_personalizado = [];

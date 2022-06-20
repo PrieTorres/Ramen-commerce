@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monte o seu Rámen!</title>
-    <link rel="shortcut icon" href="img/webp/Item_Ramen_Tonkotsu.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo/Item_Ramen_Tonkotsu.webp" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cabecalho.css">
     <link rel="stylesheet" href="css/montagem/conteudo-principal.css">
@@ -116,11 +116,13 @@
     <div class="carrinho-alert" >
         <span class="carrinho-alert__confere">✔️</span>
         <p class="carrinho-alert__texto">item adicionado ao carrinho!</p>
-        <button class="carrinho-alert__botao">ir ao carrinho</button>
+        <button class="carrinho-alert__botao" onclick="salvarObjeto(ramensJson_personalizado); x()">ir ao carrinho</button>
         <button class="carrinho-alert__botao" onclick="fecharCarrinho()">fechar</button>
     </div>
+    <script src="js/ramens_json.js"></script>
     <script src="js/fecharCarrinho.js"></script>
     <script src="js/montagem.js"></script>
     <script src="js/abrirCarrinho.js"></script>
+    <script src="js/manipuladorObjeto.js"></script>
 </body>
 </html>
