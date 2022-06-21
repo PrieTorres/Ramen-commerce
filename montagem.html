@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/carrinho-alert.css">
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/montagem/escolha-carne.css">
+    <link rel="stylesheet" href="css/montagem/formulario-principal-labels.css">
     <!--scripts apenas com objetos, não é necessário carregamento da página e é importante que estejam antes dos demais scripts que fazem uso desses objetos-->
     <script src="js/oo/Ramen.js"></script>
 </head>
@@ -34,76 +35,80 @@
         </div>
         <div class="formulario-principal">
             
-            <fieldset class="escolha-carne">
-                <legend>carne desejada:</legend> 
-                <label class="escolha-carne--chashu">Chashu (carne de porco)
-                    <input class="carne" name="carne" value="Chashu" type="radio">
+            <fieldset class="campo-escolha campo-escolha escolha-carne">
+                <legend class="campo-escolha__legenda">carne desejada:</legend> 
+                <label class="escolha-carne--chashu campo-escolha__texto-escolha">Chashu (carne de porco)
+                    <input class="campo-escolha__escolha carne" name="carne" value="Chashu" type="radio">
                 </label><br>
-                <label class="escolha-carne--nitamago">Nitamago (porco e ovos)
-                    <input class="carne" name="carne" value="Nitamago" type="radio">
+                <label class="escolha-carne--nitamago
+                campo-escolha__texto-escolha">Nitamago (porco e ovos)
+                    <input class="campo-escolha__escolha carne" name="carne" value="Nitamago" type="radio">
                 </label><br>
-                <label class="escolha-carne--frango">Frango
-                    <input class="carne" name="carne" value="Frango" type="radio">
+                <label class="escolha-carne--frango
+                campo-escolha__texto-escolha">Frango
+                    <input class="campo-escolha__escolha carne" name="carne" value="Frango" type="radio">
                 </label><br>
-                <label class="escolha-carne--bacon">Bacon
-                    <input class="carne" name="carne" value="Bacon" type="radio">
+                <label class="escolha-carne--bacon
+                campo-escolha__texto-escolha">Bacon
+                    <input class="campo-escolha__escolha carne" name="carne" value="Bacon" type="radio">
                 </label><br>
-                <label class="escolha-carne--vegetariano">Vegetariano
-                    <input class="carne" name="carne" value="Vegetariano" type="radio">
+                <label class="escolha-carne--vegetariano
+                campo-escolha__texto-escolha">Vegetariano
+                    <input class="campo-escolha__escolha carne" name="carne" value="Vegetariano" type="radio">
                 </label>
             </fieldset>
-            <fieldset class="escolha-caldo">
-                <legend>caldo desejado:</legend> 
-                <label>Agridoce
-                    <input class="caldo" name="caldo" value="Agridoce" type="radio">
+            <fieldset class="campo-escolha escolha-caldo">
+                <legend class="campo-escolha__legenda">caldo desejado:</legend> 
+                <label class="campo-escolha__texto-escolha">Agridoce
+                    <input class="campo-escolha__escolha caldo" name="caldo" value="Agridoce" type="radio">
                 </label><br>
-                <label>Tradicional
-                    <input class="caldo" name="caldo" value="Tradicional" type="radio">
+                <label class="campo-escolha__texto-escolha">Tradicional
+                    <input class="campo-escolha__escolha caldo" name="caldo" value="Tradicional" type="radio">
                 </label><br>
-                <label>Apimentado leve
-                    <input class="caldo" name="caldo" value="Apimentado leve" type="radio">
+                <label class="campo-escolha__texto-escolha">Apimentado leve
+                    <input class="campo-escolha__escolha caldo" name="caldo" value="Apimentado leve" type="radio">
                 </label><br>
-                <label>Apimentado
-                    <input class="caldo" name="caldo" value="Apimentado" type="radio">
+                <label class="campo-escolha__texto-escolha">Apimentado
+                    <input class="campo-escolha__escolha caldo" name="caldo" value="Apimentado" type="radio">
                 </label>
             </fieldset>
-            <fieldset class="escolha-legumes">
-                <legend>complementos desejados:</legend> 
-                <label>Cebolinha
-                    <input class="complementos" name="complemento" value="Cebolinha" type="checkbox">
+            <fieldset class="campo-escolha escolha-complementos">
+                <legend class="campo-escolha__legenda">complementos desejados:</legend> 
+                <label class="campo-escolha__texto-escolha">Cebolinha
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="Cebolinha" type="checkbox">
                 </label><br>
-                <label>Shitake (cogumelo)
-                    <input class="complementos" name="complemento" value="Shitake" type="checkbox">
+                <label class="campo-escolha__texto-escolha">Shitake (cogumelo)
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="Shitake" type="checkbox">
                 </label><br>
-                <label>Batata doce 
-                    <input class="complementos" name="complemento" value="Batata doce" type="checkbox">
+                <label class="campo-escolha__texto-escolha">Batata doce 
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="Batata doce" type="checkbox">
                 </label><br>
-                <label>Kombu (alga)
-                    <input class="complementos" name="complemento" value="Kombu" type="checkbox">
+                <label class="campo-escolha__texto-escolha">Kombu (alga)
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="Kombu" type="checkbox">
                 </label><br>
-                <label>Gergelim
-                    <input class="complementos" name="complemento" value="Gergelim" type="checkbox">
+                <label class="campo-escolha__texto-escolha">Gergelim
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="Gergelim" type="checkbox">
                 </label><br>
-                <label>Cebola crispy
-                    <input class="complementos" name="complemento" value="Cebola" type="checkbox">
+                <label class="campo-escolha__texto-escolha">Cebola crispy
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="Cebola" type="checkbox">
                 </label><br>
-                <label>Menma (brotos de bambu)
-                    <input class="complementos" name="complemento" value="Menma" type="checkbox">
+                <label class="campo-escolha__texto-escolha">Menma (brotos de bambu)
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="Menma" type="checkbox">
                 </label><br>
-                <label>Nori
-                    <input class="complementos" name="complemento" value="nori" type="checkbox">
+                <label class="campo-escolha__texto-escolha">Nori
+                    <input class="campo-escolha__escolha complementos" name="complemento" value="nori" type="checkbox">
                 </label><br>
             </fieldset>
-            <fieldset class="escolha-tamanho">
-                <legend>tamanho desejado:</legend> 
-                <label>P (200g)
-                    <input class="tamanho" name="tam" value="pequeno" type="radio">
+            <fieldset class="campo-escolha escolha-tamanho">
+                <legend class="campo-escolha__legenda">tamanho desejado:</legend> 
+                <label class="campo-escolha__texto-escolha">P (200g)
+                    <input class="campo-escolha__escolha tamanho" name="tam" value="pequeno" type="radio">
                 </label><br>
-                <label>M (350g)
-                    <input class="tamanho" name="tam" value="medio" type="radio">
+                <label class="campo-escolha__texto-escolha">M (350g)
+                    <input class="campo-escolha__escolha tamanho" name="tam" value="medio" type="radio">
                 </label><br>
-                <label>G (480g)
-                    <input class="tamanho" name="tam" value="grande" type="radio">
+                <label class="campo-escolha__texto-escolha">G (480g)
+                    <input class="campo-escolha__escolha tamanho" name="tam" value="grande" type="radio">
                 </label>
             </fieldset>
 

@@ -1,0 +1,53 @@
+.formulario-principal .campo-escolha{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: center;
+    background-color: var(--branco-escuro);
+}
+.campo-escolha__legenda{
+    font-size: 1.5rem;
+    color:red;
+    text-transform: capitalize;
+}
+.campo-escolha__texto-escolha{
+
+}
+.campo-escolha__escolha{
+    display:block;
+    margin: 0 calc(50% - 13px);
+}
+
+.formulario-principal .campo-escolha .campo-escolha__texto-escolha{
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 110px;
+    text-align: center;
+    transition: all .5s ease;
+    padding: 4px;
+}
+.formulario-principal .campo-escolha .campo-escolha__texto-escolha::before{
+    content: "\A";
+    white-space: pre-wrap;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    margin-right: 8px;
+    transition: all .3s linear;
+    box-shadow: 2px 2px 5px 1px var(--shadow);
+}
+
+.formulario-principal .campo-escolha .campo-escolha__texto-escolha:hover{
+    max-width: 155px;
+}
+.formulario-principal .campo-escolha .campo-escolha__texto-escolha:hover::before{
+    width: 150px;
+    height: 150px;
+}
