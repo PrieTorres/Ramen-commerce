@@ -1,0 +1,19 @@
+.escolha-caldo--agridoce::before{
+    background-image: url('../../img/ingredientes/agridoce.jpg');
+}
+.escolha-caldo--tradicional::before{
+    background-image: url('../../img/ingredientes/tradicional.jpg');
+}
+.escolha-caldo--apimentado::before{
+    background-image: url('../../img/ingredientes/apimentado.jpg');
+}
+.escolha-caldo--apimentado-leve::before{
+    background-image: url('../../img/ingredientes/apimentado-leve.jpg');
+}
+.formulario-principal .campo-escolha .escolha-caldo--agridoce::before,
+.formulario-principal .campo-escolha .escolha-caldo--tradicional::before,
+.formulario-principal .campo-escolha .escolha-caldo--apimentado::before,
+.formulario-principal .campo-escolha .escolha-caldo--apimentado-leve::before{
+    border-radius: 15px;
+    margin-bottom: 10px;
+}

@@ -1,13 +1,15 @@
 .formulario-principal .campo-escolha{
     display: flex;
     flex-wrap: wrap;
-    padding: 5px;
+    padding: 10px;
     justify-content: center;
-    background-color: var(--branco-escuro);
+    background-color: var(--branco);
+    margin-bottom: 20px;
 }
 .campo-escolha__legenda{
     font-size: 1.5rem;
-    color:red;
+    color:var(--preto);
+    text-align: center;
     text-transform: capitalize;
 }
 .campo-escolha__texto-escolha{
@@ -50,4 +52,5 @@
 .formulario-principal .campo-escolha .campo-escolha__texto-escolha:hover::before{
     width: 150px;
     height: 150px;
+    box-shadow: 0px 0px 6px 1px var(--botao-base);
 }

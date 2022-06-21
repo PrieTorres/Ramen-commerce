@@ -1,5 +1,6 @@
 @import url('campo-escolha.css');
 .formulario-principal{
     padding: 20px 5vw;
+    background-color: var(--branco-escuro);
 }
 

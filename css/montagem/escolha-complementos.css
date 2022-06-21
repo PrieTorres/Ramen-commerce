@@ -1,0 +1,28 @@
+.escolha-complementos--nori::before{
+    background-image: url('../../img/ingredientes/nori.jpg');
+}
+.escolha-complementos--menma::before{
+    background-image: url('../../img/ingredientes/menma.jpg');
+}
+.escolha-complementos--cebola-crispy::before{
+    background-image: url('../../img/ingredientes/cebola-crispy.png');
+}
+.escolha-complementos--gergelim::before{
+    background-image: url('../../img/ingredientes/gergelim-preto.png');
+}
+.escolha-complementos--kombu::before{
+    background-image: url('../../img/ingredientes/kombu.png');
+}
+.escolha-complementos--batata-doce::before{
+    background-image: url('../../img/ingredientes/batata-doce.jpg');
+}
+.escolha-complementos--shitake::before{
+    background-image: url('../../img/ingredientes/shitake.webp');
+}
+.escolha-complementos--cebolinha::before{
+    background-image: url('../../img/ingredientes/cebolinha-picada.png');
+}
+.campo-escolha.escolha-complementos .campo-escolha__texto-escolha::before,
+.campo-escolha.escolha-complementos .campo-escolha__texto-escolha:hover::before{
+    box-shadow: none;
+}

@@ -10,3 +10,6 @@
 .escolha-carne--bacon::before{
     background-image: url('../../img/ingredientes/bacon.jpg');
 }
+.escolha-carne--vegetariano::before{
+    background-image: url('../../img/ingredientes/vegetariano.jpg');
+}
