@@ -1,8 +1,11 @@
 .carrinho-alert{
     width: 50vw;
-    /*height: 80vh;*/
     height: 0;
     display: none;
+
+    height: 80vh;
+    display: flex;
+
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -16,22 +19,42 @@
     transition: all .8s ease;
 }
 .carrinho-alert__confere{
-    background-color: var(--branco-escuro);
     box-shadow: 1px 1px 8px 3px var(--shadow);
+    background-size: cover;
+    background-image: url('');
+    background-repeat: no-repeat;
     display: inline-block;
     font-size: 5rem;
-    padding: 7vw;
+    padding: 15vw;
     margin-bottom: 10vh;
     border-radius: 50%;
     animation: bong 1s;
 }
 .carrinho-alert__botao{
     display: inline;
+    padding: 12px;
+    background-color: var(--botao-base);
+    border: 2px solid var(--preto);
+    color: var(--branco);
+    border-radius: 15px;
+    font-size: 1.15rem;
+    margin: 0px 5px;
 }
 .carrinho-alert__texto{
     display: block;
     text-align: center;
     width:99%;
+}
+.carrinho-alert__quantidade{
+    display: block;
+    width: 100%;
+    margin: 8px 0px;
+    text-align: center;
+    font-size: 1.75rem;
+}
+.carrinho-alert__quantidade #quantidade_ramens{
+    width: 40px;
+    height: 1.75rem;
 }
 
 @keyframes bong{

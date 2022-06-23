@@ -1,3 +1,4 @@
+let ramen_montado;
 function montarRamen(){
     let carne = document.body.querySelector('input.carne:checked').value;
     let caldo = document.body.querySelector('input.caldo:checked').value;
@@ -14,4 +15,5 @@ function montarRamen(){
     ramen.complementos.push(complementos);
 
     ramensJson_personalizado.push(ramen);
+    ramen_montado = ramen;
 }
