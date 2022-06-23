@@ -14,5 +14,4 @@ function montarRamen(){
     ramen.complementos.push(complementos);
 
     ramensJson_personalizado.push(ramen);
-    
 }

@@ -46,7 +46,8 @@ let ramensJson = [
         ],
         tamanhos:[1,2,3],
         precos:[32.14,41.17,58.99],
-        descricao: 'Um ramen pra você que assim como adora um quentinho no coração também adora um quentinho na boca, picancia garantida, recomendado a todos os fortes e corajosos, considere como um desafio'
+        descricao: 'Um ramen pra você que assim como adora um quentinho no coração também adora um quentinho na boca, picancia garantida, recomendado a todos os fortes e corajosos, considere como um desafio',
+        imagem: 'img/ramens/ramen-picante.png'
     },
     {
         id: 3,
@@ -65,7 +66,7 @@ let ramensJson = [
         ],
         tamanhos:[1,2,3],
         precos:[30.00,37.46,52.25],
+        imagem: 'img/ramens/ramen-tradicional.png',
         descricao: 'Um ramen tradicional pra você que sempre teve um pouco de curiosidade para provar como é e quer provar o sabor mais próximo de como é servido na China, divirta-se'
     }
-]
-let ramensJson_personalizado = [];
+];

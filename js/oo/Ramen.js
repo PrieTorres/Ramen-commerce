@@ -5,6 +5,7 @@ class Ramen {
         this.tamanho = tamanho;
         this.complementos=[];
         this._preco;
+        this.imagem = 'img/ramens/ramen_7.png';
     }
 
     get preco(){
