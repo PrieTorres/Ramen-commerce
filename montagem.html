@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/montagem/formulario-principal-labels.css">
     <link rel="stylesheet" href="css/montagem/escolha-caldo.css">
     <link rel="stylesheet" href="css/montagem/escolha-complementos.css">
+    <link rel="stylesheet" href="css/montagem/escolha-tamanho.css">
     <!--scripts apenas com objetos, não é necessário carregamento da página e é importante que estejam antes dos demais scripts que fazem uso desses objetos-->
     <script src="js/oo/Ramen.js"></script>
 </head>
@@ -115,18 +116,21 @@
             </fieldset>
             <fieldset class="campo-escolha escolha-tamanho">
                 <legend class="campo-escolha__legenda">tamanho desejado:</legend> 
-                <label class="campo-escolha__texto-escolha">P (200g)
+                <label class="campo-escolha__texto-escolha
+                escolha-tamanho--pequeno">P (200g)
                     <input class="campo-escolha__escolha tamanho" name="tam" value="pequeno" type="radio">
                 </label><br>
-                <label class="campo-escolha__texto-escolha">M (350g)
+                <label class="campo-escolha__texto-escolha
+                escolha-tamanho--medio">M (350g)
                     <input class="campo-escolha__escolha tamanho" name="tam" value="medio" type="radio">
                 </label><br>
-                <label class="campo-escolha__texto-escolha">G (480g)
+                <label class="campo-escolha__texto-escolha
+                escolha-tamanho--grande">G (480g)
                     <input class="campo-escolha__escolha tamanho" name="tam" value="grande" type="radio">
                 </label>
             </fieldset>
 
-            <button onclick="montarRamen(), abrirCarrinho()">Pronto!</button>
+            <button class="formulario-principal__botao" onclick="montarRamen(), abrirCarrinho()">Pronto!</button>
         </div>
         
     </main>

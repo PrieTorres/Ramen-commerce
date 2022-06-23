@@ -2,5 +2,17 @@
 .formulario-principal{
     padding: 20px 5vw;
     background-color: var(--branco-escuro);
+    text-align: center;
 }
-
+.formulario-principal__botao{
+    color: var(--branco);
+    font-size: 1.25rem;
+    padding: 10px;
+    background-color: var(--botao-base);
+    border: 3px solid var(--branco);
+    border-radius: 10px;
+    transition: all .5s ease;
+}
+.formulario-principal__botao:hover{
+    background-color: var(--botao-ativo);
+}
