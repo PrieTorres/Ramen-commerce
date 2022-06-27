@@ -1,5 +1,12 @@
 .caixa-ramen{
     max-width: 200px;
+    cursor: pointer;
+    transition: all .8s ease;
+    animation-delay: 1s;
+    transition-delay: .4s;
+}
+.caixa-ramen:hover{
+    transform: rotateY(180deg);
 }
 .caixa-ramen__imagem-ramen{
     max-width: 100%;
@@ -8,10 +15,13 @@
 
 }
 .caixa-ramen__atributos-ramen{
-
+    list-style: circle;
 }
 .atributos-ramen__item{
-
+    padding-left: 10px;
+}
+.atributos-ramen__item::before{
+    content: '●';
 }
 .caixa-ramen__descricao-ramen{
 

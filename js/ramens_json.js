@@ -31,7 +31,7 @@ let ramensJson = [
         tamanhos:[1,2,3],
         precos:[25.78,39.88,55.89],
         descricao: 'Um ramen pra você que não come carne mas ama uma comida oriental muito boa de qualidade garantida',
-        imagem: 'img/ramens/ramen-vegetariano-cima.png'
+        imagem: 'img/ramens/ramen-vegetariano-cima-edit.png'
     },
     {
         id: 1,
