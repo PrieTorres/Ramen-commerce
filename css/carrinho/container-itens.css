@@ -1,0 +1,4 @@
+.container-itens{
+    display: flex;
+    flex-wrap: wrap;
+}

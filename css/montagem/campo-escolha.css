@@ -13,7 +13,7 @@
     text-transform: capitalize;
 }
 .campo-escolha__texto-escolha{
-
+    font-size: 1.15rem;
 }
 .campo-escolha__escolha{
     display:block;
@@ -41,7 +41,7 @@
     background-position: center;
     background-size: cover;
     box-sizing: border-box;
-    margin-right: 8px;
+    margin-bottom: 8px;
     transition: all .3s linear;
     box-shadow: 2px 2px 5px 1px var(--shadow);
 }

@@ -5,13 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seus pedidos!</title>
+    <!--css principais-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cabecalho.css">
     <link rel="stylesheet" href="css/rodape.css">
+    <!---->
     <link rel="shortcut icon" href="img/logo/Item_Ramen_Tonkotsu.webp" type="image/x-icon">
+    <link rel="stylesheet" href="css/carrinho/conteudo-principal.css">
+    <link rel="stylesheet" href="css/carrinho/caixa-item.css">
+    <link rel="stylesheet" href="css/carrinho/container-caixa-itens.css">
+    <link rel="stylesheet" href="css/carrinho/container-itens.css">
     <script src="js/ramens_json.js"></script>
     <script src="js/montarCarrinho.js"></script>
     <script src="js/manipuladorObjeto.js"></script>
+    <!---->
     <script>
         carregarObjeto();
     </script>
@@ -28,16 +35,27 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="conteudo-principal">
         
         <div class="container-itens">
+            <!-- itens comprados -->
             <div class="container-caixa-item">
-                <div class="container-caixa-item__caixa-item">
-                    <img src="" alt="" class="container-caixa-item__caixa-item__imagem">
-                    <ul class="container-caixa-item__caixa-item__lista">
-                        <li class="container-caixa-item__caixa-item__lista__item">
+                <img src="img/ramens/ramen-3561894_1920.jpg" alt="ramen comprado" class="container-caixa-item__imagem">
+                <div class="caixa-item__info">
+                    <ul class="container-caixa-item__lista">
+                        <li class="container-caixa-item__lista__item">
+                            Shitake
+                        </li>
+                        <li class="container-caixa-item__lista__item">
+                            Gergelim
+                        </li>
+                        <li class="container-caixa-item__lista__item">
+                            Cebolinha
                         </li>
                     </ul>
+                    <p class='container-caixa-item__descricao'>
+                        Lorem ipsum sit amet no mercy to them abet shalama ta pevet no mum ter cet pi de los quiores
+                    </p>
                 </div>
                 <div class="container-caixa-item__caixa-quantidade">
                     <div class="caixa-quantidade__barra">
@@ -46,11 +64,16 @@
                         <div class="barra__menos">+</div>
                     </div>
                 </div>
+                <!-- fim -->
             </div>
             
         </div>
-        <div class="container-total"></div>
     </main>
+    <aside><!-- janela do total da compra -->
+        <div class="container-total">
+
+        </div>
+    </aside>
     <footer class="rodape-principal">
         <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
     </footer>

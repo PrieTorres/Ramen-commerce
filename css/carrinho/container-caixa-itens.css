@@ -1,0 +1,29 @@
+.container-caixa-item{
+    max-height: 200px;
+    border: 1px solid black;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.container-caixa-item__imagem{
+    max-width: 30%;
+    max-height: 90%;
+}
+.caixa-item__info{
+    display: inline-block;
+    max-width: 68%;
+    box-sizing: border-box;
+    padding: 0px 20px;
+}
+.container-caixa-item__lista{
+    display: flex;
+    align-items: flex-start;
+}
+.container-caixa-item__lista__item{
+    background-color: var(--cinza-transparente);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+}
