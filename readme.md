@@ -11,16 +11,17 @@ Este projeto foi feito inteiramnete para treino de habilidades adquiridas atrav�
 
 <h2>algumas das habilidades envolvidas:</h2>
 <ul>
-    <li>Html e css (flexbox, arquitetura css)</li>
+    <li>HTML e CSS (flexbox, arquitetura css)</li>
     <li>SEO</li>
     <li>Javascript DOM</li>
     <li>Figma - básico</li>
+    <li>Javascript orientado a objetos</li>
+    <li>Javascript localstorage</li>
 </ul>
 <hr>
 
 <h2>habilidades que serão futuramente implementadas:</h2>
 <ul>
-    <li>Javascript orientado a objetos</li>
     <li>Responsividade</li>
     <li>acessibilidade Web</li>
 </ul>
