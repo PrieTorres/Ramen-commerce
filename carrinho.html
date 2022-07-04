@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/carrinho/caixa-item.css">
     <link rel="stylesheet" href="css/carrinho/container-caixa-itens.css">
     <link rel="stylesheet" href="css/carrinho/container-itens.css">
+    <link rel="stylesheet" href="css/carrinho/quantifier.css">
+    <!-- scrits importantes-->
     <script src="js/ramens_json.js"></script>
     <script src="js/montarCarrinho.js"></script>
     <script src="js/manipuladorObjeto.js"></script>
@@ -28,7 +30,7 @@
         <h1 class="cabecalho-principal__titulo"><span class="cabecalho-principal__titulo-content">Ramen-lhama</span></h1>
         <nav class="cabecalho-principal__nav">
             <ul class="cabecalho-principal__nav-lista">
-                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link ativo" href="index.html">Home</a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="index.html">Home</a></li>
                 <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="montagem.html">Monte o seu Rámen!</a></li>
                 <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="pratos_prontos.html">Combos</a></li>
                 <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="trabalhe_conosco.html">Trabalhe conosco</a></li>
@@ -57,11 +59,11 @@
                         Lorem ipsum sit amet no mercy to them abet shalama ta pevet no mum ter cet pi de los quiores
                     </p>
                 </div>
-                <div class="container-caixa-item__caixa-quantidade">
-                    <div class="caixa-quantidade__barra">
-                        <div class="barra__menos">-</div>
-                        <div class="barra__quantidade">xx</div>
-                        <div class="barra__menos">+</div>
+                <div class="container-caixa-item__caixa-quantidade quantifier-container">
+                    <div class="caixa-quantidade__barra quantifier-caixa">
+                        <div class="quantifier-opcao barra__menos" onclick='alterarQuantidade("menos")' >-</div>
+                        <div class="barra__quantidade quantifier-quantidade">1</div>
+                        <div class="quantifier-opcao barra__menos" onclick='alterarQuantidade("mais")'>+</div>
                     </div>
                 </div>
                 <!-- fim -->
@@ -77,5 +79,6 @@
     <footer class="rodape-principal">
         <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
     </footer>
+    <script src="js/quantifier.js"></script>
 </body>
 </html>
