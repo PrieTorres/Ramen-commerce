@@ -6,6 +6,8 @@ class Ramen {
         this.complementos=[];
         this._preco;
         this.imagem = './img/ramens/ramen_7.png';
+        this.descricao = 'O seu ramen personalizado do jeitinho que você gosta'
+        this.quantidade = 1;
     }
 
     get preco(){

@@ -10,7 +10,7 @@ ramensJson.forEach(ramen => {
         atributos.push(`<li class="atributos-ramen__item">${ingrediente}</li>`);
     });
 
-    atributos = atributos.join('')
+    atributos = atributos.join('');
 
     let html = `
 <div class="caixa-ramen" onclick="salvarObjeto(ramensJson[${i}])">

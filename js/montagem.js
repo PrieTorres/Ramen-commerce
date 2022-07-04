@@ -17,3 +17,7 @@ function montarRamen(){
     ramensJson_personalizado.push(ramen);
     ramen_montado = ramen;
 }
+function alterarNumero(){
+    let numero = parseInt(document.body.querySelector('#quantidade_ramens').value);
+    ramensJson_personalizado[0].quantidade = numero;
+}

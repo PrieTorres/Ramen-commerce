@@ -2,10 +2,10 @@
     width: 50vw;
     height: 0;
     display: none;
-
+    /*
     height: 80vh;
     display: flex;
-
+    */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -17,6 +17,7 @@
     top: calc(50% - 40vh);
     padding: 10px;
     transition: all .8s ease;
+    overflow: auto;
 }
 .carrinho-alert__confere{
     box-shadow: 1px 1px 8px 3px var(--shadow);
@@ -24,8 +25,10 @@
     background-image: url('');
     background-repeat: no-repeat;
     display: inline-block;
-    font-size: 5rem;
-    padding: 15vw;
+    padding: 20%;
+    flex-shrink: 2;
+    max-width: 40%;
+    max-height: 40%;
     margin-bottom: 10vh;
     border-radius: 50%;
     animation: bong 1s;
@@ -39,6 +42,7 @@
     border-radius: 15px;
     font-size: 1.15rem;
     margin: 0px 5px;
+    flex-shrink: 2;
 }
 .carrinho-alert__texto{
     display: block;
@@ -58,30 +62,6 @@
 }
 
 @keyframes bong{
-    /*0%{
-        transform: scale(1);
-    }
-    15%,40%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scaleY(1.2);
-    }
-    60%{
-        transform: scaleY(1);
-    }
-    70%{
-        transform: scaleY(1.1);
-    }
-    80%{
-        transform: scaleY(1);
-    }
-    90%{
-        transform: scaleY(1.05);
-    }
-    100%{
-        transform: scaleY(1);
-    }*/
     0%{
         transform: scale(0.4);
     }

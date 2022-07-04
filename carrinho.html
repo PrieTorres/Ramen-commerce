@@ -12,7 +12,6 @@
     <!---->
     <link rel="shortcut icon" href="img/logo/Item_Ramen_Tonkotsu.webp" type="image/x-icon">
     <link rel="stylesheet" href="css/carrinho/conteudo-principal.css">
-    <link rel="stylesheet" href="css/carrinho/caixa-item.css">
     <link rel="stylesheet" href="css/carrinho/container-caixa-itens.css">
     <link rel="stylesheet" href="css/carrinho/container-itens.css">
     <link rel="stylesheet" href="css/carrinho/quantifier.css">
@@ -39,9 +38,9 @@
     </header>
     <main class="conteudo-principal">
         
-        <div class="container-itens">
+        <div class="container-itens" id="carrinho-de-itens">
             <!-- itens comprados -->
-            <div class="container-caixa-item">
+            <!--<div class="container-caixa-item">
                 <img src="img/ramens/ramen-3561894_1920.jpg" alt="ramen comprado" class="container-caixa-item__imagem">
                 <div class="caixa-item__info">
                     <ul class="container-caixa-item__lista">
@@ -58,14 +57,14 @@
                     <p class='container-caixa-item__descricao'>
                         Lorem ipsum sit amet no mercy to them abet shalama ta pevet no mum ter cet pi de los quiores
                     </p>
-                </div>
-                <div class="container-caixa-item__caixa-quantidade quantifier-container">
-                    <div class="caixa-quantidade__barra quantifier-caixa">
-                        <div class="quantifier-opcao barra__menos" onclick='alterarQuantidade("menos")' >-</div>
-                        <div class="barra__quantidade quantifier-quantidade">1</div>
-                        <div class="quantifier-opcao barra__menos" onclick='alterarQuantidade("mais")'>+</div>
+                    <div class="container-caixa-item__caixa-quantidade quantifier-container">
+                        <div class="caixa-quantidade__barra quantifier-caixa">
+                            <div class="quantifier-opcao barra__menos" onclick='alterarQuantidade("menos")' >-</div>
+                            <div class="barra__quantidade quantifier-quantidade">1</div>
+                            <div class="quantifier-opcao barra__menos" onclick='alterarQuantidade("mais")'>+</div>
+                        </div>
                     </div>
-                </div>
+                </div>-->
                 <!-- fim -->
             </div>
             
@@ -80,5 +79,7 @@
         <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
     </footer>
     <script src="js/quantifier.js"></script>
+    <script src="js/montarCarrinho.js"></script>
+    <script>montarCarrinho();</script>
 </body>
 </html>

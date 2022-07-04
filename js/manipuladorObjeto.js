@@ -5,6 +5,8 @@ function salvarObjeto(objeto){
 }
 function carregarObjeto(){
     let newObject = window.localStorage.getItem("objeto");
-    console.log(JSON.parse(newObject));
+    let item = JSON.parse(newObject);
+    carrinho.push(...item);//porque item é um array
 }
+
 function redirect(){ window.location.href = 'carrinho.html' }
