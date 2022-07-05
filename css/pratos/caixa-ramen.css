@@ -4,6 +4,7 @@
     transition: all .8s ease;
     animation-delay: 1s;
     transition-delay: .4s;
+    margin: 20px;
 }
 .caixa-ramen:hover{
     transform: rotateY(180deg);

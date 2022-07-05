@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/home/descrisao-ramen.css">
+    <!-- scripts importantes para comprar, não dependem do html da página ter carregado -->
+    <script src="js/ramens_json.js"></script>
+    <script src="js/adicionarAoCarrinho.js"></script>
+    <script src="js/manipuladorObjeto.js"></script>
+    <!---->
 </head>
 <body onload="trocarImagem()">
     <header class="cabecalho-principal">
@@ -44,47 +49,47 @@
         <section class="conteudo_principal_ramens">
             <h1 class="conteudo_principal_ramens-titulo">Mais Pedidos</h1>
             <div class="conteudo_principal_ramens-container">
-                <div class="conteudo_principal_ramens-container-caixa">
+                <div class="conteudo_principal_ramens-container-caixa" onclick="comprarRamen(0); salvarObjeto(carrinho); redirect()">
                     <h2 class="ramens-caixa-titulo">Ramen 1</h2>
                     <img src="img/ramens/ramen_1.png" alt="ramen sabor 1" class="ramens-caixa-imagem">
                     <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
-                <div class="conteudo_principal_ramens-container-caixa">
+                <div class="conteudo_principal_ramens-container-caixa" onclick="comprarRamen(1); salvarObjeto(carrinho); redirect()">
                     <h2 class="ramens-caixa-titulo">Ramen 2</h2>
                     <img src="img/ramens/ramen_cima_2.png" alt="ramen sabor 2" class="ramens-caixa-imagem">
                     <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
-                <div class="conteudo_principal_ramens-container-caixa">
+                <div class="conteudo_principal_ramens-container-caixa" onclick="comprarRamen(2); salvarObjeto(carrinho); redirect()">
                     <h2 class="ramens-caixa-titulo">Ramen 3</h2>
                     <img src="img/ramens/ramen_11.png" alt="ramen sabor 3" class="ramens-caixa-imagem">
                     <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
-                <div class="conteudo_principal_ramens-container-caixa">
+                <div class="conteudo_principal_ramens-container-caixa" onclick="comprarRamen(3); salvarObjeto(carrinho); redirect()">
                     <h2 class="ramens-caixa-titulo">Ramen 4</h2>
                     <img src="img/ramens/ramen_4.png" alt="ramen sabor 4" class="ramens-caixa-imagem">
                     <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
-                <div class="conteudo_principal_ramens-container-caixa">
+                <div class="conteudo_principal_ramens-container-caixa" onclick="comprarRamen(4); salvarObjeto(carrinho); redirect()">
                     <h2 class="ramens-caixa-titulo">Ramen 5</h2>
                     <img src="img/ramens/ramen_5.png" alt="ramen sabor 5" class="ramens-caixa-imagem">
                     <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
-                <div class="conteudo_principal_ramens-container-caixa">
+                <div class="conteudo_principal_ramens-container-caixa" onclick="comprarRamen(5); salvarObjeto(carrinho); redirect()">
                     <h2 class="ramens-caixa-titulo">Ramen 6</h2>
                     <img src="img/ramens/ramen_6.png" alt="ramen sabor 6" class="ramens-caixa-imagem">
                     <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
-                <div class="conteudo_principal_ramens-container-caixa">
+                <div class="conteudo_principal_ramens-container-caixa" onclick="comprarRamen(6); salvarObjeto(carrinho); redirect()">
                     <h2 class="ramens-caixa-titulo">Ramen 7</h2>
                     <img src="img/ramens/ramen_7.png" alt="ramen sabor 7" class="ramens-caixa-imagem">
                     <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
-                <div class="conteudo_principal_ramens-container-caixa">
+                <div class="conteudo_principal_ramens-container-caixa" onclick="comprarRamen(7); salvarObjeto(carrinho); redirect()">
                     <h2 class="ramens-caixa-titulo">Ramen 8</h2>
                     <img src="img/ramens/ramen_8.png" alt="ramen sabor 8" class="ramens-caixa-imagem">
                     <span class="ramens-caixa_preco">R$9,90</span>
                 </div>
-                <div class="conteudo_principal_ramens-container-caixa">
+                <div class="conteudo_principal_ramens-container-caixa" onclick="comprarRamen(8); salvarObjeto(carrinho); redirect()">
                     <h2 class="ramens-caixa-titulo">Ramen 9</h2>
                     <img src="img/ramens/ramen_9.png" alt="ramen sabor 9" class="ramens-caixa-imagem">
                     <span class="ramens-caixa_preco">R$9,90</span>
@@ -111,7 +116,8 @@
         <section class="conteudo-principal__populares">
 
             <div class="
-            conteudo-principal__populares-container">
+            conteudo-principal__populares-container"
+            onclick="comprarRamen(0); salvarObjeto(carrinho); redirect()">
                 <img 
                 class="conteudo-principal__populares-container-imagem"
                 src="img/ramens/ramen-tradicional.jpg" 
@@ -125,7 +131,8 @@
             </div>
 
             <div class="
-            conteudo-principal__populares-container">
+            conteudo-principal__populares-container"
+            onclick="comprarRamen(0); salvarObjeto(carrinho); redirect()">
                 <img class="conteudo-principal__populares-container-imagem" 
                 src="img/ramens/ramen-picante.jpg" 
                 alt="ramen sabor picante">
@@ -138,7 +145,8 @@
             </div>
 
             <div class="
-            conteudo-principal__populares-container">
+            conteudo-principal__populares-container"
+            onclick="comprarRamen(0); salvarObjeto(carrinho); redirect()">
                 <img class="conteudo-principal__populares-container-imagem" 
                 src="img/ramens/ramen-vegetariano.jpg" 
                 alt="ramen vegetariano">

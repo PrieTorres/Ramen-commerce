@@ -10,7 +10,7 @@ function montarCarrinho(){
 
         let ingrediente_ramen = [];
         let complementos = [...ramen.complementos];
-        ingrediente_ramen.push(...complementos[0]);
+        ingrediente_ramen.push(...complementos);
         ingrediente_ramen.push(ramen.caldo);
         ingrediente_ramen.push(ramen.carne);
         ingrediente_ramen.push(ramen.tamanho);

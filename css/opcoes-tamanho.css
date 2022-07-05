@@ -1,0 +1,27 @@
+.opcoes-tamanho__container{
+
+}
+.opcoes-tamanho__lista{
+    display: flex;
+}
+.opcoes-tamanho__opcao{
+    background-color: var(--branco);
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-family: monospace;
+    border-radius: 50%;
+}
+.opcoes-tamanho__opcao:first-child,
+.opcoes-tamanho__opcao:last-child{
+    margin-left: 0;
+    margin-right: 0;
+}
+.opcoes-tamanho__opcao.ativo{
+    transform: scale(1.1);
+    box-shadow: 1px 1px 3px 0px var(--shadow);
+    background-color: var(--botao-base);
+    color: var(--branco);
+}

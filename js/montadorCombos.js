@@ -6,7 +6,7 @@ ramensJson.forEach(ramen => {
     let descricao = ramen.descricao;
     let atributos = []
 
-    ramen.ingredientes.forEach(ingrediente => {
+    ramen.complementos.forEach(ingrediente => {
         atributos.push(`<li class="atributos-ramen__item">${ingrediente}</li>`);
     });
 
