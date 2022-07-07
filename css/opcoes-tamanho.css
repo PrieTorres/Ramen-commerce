@@ -1,8 +1,9 @@
-.opcoes-tamanho__container{
+/*.opcoes-tamanho__container{
 
-}
+}*/
 .opcoes-tamanho__lista{
     display: flex;
+    padding: 10px;
 }
 .opcoes-tamanho__opcao{
     background-color: var(--branco);
@@ -24,4 +25,7 @@
     box-shadow: 1px 1px 3px 0px var(--shadow);
     background-color: var(--botao-base);
     color: var(--branco);
+}
+.opcoes-tamanho__opcao:hover{
+    cursor: pointer;
 }

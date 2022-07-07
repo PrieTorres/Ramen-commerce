@@ -13,7 +13,7 @@ function montarCarrinho(){
         ingrediente_ramen.push(...complementos);
         ingrediente_ramen.push(ramen.caldo);
         ingrediente_ramen.push(ramen.carne);
-        ingrediente_ramen.push(ramen.tamanho);
+
         let lista_ingredientes = [];
         if(ingrediente_ramen.length>0){
             ingrediente_ramen.forEach(ingrediente => {
@@ -25,6 +25,24 @@ function montarCarrinho(){
             });
         }
         lista_ingredientes = lista_ingredientes.join('');
+
+        let p = null;
+        let m = null;
+        let g = null;
+
+        if(ramen.tamanho != undefined){
+            switch(ramen.tamanho){
+                case 'pequeno':
+                    p = 'ativo'
+                    break
+                case 'medio':
+                    m = 'ativo'
+                    break
+                case 'grande':
+                    g = 'ativo'
+                    break
+            }
+        }
 
 
 
@@ -44,6 +62,13 @@ function montarCarrinho(){
                         <div class="barra__quantidade quantifier-quantidade" id="ramen-container-${id}" >${quantidade_ramen}</div>
                         <div class="quantifier-opcao barra__menos" onclick='alterarQuantidade("mais", "${id}")'>+</div>
                     </div>
+                </div>
+                <div class="opcoes-tamanho__container">
+                    <ul class="opcoes-tamanho__lista">
+                        <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--pequeno ${p}" onclick="alterarTamanho('pequeno', ${id})">P</li>
+                        <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--medio ${m}" onclick="alterarTamanho('medio', ${id})">M</li>
+                        <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--grande ${g}" onclick="alterarTamanho('grande', ${id})">G</li>
+                    </ul>
                 </div>
         </div>
         `;

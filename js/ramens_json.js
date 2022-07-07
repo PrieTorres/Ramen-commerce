@@ -28,7 +28,6 @@ let ramensJson = [
             'Batata doce nham nham',
             'Kombu (alga, uma delícia)'
         ],
-        tamanhos:'medio',
         precos:[25.78,39.88,55.89],
         descricao: 'Um ramen pra você que não come carne mas ama uma comida oriental muito boa de qualidade garantida',
         imagem: 'img/ramens/ramen-vegetariano-cima-edit.png',
@@ -45,7 +44,6 @@ let ramensJson = [
             'Kombu',
             'Gergelim',
         ],
-        tamanhos:'medio',
         precos:[32.14,41.17,58.99],
         descricao: 'Um ramen pra você que assim como adora um quentinho no coração também adora um quentinho na boca, picancia garantida, recomendado a todos os fortes e corajosos, considere como um desafio',
         imagem: 'img/ramens/ramen-picante.jpg',
@@ -66,7 +64,6 @@ let ramensJson = [
             'muito amor',
             'ingrediente secreto'
         ],
-        tamanhos:'medio',
         precos:[30.00,37.46,52.25],
         quantidade: 1,
         imagem: 'img/ramens/ramen-tradicional.jpg',
@@ -86,7 +83,6 @@ let ramensJson = [
             'elemento X',
             'ingrediente secreto'
         ],
-        tamanhos:'medio',
         quantidade: 1,
         precos:[30.00,37.46,52.25],
         imagem: 'img/ramens/ramen_4.png',
@@ -106,7 +102,6 @@ let ramensJson = [
             'Gergelim',
             'Geléia de pimenta'
         ],
-        tamanhos:'medio',
         quantidade: 1,
         precos:[30.00,37.46,52.25],
         imagem: 'img/ramens/ramen_5.png',
@@ -130,7 +125,6 @@ let ramensJson = [
             'Gergelim',
             'Geléia de pimenta'
         ],
-        tamanhos:'medio',
         quantidade: 1,
         precos:[30.00,37.46,52.25],
         imagem: 'img/ramens/ramen_6.png',
@@ -153,7 +147,6 @@ let ramensJson = [
             'Sorte',
             'Brócolis picado'
         ],
-        tamanhos:'medio',
         quantidade: 1,
         precos:[30.00,37.46,52.25],
         imagem: 'img/ramens/ramen_7.png',
@@ -174,7 +167,6 @@ let ramensJson = [
             'Multiplos legumes',
             'Saúde'
         ],
-        tamanhos:'medio',
         quantidade: 1,
         precos:[30.00,37.46,52.25],
         imagem: 'img/ramens/ramen_11.png',

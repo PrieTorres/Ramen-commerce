@@ -40,7 +40,7 @@
     <main class="conteudo-principal">
         
         <div class="container-itens" id="carrinho-de-itens">
-            <!-- itens comprados -->
+            <!-- itens comprados --> <!--
             <div class="container-caixa-item">
                 <img src="img/ramens/ramen-3561894_1920.jpg" alt="ramen comprado" class="container-caixa-item__imagem">
                 <div class="caixa-item__info">
@@ -67,12 +67,12 @@
                     </div>
                     <div class="opcoes-tamanho__container">
                         <ul class="opcoes-tamanho__lista">
-                            <li class="opcoes-tamanho__opcao tamanho__opcao--pequeno">P</li>
-                            <li class="opcoes-tamanho__opcao tamanho__opcao--medio ativo">M</li>
-                            <li class="opcoes-tamanho__opcao tamanho__opcao--grande">G</li>
+                            <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--pequeno" onclick="alterarTamanho('pequeno', ${id})">P</li>
+                            <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--medio ativo" onclick="alterarTamanho('medio', ${id})">M</li>
+                            <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--grande" onclick="alterarTamanho('grande', ${id})">G</li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
                 <!-- fim -->
             </div>
             
@@ -88,6 +88,7 @@
     </footer>
     <script src="js/quantifier.js"></script>
     <script src="js/montarCarrinho.js"></script>
+    <script src="js/alterarTamanho.js"></script>
     <script>montarCarrinho();</script>
 </body>
 </html>
