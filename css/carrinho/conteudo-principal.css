@@ -1,4 +1,7 @@
 .conteudo-principal{
-    width: 70vw;
+    flex: 2;
     background-color: var(--branco-escuro);
+    min-height: 75vh;
+    padding: 20px;
+    box-sizing: border-box;
 }

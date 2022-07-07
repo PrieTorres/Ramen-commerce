@@ -81,3 +81,30 @@ function montarCarrinho(){
 
 
 }
+
+function montarTotal(){
+    let container_itens = document.body.querySelector('.itens-comprados');
+
+    carrinho.forEach(item => {
+        let id = 0;
+
+        let html = `
+        <div class="item-comprado">
+            <div class="item-comprado__cancelar" onclick="removerItem(${id})">X</div>
+            <div class="item-comprado__info">
+                <img class="item-comprado__imagem" src="${item.imagem}" alt="ramen apetitoso">
+                <p class="item-comprado__nome">${item.nome}</p>
+            </div>
+        </div>
+        `
+        id++;
+    });
+}
+
+function alterarTotal(){
+
+}
+
+function removerItem(id){
+
+}

@@ -2,14 +2,14 @@ let combosRamen = [
     {
         id: 1,
         nome: 'combo familia',
-        complementos: ['3 ramens de sua escolha (2 pequenos e 1 medio)','1,5L de chá gelado','3 hashis de cortesia'],
+        complementos: ['3 ramens de sua escolha (2 pequenos e 1 médio)','1,5L de chá gelado','3 hashis de cortesia'],
         preco: 90.89
 
     },
     {
         id: 2,
         nome: 'combo casal',
-        complementos: ['2 ramens de sua escolha (2 medios)','1L de chá gelado','2 hashis de cortesia'],
+        complementos: ['2 ramens de sua escolha (2 médios)','1L de chá gelado','2 hashis de cortesia'],
         preco: 63.44,
         descricao: 'Um combo pra você que quer partilhar de seus bom gosto culinário com o seu par, uma ótima refeição'
     }

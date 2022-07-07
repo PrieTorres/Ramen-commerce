@@ -19,7 +19,7 @@
 
 .conteudo-principal-topo__container--texto{
     font-family: var(--fonte-padrao);
-    font-size: 5.62rem;
+    font-size: 5em;
     font-weight: 100;
 }
 

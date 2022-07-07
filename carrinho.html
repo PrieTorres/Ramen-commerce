@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="css/carrinho/container-itens.css">
     <link rel="stylesheet" href="css/quantifier.css">
     <link rel="stylesheet" href="css/opcoes-tamanho.css">
+    <link rel="stylesheet" href="css/carrinho/total-compra.css">
+    <link rel="stylesheet" href="css/carrinho/carrinho.css">
+    <link rel="stylesheet" href="css/carrinho/itens-comprados.css">
     <!-- scrits importantes-->
     <script src="js/ramens_json.js"></script>
     <script src="js/montarCarrinho.js"></script>
@@ -37,52 +40,31 @@
             </ul>
         </nav>
     </header>
-    <main class="conteudo-principal">
+    <main class="carrinho">
         
-        <div class="container-itens" id="carrinho-de-itens">
-            <!-- itens comprados --> <!--
-            <div class="container-caixa-item">
-                <img src="img/ramens/ramen-3561894_1920.jpg" alt="ramen comprado" class="container-caixa-item__imagem">
-                <div class="caixa-item__info">
-                    <ul class="container-caixa-item__lista">
-                        <li class="container-caixa-item__lista__item">
-                            Shitake
-                        </li>
-                        <li class="container-caixa-item__lista__item">
-                            Gergelim
-                        </li>
-                        <li class="container-caixa-item__lista__item">
-                            Cebolinha
-                        </li>
-                    </ul>
-                    <p class='container-caixa-item__descricao'>
-                        Lorem ipsum sit amet no mercy to them abet shalama ta pevet no mum ter cet pi de los quiores
-                    </p>
-                    <div class="container-caixa-item__caixa-quantidade quantifier-container">
-                        <div class="caixa-quantidade__barra quantifier-caixa">
-                            <div class="quantifier-opcao barra__menos" onclick='alterarQuantidade("menos")' >-</div>
-                            <div class="barra__quantidade quantifier-quantidade">1</div>
-                            <div class="quantifier-opcao barra__menos" onclick='alterarQuantidade("mais")'>+</div>
-                        </div>
-                    </div>
-                    <div class="opcoes-tamanho__container">
-                        <ul class="opcoes-tamanho__lista">
-                            <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--pequeno" onclick="alterarTamanho('pequeno', ${id})">P</li>
-                            <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--medio ativo" onclick="alterarTamanho('medio', ${id})">M</li>
-                            <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--grande" onclick="alterarTamanho('grande', ${id})">G</li>
-                        </ul>
-                    </div>
-                </div> -->
-                <!-- fim -->
+        <div class="conteudo-principal">
+            <div class="container-itens" id="carrinho-de-itens">
+                <!-- itens comprados -->    
             </div>
-            
         </div>
-    </main>
-    <aside><!-- janela do total da compra -->
-        <div class="container-total">
 
-        </div>
-    </aside>
+        <aside class="container-total"><!-- janela do total da compra -->
+            <h2>Total</h2>
+            <div class="itens-comprados">
+                <!-- itens comprados, html teste -->
+                <div class="item-comprado">
+                    <div class="item-comprado__cancelar">X</div>
+                    <div class="item-comprado__info">
+                        <img class="item-comprado__imagem" src="img/ramens/desenho-ramen.png" alt="ramen apetitoso">
+                        <p class="item-comprado__nome">Nome teste</p>
+                    </div>
+                </div>
+                <!---->
+            </div>
+            <strong>Total: R$<strong id="valor_total">00,00</strong></strong>
+        </aside>
+
+    </main>
     <footer class="rodape-principal">
         <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
     </footer>

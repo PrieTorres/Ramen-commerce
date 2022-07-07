@@ -1,0 +1,5 @@
+.container-total{
+    flex: 1;
+    min-height: 100%;
+    background-color: red;
+}

@@ -18,4 +18,6 @@ function alterarTamanho(tamanho, id){
         carrinho[id].tamanho = 'Grande';
 
     }
+
+    window.localStorage.setItem("objeto", JSON.stringify(carrinho));
 }

@@ -1,0 +1,34 @@
+.itens-comprados{
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.item-comprado{
+    border: 1px solid black;
+    height: 100px;
+    width: 100%;
+    display: block;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.item-comprado__cancelar{
+    font-size: 3em;
+    font-family: monospace;
+    text-transform: uppercase;
+    float: right;
+}
+
+.item-comprado__info{
+    display: flex;
+    height: 100%;
+    max-width: 80%;
+}
+.item-comprado__imagem{
+    max-height: 90%;
+    align-self: center;
+    margin-left: 3px;
+}
+.item-comprado__nome{
+    font-size: 1.15em;
+    margin: 0 8px;
+}

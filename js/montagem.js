@@ -1,9 +1,12 @@
-let ramen_montado;
-function montarRamen(){
+let ramen_montado; //variável global que depois vai ser passado para o carrinho
+
+function montarRamen(){  
     let carne = document.body.querySelector('input.carne:checked').value;
     let caldo = document.body.querySelector('input.caldo:checked').value;
     let tamanho = document.body.querySelector('input.tamanho:checked').value;
+
     let complementos_input = document.body.querySelectorAll('input.complementos:checked');
+
     let complementos = [];
     for(i in complementos_input){
         if(complementos_input[i].value != null){
@@ -15,8 +18,10 @@ function montarRamen(){
     ramen.complementos.push(...complementos);
 
     ramensJson_personalizado.push(ramen);
+
     ramen_montado = ramen;
 }
+
 function alterarNumero(){
     let numero = parseInt(document.body.querySelector('#quantidade_ramens').value);
     ramensJson_personalizado[0].quantidade = numero;
