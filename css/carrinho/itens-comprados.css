@@ -12,7 +12,7 @@
     box-sizing: border-box;
 }
 .item-comprado__cancelar{
-    font-size: 3em;
+    font-size: 2em;
     font-family: monospace;
     text-transform: uppercase;
     float: right;
@@ -28,7 +28,10 @@
     align-self: center;
     margin-left: 3px;
 }
-.item-comprado__nome{
+.item-comprado__texto{
     font-size: 1.15em;
     margin: 0 8px;
+}
+.item-comprado__texto--item{
+    display: inline-block;
 }

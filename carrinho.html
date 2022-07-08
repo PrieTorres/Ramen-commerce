@@ -52,13 +52,20 @@
             <h2>Total</h2>
             <div class="itens-comprados">
                 <!-- itens comprados, html teste -->
+            <!--
                 <div class="item-comprado">
                     <div class="item-comprado__cancelar">X</div>
                     <div class="item-comprado__info">
                         <img class="item-comprado__imagem" src="img/ramens/desenho-ramen.png" alt="ramen apetitoso">
-                        <p class="item-comprado__nome">Nome teste</p>
+                        <div class="item-comprado__texto">
+                            <p class="item-comprado__texto--item item-comprado__texto--nome">Nome Teste</p>
+                            <p class="item-comprado__texto--item item-comprado__texto--tamanho">Tamanho</p>
+                            <p class="item-comprado__texto--item item-comprado__texto--preco">R$00,00</p><br>
+                            <p class="item-comprado__texto--item item-comprado__texto--quantidade">1</p>
+                        </div>
                     </div>
                 </div>
+            -->
                 <!---->
             </div>
             <strong>Total: R$<strong id="valor_total">00,00</strong></strong>
@@ -71,6 +78,6 @@
     <script src="js/quantifier.js"></script>
     <script src="js/montarCarrinho.js"></script>
     <script src="js/alterarTamanho.js"></script>
-    <script>montarCarrinho();</script>
+    <script>montarCarrinho();montarTotal();</script>
 </body>
 </html>

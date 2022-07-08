@@ -79,30 +79,101 @@ function montarCarrinho(){
 
     });
 
+}
+
+function definirPreco(){
+    carrinho.forEach(ramenJSON => {
+        if(ramenJSON.tamanho == undefined){
+            ramenJSON.tamanho = 'medio';
+        }
+
+        if(ramenJSON.calcularPreco != undefined){
+            ramenJSON.calcularPreco();
+        }else{
+            switch(ramenJSON.tamanho){
+                case 'pequeno':
+                    ramenJSON.preco = ramenJSON.precos[0];
+                    break;
+                case 'medio':
+                    ramenJSON.preco = ramenJSON.precos[1];
+                    break;
+                case 'grande':
+                    ramenJSON.preco = ramenJSON.precos[2];
+                    break;
+            }
+        }
+    });
 
 }
 
 function montarTotal(){
+    definirPreco();
+
     let container_itens = document.body.querySelector('.itens-comprados');
 
     carrinho.forEach(item => {
         let id = 0;
+        
+        let valor = item.preco*item.quantidade;
 
         let html = `
-        <div class="item-comprado">
+        <div class="item-comprado item-comprado-${id}">
             <div class="item-comprado__cancelar" onclick="removerItem(${id})">X</div>
             <div class="item-comprado__info">
                 <img class="item-comprado__imagem" src="${item.imagem}" alt="ramen apetitoso">
-                <p class="item-comprado__nome">${item.nome}</p>
+                <div class="item-comprado__texto">
+                    <p class="item-comprado__texto--item item-comprado__texto--nome">${item.nome}</p>
+                    <p class="item-comprado__texto--item item-comprado__texto--tamanho">${item.tamanho}</p>
+                    <p class="item-comprado__texto--item item-comprado__texto--preco">R$${valor}</p><br>
+                    <p class="item-comprado__texto--item item-comprado__texto--quantidade">${item.quantidade}</p>
+                </div>
             </div>
         </div>
         `
+        container_itens.innerHTML += html
+        id++;
+    });
+}
+
+function reloadCarrinho(){
+    definirPreco();
+
+    let container_itens = document.body.querySelector('.itens-comprados');
+    container_itens.innerHTML = '';
+
+    carrinho.forEach(item => {
+        let id = 0;
+        
+        let valor = item.preco*item.quantidade;
+
+        let html = `
+        <div class="item-comprado item-comprado-${id}">
+            <div class="item-comprado__cancelar" onclick="removerItem(${id})">X</div>
+            <div class="item-comprado__info">
+                <img class="item-comprado__imagem" src="${item.imagem}" alt="ramen apetitoso">
+                <div class="item-comprado__texto">
+                    <p class="item-comprado__texto--item item-comprado__texto--nome">${item.nome}</p>
+                    <p class="item-comprado__texto--item item-comprado__texto--tamanho">${item.tamanho}</p>
+                    <p class="item-comprado__texto--item item-comprado__texto--preco">R$${valor}</p><br>
+                    <p class="item-comprado__texto--item item-comprado__texto--quantidade">${item.quantidade}</p>
+                </div>
+            </div>
+        </div>
+        `
+        container_itens.innerHTML += html
         id++;
     });
 }
 
 function alterarTotal(){
+    let total_container = document.body.querySelector("#valor_total");
 
+    let valor_total = 0;
+    carrinho.forEach(item =>{
+        valor_total += item.preco;
+    })
+
+    total_container.innerHTML = valor_total;
 }
 
 function removerItem(id){

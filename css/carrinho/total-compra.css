@@ -1,5 +1,7 @@
 .container-total{
     flex: 1;
     min-height: 100%;
-    background-color: red;
+    background-color: var(--branco);
+    padding: 8px;
+    box-sizing: border-box;
 }

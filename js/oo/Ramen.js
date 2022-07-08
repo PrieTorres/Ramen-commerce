@@ -16,13 +16,13 @@ class Ramen {
 
     calcularPreco(){
         if(this.tamanho=="pequeno"){
-            this._preco=20+(ParseInt(this.complementos.length)*0.7);
+            this._preco=28.9+(ParseInt(this.complementos.length)*0.7);
         }
         if(this.tamanho=="medio"){
-            this._preco=25+(ParseInt(this.complementos.length)*0.8);
+            this._preco=37.4+(ParseInt(this.complementos.length)*0.8);
         }
         if(this.tamanho=="grande"){
-            this._preco=30+(ParseInt(this.complementos.length));
+            this._preco=42.5+(ParseInt(this.complementos.length));
         }
     }
 }
