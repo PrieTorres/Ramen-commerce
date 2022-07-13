@@ -9,6 +9,8 @@
 }
 .container-caixa-item__imagem{
     max-width: 30%;
+    max-height: 90%;
+    align-self: center;
 }
 .caixa-item__info{
     display: flex;

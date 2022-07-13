@@ -17,9 +17,13 @@ function montarRamen(){
     let ramen = new Ramen(caldo, carne, tamanho);
     ramen.complementos.push(...complementos);
 
+    ramen.calcularPreco();
+
     ramensJson_personalizado.push(ramen);
 
     ramen_montado = ramen;
+
+    ramen.nome = `Ramen ${caldo} de ${carne}`
 }
 
 function alterarNumero(){

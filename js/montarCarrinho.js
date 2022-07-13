@@ -83,13 +83,8 @@ function montarCarrinho(){
 
 function definirPreco(){
     carrinho.forEach(ramenJSON => {
-        if(ramenJSON.tamanho == undefined){
-            ramenJSON.tamanho = 'medio';
-        }
 
-        if(ramenJSON.calcularPreco != undefined){
-            ramenJSON.calcularPreco();
-        }else{
+        if(ramenJSON.precos != undefined){
             switch(ramenJSON.tamanho){
                 case 'pequeno':
                     ramenJSON.preco = ramenJSON.precos[0];
@@ -110,11 +105,15 @@ function montarTotal(){
     definirPreco();
 
     let container_itens = document.body.querySelector('.itens-comprados');
-
+    
     carrinho.forEach(item => {
         let id = 0;
         
         let valor = item.preco*item.quantidade;
+        console.log(`valor item ${id}: ${valor}
+        preco item ${id}: ${item.preco}`);
+
+        let tamanho = item.tamanho.toUpperCase();
 
         let html = `
         <div class="item-comprado item-comprado-${id}">
@@ -123,7 +122,7 @@ function montarTotal(){
                 <img class="item-comprado__imagem" src="${item.imagem}" alt="ramen apetitoso">
                 <div class="item-comprado__texto">
                     <p class="item-comprado__texto--item item-comprado__texto--nome">${item.nome}</p>
-                    <p class="item-comprado__texto--item item-comprado__texto--tamanho">${item.tamanho}</p>
+                    <p class="item-comprado__texto--item item-comprado__texto--tamanho">${tamanho}</p>
                     <p class="item-comprado__texto--item item-comprado__texto--preco">R$${valor}</p><br>
                     <p class="item-comprado__texto--item item-comprado__texto--quantidade">${item.quantidade}</p>
                 </div>
@@ -144,7 +143,9 @@ function reloadCarrinho(){
     carrinho.forEach(item => {
         let id = 0;
         
-        let valor = item.preco*item.quantidade;
+        let valor = (item.preco*item.quantidade).toFixed(2);
+
+        let tamanho = item.tamanho.toUpperCase();
 
         let html = `
         <div class="item-comprado item-comprado-${id}">
@@ -153,7 +154,7 @@ function reloadCarrinho(){
                 <img class="item-comprado__imagem" src="${item.imagem}" alt="ramen apetitoso">
                 <div class="item-comprado__texto">
                     <p class="item-comprado__texto--item item-comprado__texto--nome">${item.nome}</p>
-                    <p class="item-comprado__texto--item item-comprado__texto--tamanho">${item.tamanho}</p>
+                    <p class="item-comprado__texto--item item-comprado__texto--tamanho">${tamanho}</p>
                     <p class="item-comprado__texto--item item-comprado__texto--preco">R$${valor}</p><br>
                     <p class="item-comprado__texto--item item-comprado__texto--quantidade">${item.quantidade}</p>
                 </div>
@@ -177,5 +178,4 @@ function alterarTotal(){
 }
 
 function removerItem(id){
-
 }

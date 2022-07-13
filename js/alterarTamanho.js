@@ -7,15 +7,15 @@ function alterarTamanho(tamanho, id){
 
     if(tamanho == 'pequeno'){
         divs_tamanhos[0].classList.add('ativo');
-        carrinho[id].tamanho = 'Pequeno';
+        carrinho[id].tamanho = 'pequeno';
 
     }else if(tamanho == 'medio'){
         divs_tamanhos[1].classList.add('ativo');
-        carrinho[id].tamanho = 'Medio';
+        carrinho[id].tamanho = 'medio';
 
     }else if(tamanho == 'grande'){
         divs_tamanhos[2].classList.add('ativo');
-        carrinho[id].tamanho = 'Grande';
+        carrinho[id].tamanho = 'grande';
 
     }
 

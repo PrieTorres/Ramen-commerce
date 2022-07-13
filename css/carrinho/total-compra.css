@@ -5,3 +5,8 @@
     padding: 8px;
     box-sizing: border-box;
 }
+.container-total__titulo{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
