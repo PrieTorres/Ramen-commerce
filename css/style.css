@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Blaka&display=swap');
+@font-face {
+    font-family: 'revoka';
+    src: url('../fonts/revoka/REVOKA-PERSONALUSE.otf');
+}
+@font-face {
+    font-family: 'assassinNinja';
+    src: url('../fonts/aassassinninja/aAssassinNinja.otf');
+}
+@font-face {
+    font-family: 'food';
+    src: url('../fonts/asian_food/Asian\ Food.ttf');
+}
 
 :root{
     --amarelo: #c29311;
@@ -20,6 +32,9 @@
 
 
     --fonte-padrao: 'Blaka', 'Times New Roman', Times, serif;
+    --fonte-secundaria: 'assassinNinja', 'Blaka','Times New Roman', Times, serif;
+    --fonte-fantasia: 'revoka','assassinNinja', 'Blaka','Times New Roman', Times, serif;
+    --fonte-desenhos: 'food';
 
     --linear-preto-Mbranco: linear-gradient(90deg, #7e7e7e40, #ffffffe6 70%);
 
@@ -48,6 +63,13 @@ html,body{
     font-weight: 500;
     text-align: center;
     animation: aumenta-diminui 1.4s infinite alternate;
+}
+
+.aumenta_e_shadow{
+    transform: scale(1.5);
+    transition-delay: .4s;
+    transition: all .5s;
+    box-shadow: 0px 0px 2px 2px black;
 }
 
 @keyframes aumenta-diminui{
