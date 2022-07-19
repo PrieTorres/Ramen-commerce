@@ -22,6 +22,9 @@
     margin: 0 auto;
 }
 .conteudo_principal_ramens-container-caixa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     max-width: 20.25vw;
     height: auto;
     border: 1px solid black;
