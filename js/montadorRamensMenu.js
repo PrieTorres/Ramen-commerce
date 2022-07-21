@@ -1,4 +1,4 @@
-let container = document.body.querySelector('#container-ramens')
+let container = document.body.querySelector('.container_ramens')
 let i = 0;
 
 //ramens
@@ -22,12 +22,12 @@ async function escreverHTML(){
         <div class="caixa-ramen flip-container" onclick="salvarObjeto(ramensJson[${i}])">
     
             <div class="flipper">
-                <div class="back">
+                <div class="back ramen-atras">
                     <ul class="caixa-ramen__atributos-ramen">
                         ${atributos}
                     </ul>
                 </div>
-                <div class="front">
+                <div class="front ramen-frente">
                     <img src="${imagem}" alt="ramen delicioso" class="caixa-ramen__imagem-ramen">
                     <h3 class="caixa-ramen__nome-ramen">${nome}</h3>
                     <p class="caixa-ramen__descricao-ramen">${descricao}</p>

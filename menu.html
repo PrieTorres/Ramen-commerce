@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="css/cabecalho.css">
     <link rel="stylesheet" href="css/rodape.css">
     <script src="js/ramens_json.js"></script>
-    <link rel="stylesheet" href="css/pratos/container-ramens.css">
-    <link rel="stylesheet" href="css/pratos/caixa-ramen.css">
+    <link rel="stylesheet" href="css/menu/container-ramens.css">
+    <link rel="stylesheet" href="css/menu/caixa-ramen.css">
     <link rel="stylesheet" href="css/flip_effect.css">
+    <link rel="stylesheet" href="css/menu/container-combos.css">
+    <link rel="stylesheet" href="css/menu/carrosel-combos.css">
 </head>
 <body>
     <header class="cabecalho-principal">
@@ -21,18 +23,25 @@
             <ul class="cabecalho-principal__nav-lista">
                 <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="index.html">Home</a></li>
                 <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="montagem.html">Monte o seu Rámen!</a></li>
-                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link ativo" href="pratos_prontos.html">Combos</a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link ativo" href="pratos_prontos.html">Menu</a></li>
                 <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="trabalhe_conosco.html">Trabalhe conosco</a></li>
             </ul>
         </nav>
     </header>
     <main class="conteudo-principal" id="container-ramens">
-       
+        <div class="container_combos" id="container_carrosel_combos">
+            
+        </div>
+       <div class="container_ramens"></div>
     </main>
     <footer class="rodape-principal">
         <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
     </footer>
-    <script src="js/montadorPratosProntos.js"></script>
+    <script src="js/montadorCombosMenu.js"></script>
+
+    <script> escreverHTMLCombos(0); </script>
+
+    <script src="js/montadorRamensMenu.js"></script>
     <script src="js/abrirCarrinho.js"></script>
     <script src="js/manipuladorObjeto.js"></script>
     <script src="js/click_estilizador.js"></script>

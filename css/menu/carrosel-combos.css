@@ -1,0 +1,46 @@
+.carrosel_combos{
+    display: block;
+    max-width: 80vw;
+    height: 50vh;
+    margin: 30px auto;
+    position: relative;
+    transition: all .6s ease;
+}
+.tela_principal{
+    width: 100%;
+    height: 100%;
+}
+.tela_principal{
+    background-color: red;
+    z-index: -1;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.tela_hover{
+    width: 0vw;
+    height: 50vh;
+    z-index: 2;
+    position: absolute;
+    background-image: linear-gradient(#00000000, #000000 75%);
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: flex-end;
+    color: #FFF;
+}
+
+.movimentador-carrosel>.proximo, .movimentador-carrosel>.anterior{
+   position: absolute;
+   top: 40%;
+   z-index: 10;
+   font-size: 4rem;
+   transition: all .4s ease;
+   padding: 5px;
+}
+.movimentador-carrosel>.proximo{
+    right: 0;
+}
+.movimentador-carrosel>.proximo:hover, .movimentador-carrosel>.anterior:hover{
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px;
+    cursor: pointer;
+}

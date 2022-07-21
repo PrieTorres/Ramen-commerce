@@ -3,7 +3,9 @@ let combosRamen = [
         id: 1,
         nome: 'combo familia',
         complementos: ['3 ramens de sua escolha (2 pequenos e 1 médio)','1,5L de chá gelado','3 hashis de cortesia'],
-        preco: 90.89
+        preco: 90.89,
+        descricao: 'Esse combo é pra você que sabe que vai ter que dividir se pedir apenas um, não se desespere, cada um com o seu, todos felizes!',
+        imagem: 'img/ramens/ramen_combo_2.png'
 
     },
     {
@@ -11,7 +13,16 @@ let combosRamen = [
         nome: 'combo casal',
         complementos: ['2 ramens de sua escolha (2 médios)','1L de chá gelado','2 hashis de cortesia'],
         preco: 63.44,
-        descricao: 'Um combo pra você que quer partilhar de seus bom gosto culinário com o seu par, uma ótima refeição'
+        descricao: 'Um combo pra você que quer partilhar de seus bom gosto culinário com o seu par, uma ótima refeição',
+        imagem: 'img/ramens/ramen_combo.png'
+    },
+    {
+        id: 3,
+        nome: 'combo faminto',
+        complementos: ['2 ramens de sua escolha (2 grandes)','1 cupNoddles','1 hashi de cortesia'],
+        preco: 97.88,
+        descricao: 'Um combo pra você que está morrendo de fome, ou apenas está com uma grande vontade de comer do melhor rámen disponível no mercado, de qualquer forma bom apetite, satisfação garantida',
+        imagem: 'img/ramens/ramen_combo_3.png'
     }
 ]
 

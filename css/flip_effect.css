@@ -11,12 +11,13 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transform: all 1s ease;
     perspective: 500;
+    transition-delay: .5s;
 }
 .front, .back{
-    display: block;
     position: absolute;
     width: 100%;
     height: 100%;
+    transition-delay: .5s;
 }
 .front{
     background-color: var(--branco);

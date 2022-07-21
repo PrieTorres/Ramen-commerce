@@ -27,6 +27,10 @@
     flex-wrap: wrap;
     align-content: flex-start;
     margin-bottom: 15px;
+    user-select: none; 
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
 }
 .container-caixa-item__lista__item{
     background-color: var(--cinza-transparente);

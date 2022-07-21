@@ -1,0 +1,7 @@
+.container_ramens{
+    background: var(--preto-bg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 5px;
+}

@@ -6,19 +6,39 @@
     animation-delay: 1s;
     transition-delay: .4s;
     margin: 20px;
+    padding: 10px;
 }
+
+.ramen-frente{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.ramen-atras{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .caixa-ramen__imagem-ramen{
-    max-width: 100%;
+    max-width: 80%;
+    flex-shrink: 2;
 }
 .caixa-ramen__nome-ramen{
-
+    font-family: var(--fonte-fantasia);
+    font-size: 2rem;
+    text-align: center;
+    margin: 5px 0px;
 }
 .caixa-ramen__atributos-ramen{
     display: flex;
     height: 100%;
     width: 100%;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     align-content: center;
     flex-wrap: wrap;
     padding: 20px;

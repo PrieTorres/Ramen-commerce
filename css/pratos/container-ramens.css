@@ -1,7 +1,0 @@
-#container-ramens{
-    display: flex;
-    padding: 20px;
-    background-color: var(--branco);
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
