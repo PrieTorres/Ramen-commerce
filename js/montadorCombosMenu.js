@@ -5,22 +5,25 @@ function escreverHTMLCombos(id){
     let descricao = combosRamen[id].descricao;
     let imagem = combosRamen[id].imagem;
     let preco = combosRamen[id].preco;
-    let complementos = [];
+    let itens = [];
 
     combosRamen[id].complementos.forEach(ingrediente => {
-        complementos.push(`<li class="atributos-ramen__item" id="item${cont}-${i}" onclick=" limparEstilos('atributos-ramen__item', 'aumenta_e_shadow'); aumentar_e_colorir('item${cont}-${i}') " >${ingrediente}</li>`);
-        cont++;
+        itens.push(`<li class="combo_complementos__item">${ingrediente}</li>`);
     });
+
+    itens = itens.join('');
 
     let html_combos_carrosel = `
     <div class="carrosel_combos" onmouseenter="mostrarTelaHover('container_combos')" onmouseleave="ocultarTelaHover('container_combos')">
 
-        <div class="tela_hover">
+        <div class="tela_hover" id="combo_${id_combo_ramen}" onclick="comprarCombo(${(id_combo_ramen+1)}); salvarObjeto(carrinho); redirect()">
             <p class="combo_descricao">${descricao}</p>
         </div>
         <div class="tela_principal" style="background-image: url(${imagem});">
-            <p class="combo_preco">${preco}</p>
-            <p class="combo_complementos"></p>
+            <div class="combos_infos">
+                <p class="combo_preco">${preco}</p>
+                <ul class="combo_complementos">${itens}</ul>
+            </div>
         </div>
 
         <div class="movimentador-carrosel">
@@ -61,11 +64,11 @@ async function previousCombo(){
 function mostrarTelaHover(classe){
     let telaHover = document.body.querySelector(`.${classe}>.carrosel_combos>.tela_hover`)
 
-    telaHover.style.width = '80vw';
+    telaHover.style.opacity = '1';
 }
 
 function ocultarTelaHover(classe){
     let telaHover = document.body.querySelector(`.${classe}>.carrosel_combos>.tela_hover`)
 
-    telaHover.style.width = '0vw';
+    telaHover.style.opacity = '0';
 }
