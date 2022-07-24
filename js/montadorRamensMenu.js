@@ -2,7 +2,7 @@ let container = document.body.querySelector('.container_ramens')
 let i = 0;
 
 //ramens
-async function escreverHTML(){
+async function escreveRamensJSON(){
 
     await ramensJson.forEach(ramen => {
         let imagem = ramen.imagem;
@@ -19,10 +19,10 @@ async function escreverHTML(){
         atributos = atributos.join('');
     
         let html = `
-        <div class="caixa-ramen flip-container" onclick="salvarObjeto(ramensJson[${i}])">
+        <div class="caixa-ramen flip-container">
     
             <div class="flipper">
-                <div class="back ramen-atras">
+                <div class="back ramen-atras"  onclick="comprarRamen(${i});  abrirCarrinho(ramensJson[${i}]);" >
                     <ul class="caixa-ramen__atributos-ramen">
                         ${atributos}
                     </ul>
@@ -42,46 +42,4 @@ async function escreverHTML(){
         i++;
     });
     
-    //combos
-    combosRamen.forEach(combo => {
-        let imagem = combo.imagem;
-        let nome = combo.nome;
-        let descricao = combo.descricao;
-        let atributos = []
-        let cont = 0;
-
-        combo.complementos.forEach(ingrediente => {
-            atributos.push(`<li class="atributos-ramen__item" id="item${cont}" onclick="aumentar_e_colorir('item${cont}')">${ingrediente}</li>`);
-            cont++;
-        });
-    
-        atributos = atributos.join('');
-    
-        let html = `
-        <div class="caixa-combo-ramen" onclick="salvarObjeto(ramensJson[${i}])">
-    
-            <div class="flipper">
-    
-                <div class="front">
-                    <img src="${imagem}" alt="ramen delicioso" class="combo-ramen__imagem-ramen">
-                    <h3 class="combo-ramen__nome-ramen">${nome}</h3>
-                    <p class="combo-ramen__descricao-ramen">${descricao}</p>
-                </div>
-    
-                <div class="back">
-                    <ul class="combo-ramen__atributos-ramen">
-                        ${atributos}
-                    </ul>
-                </div>
-                
-            </div>
-    
-        </div>
-        `
-    
-        container.innerHTML += html
-        i++;
-    });
 }
-
-escreverHTML();

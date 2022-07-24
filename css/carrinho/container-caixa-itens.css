@@ -37,4 +37,5 @@
     margin: 5px;
     padding: 5px;
     border-radius: 15px;
+    z-index: 99;
 }

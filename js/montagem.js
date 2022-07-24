@@ -25,8 +25,3 @@ function montarRamen(){
 
     ramen.nome = `Ramen ${caldo} de ${carne}`
 }
-
-function alterarNumero(){
-    let numero = parseInt(document.body.querySelector('#quantidade_ramens').value);
-    ramensJson_personalizado[0].quantidade = numero;
-}

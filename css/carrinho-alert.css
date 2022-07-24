@@ -18,6 +18,7 @@
     padding: 10px;
     transition: all .8s ease;
     overflow: auto;
+    z-index: 999;
 }
 .carrinho-alert__confere{
     box-shadow: 1px 1px 8px 3px var(--shadow);

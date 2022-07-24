@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/flip_effect.css">
     <link rel="stylesheet" href="css/menu/container-combos.css">
     <link rel="stylesheet" href="css/menu/carrosel-combos.css">
+    <link rel="stylesheet" href="css/carrinho-alert.css">
 </head>
 <body>
     <header class="cabecalho-principal">
@@ -31,18 +32,34 @@
     </header>
     <main class="conteudo-principal" id="container-ramens">
         <div class="container_combos" id="container_carrosel_combos">
-            
+            <!-- vão ser escritos pelo javascript -->
         </div>
-       <div class="container_ramens"></div>
+       <div class="container_ramens">
+            <!-- vão ser escritos pelo javascript -->
+       </div>
     </main>
     <footer class="rodape-principal">
         <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
     </footer>
-    <script src="js/montadorCombosMenu.js"></script>
 
+    <!-- carrinho alert -->
+    <div class="carrinho-alert" >
+        <span class="carrinho-alert__confere"></span>
+        <p class="carrinho-alert__texto">item adicionado ao carrinho!</p>
+        <label class="carrinho-alert__quantidade">Quantidade:
+            <input type="number" name="quantidade" id="quantidade_ramens" max="30" maxlength="2" min="1" value="1">
+        </label>
+        <button class="carrinho-alert__botao" onclick="alterarNumero(); salvarObjeto(carrinho); redirect()">ir ao carrinho</button>
+        <button class="carrinho-alert__botao" onclick="fecharCarrinho(); alterarNumero()">Continuar comprando</button>
+    </div>
+    <!-- fim carrinho alert-->
+
+    <script src="js/montadorCombosMenu.js"></script>
     <script> escreverHTMLCombos(0); </script>
 
     <script src="js/montadorRamensMenu.js"></script>
+    <script> escreveRamensJSON(); </script>
+
     <script src="js/abrirCarrinho.js"></script>
     <script src="js/manipuladorObjeto.js"></script>
     <script src="js/click_estilizador.js"></script>

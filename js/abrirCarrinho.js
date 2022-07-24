@@ -15,3 +15,26 @@ function abrirCarrinho(ramen){
         carrinho.style.height = '80vh';
     },20)
 }
+
+function fecharCarrinho(){
+    let div_carrinho = document.body.querySelector('.carrinho-alert');
+
+    div_carrinho.style.display = 'none';
+    div_carrinho.style.height = '0';
+}
+
+function alterarNumero(tipo='padrao'){
+    let numero = parseInt(document.body.querySelector('#quantidade_ramens').value);
+
+    if(tipo == 'personalizado'){
+        ramensJson_personalizado[0].quantidade = numero;
+    }else if(tipo == 'combo'){
+
+    }else if(tipo == 'padrao'){
+        let index = carrinho.length;
+        index--;
+        // console.log(carrinho[index]);
+        carrinho[index].quantidade = numero;
+    }
+    
+}
