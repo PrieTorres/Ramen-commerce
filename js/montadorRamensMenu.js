@@ -12,7 +12,9 @@ async function escreveRamensJSON(){
         let cont = 0; 
     
         ramen.complementos.forEach(ingrediente => {
-            atributos.push(`<li class="atributos-ramen__item" id="item${cont}-${i}" onclick=" limparEstilos('atributos-ramen__item', 'aumenta_e_shadow'); aumentar_e_colorir('item${cont}-${i}') " >${ingrediente}</li>`);
+            atributos.push(
+                `<li class="atributos-ramen__item" id="item${cont}-${i}" onmouseenter=" limparEstilos('atributos-ramen__item', 'aumenta_e_shadow'); aumentar_e_colorir('item${cont}-${i}') " >${ingrediente}</li>`
+            );
             cont++;
         });
     

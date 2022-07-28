@@ -1,6 +1,8 @@
 function abrirCarrinho(ramen){
     let carrinho = document.body.querySelector('.carrinho-alert');
+    let carrinho_background = document.body.querySelector('#carrinho-alert-background');
 
+    carrinho_background.style.display = 'block';
     carrinho.style.display = 'flex';
 
     let imagem_carrinho = document.body.querySelector('.carrinho-alert__confere');
@@ -18,7 +20,9 @@ function abrirCarrinho(ramen){
 
 function fecharCarrinho(){
     let div_carrinho = document.body.querySelector('.carrinho-alert');
+    let carrinho_background = document.body.querySelector('#carrinho-alert-background');
 
+    carrinho_background.style.display = 'none';
     div_carrinho.style.display = 'none';
     div_carrinho.style.height = '0';
 }

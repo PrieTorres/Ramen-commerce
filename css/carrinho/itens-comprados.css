@@ -10,6 +10,7 @@
     display: block;
     padding: 5px;
     box-sizing: border-box;
+    text-align: left;
 }
 .item-comprado__cancelar{
     font-size: 2em;
@@ -34,4 +35,8 @@
 }
 .item-comprado__texto--item{
     display: inline-block;
+}
+
+.item-comprado__cancelar:hover{
+    cursor: pointer;
 }

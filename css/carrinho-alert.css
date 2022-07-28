@@ -1,3 +1,13 @@
+.carrinho-alert-background{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000008a;
+    z-index: 998;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
 .carrinho-alert{
     width: 50vw;
     height: 0;

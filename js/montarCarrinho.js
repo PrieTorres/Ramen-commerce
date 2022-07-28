@@ -6,15 +6,15 @@ function montarCarrinho(){
         let imagem_ramen = ramen.imagem;
         let descricao_ramen = ramen.descricao;
         let quantidade_ramen = ramen.quantidade;
+        let lista_ingredientes = [];
+        let ul_ingredientes = '';
+        let html_escolha_tamanho = '';
         //console.log(quantidade_ramen);
 
         let ingrediente_ramen = [];
         let complementos = [...ramen.complementos];
         ingrediente_ramen.push(...complementos);
-        ingrediente_ramen.push(ramen.caldo);
-        ingrediente_ramen.push(ramen.carne);
 
-        let lista_ingredientes = [];
         if(ingrediente_ramen.length>0){
             ingrediente_ramen.forEach(ingrediente => {
                 lista_ingredientes.push(`
@@ -26,33 +26,71 @@ function montarCarrinho(){
         }
         lista_ingredientes = lista_ingredientes.join('');
 
-        let p = null;
-        let m = null;
-        let g = null;
+        ul_ingredientes = `
+        <ul class="container-caixa-item__lista">
+            ${lista_ingredientes}
+        </ul>`
 
-        if(ramen.tamanho != undefined){
-            switch(ramen.tamanho){
-                case 'pequeno':
-                    p = 'ativo'
-                    break
-                case 'medio':
-                    m = 'ativo'
-                    break
-                case 'grande':
-                    g = 'ativo'
-                    break
+
+        if(ramen.tipo != 'combo'){
+            ingrediente_ramen = [];
+            complementos = [...ramen.complementos];
+            ingrediente_ramen.push(...complementos);
+            ingrediente_ramen.push(ramen.caldo);
+            ingrediente_ramen.push(ramen.carne);
+
+            lista_ingredientes = [];
+            if(ingrediente_ramen.length>0){
+                ingrediente_ramen.forEach(ingrediente => {
+                    lista_ingredientes.push(`
+                    <li class="container-caixa-item__lista__item">
+                        ${ingrediente}
+                    </li>
+                    `)
+                });
             }
-        }
+            lista_ingredientes = lista_ingredientes.join('');
 
+            let p = null;
+            let m = null;
+            let g = null;
+
+            if(ramen.tamanho != undefined){
+                switch(ramen.tamanho){
+                    case 'pequeno':
+                        p = 'ativo'
+                        break
+                    case 'medio':
+                        m = 'ativo'
+                        break
+                    case 'grande':
+                        g = 'ativo'
+                        break
+                }
+            }
+
+            ul_ingredientes = `
+            <ul class="container-caixa-item__lista">
+                ${lista_ingredientes}
+            </ul>`
+
+            html_escolha_tamanho = `
+            <div class="opcoes-tamanho__container">
+                <ul class="opcoes-tamanho__lista">
+                    <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--pequeno ${p}" onclick="alterarTamanho('pequeno', ${id})">P</li>
+                    <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--medio ${m}" onclick="alterarTamanho('medio', ${id})">M</li>
+                    <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--grande ${g}" onclick="alterarTamanho('grande', ${id})">G</li>
+                </ul>
+            </div>
+            `
+        }
 
 
         let html = `
         <div class="container-caixa-item">
             <img src="${imagem_ramen}" alt="ramen comprado" class="container-caixa-item__imagem">
             <div class="caixa-item__info">
-                <ul class="container-caixa-item__lista">
-                    ${lista_ingredientes}
-                </ul>
+                ${ul_ingredientes}
                 <p class='container-caixa-item__descricao'>
                     ${descricao_ramen}
                 </p>
@@ -63,13 +101,7 @@ function montarCarrinho(){
                         <div class="quantifier-opcao barra__menos" onclick='alterarQuantidade("mais", "${id}")'>+</div>
                     </div>
                 </div>
-                <div class="opcoes-tamanho__container">
-                    <ul class="opcoes-tamanho__lista">
-                        <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--pequeno ${p}" onclick="alterarTamanho('pequeno', ${id})">P</li>
-                        <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--medio ${m}" onclick="alterarTamanho('medio', ${id})">M</li>
-                        <li class="opcoes-tamanho__opcao opcoes-tamanho__opcao-${id} tamanho__opcao--grande ${g}" onclick="alterarTamanho('grande', ${id})">G</li>
-                    </ul>
-                </div>
+                ${html_escolha_tamanho}
         </div>
         `;
 
@@ -79,6 +111,7 @@ function montarCarrinho(){
 
     });
 
+    
 }
 
 function definirPreco(){
@@ -108,13 +141,14 @@ function montarTotal(){
     
     carrinho.forEach(item => {
         let id = 0;
-        
         let valor = item.preco*item.quantidade;
-        console.log(`valor item ${id}: ${valor}
-        preco item ${id}: ${item.preco}`);
+        let tamanho = '';
+        
+        if(item.tipo != 'combo'){
+            tamanho = item.tamanho.toUpperCase();
+        }
 
-        let tamanho = item.tamanho.toUpperCase();
-
+        valor = valor.toFixed(2);
         let html = `
         <div class="item-comprado item-comprado-${id}">
             <div class="item-comprado__cancelar" onclick="removerItem(${id})">X</div>
@@ -123,7 +157,7 @@ function montarTotal(){
                 <div class="item-comprado__texto">
                     <p class="item-comprado__texto--item item-comprado__texto--nome">${item.nome}</p>
                     <p class="item-comprado__texto--item item-comprado__texto--tamanho">${tamanho}</p>
-                    <p class="item-comprado__texto--item item-comprado__texto--preco">R$${valor}</p><br>
+                    <p class="item-comprado__texto--item item-comprado__texto--preco">R$${valor.toFixed(2)}</p><br>
                     <p class="item-comprado__texto--item item-comprado__texto--quantidade">${item.quantidade}</p>
                 </div>
             </div>
@@ -132,6 +166,8 @@ function montarTotal(){
         container_itens.innerHTML += html
         id++;
     });
+
+    alterarTotal();
 }
 
 function reloadCarrinho(){
@@ -142,10 +178,14 @@ function reloadCarrinho(){
 
     carrinho.forEach(item => {
         let id = 0;
+        let valor = item.preco*item.quantidade;
+        let tamanho = '';
         
-        let valor = (item.preco*item.quantidade).toFixed(2);
+        if(item.tipo != 'combo'){
+            tamanho = item.tamanho.toUpperCase();
+        }
 
-        let tamanho = item.tamanho.toUpperCase();
+        valor = valor.toFixed(2);
 
         let html = `
         <div class="item-comprado item-comprado-${id}">
@@ -164,6 +204,8 @@ function reloadCarrinho(){
         container_itens.innerHTML += html
         id++;
     });
+
+    alterarTotal();
 }
 
 function alterarTotal(){
@@ -171,11 +213,19 @@ function alterarTotal(){
 
     let valor_total = 0;
     carrinho.forEach(item =>{
-        valor_total += item.preco;
+        valor_total += (item.preco*item.quantidade);
     })
+    valor_total = valor_total.toFixed(2)
 
     total_container.innerHTML = valor_total;
 }
 
 function removerItem(id){
+    carrinho.splice(id, 1);
+    let html_carrinho_container = document.body.querySelector("#carrinho-de-itens");
+
+    html_carrinho_container.innerHTML = '';
+
+    reloadCarrinho();
+    montarCarrinho();
 }

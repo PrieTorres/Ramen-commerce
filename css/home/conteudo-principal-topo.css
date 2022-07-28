@@ -29,6 +29,7 @@
     padding: 15px;
     border-radius: 5px;
     transition: all .825s ease;
+    background-color: #00000000;
 }
 .conteudo-principal-topo__container--botao:hover{
     background-color: var(--botao-base);

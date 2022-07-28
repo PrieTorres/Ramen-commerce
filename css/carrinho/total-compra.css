@@ -4,9 +4,37 @@
     background-color: var(--branco);
     padding: 8px;
     box-sizing: border-box;
+    text-align: center;
 }
 .container-total__titulo{
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 6rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 10px;
+}
+.container-total__valor-total{
+    font-size: 4rem;
+    text-align: center;
+    display: block;
+    color: var(--preto);
+    text-shadow: 2px 2px 4px var(--botao-base), -2px -2px 4px var(--botao-base) ;
+    text-transform: uppercase;
+}
+.container-total__botao-comprar{
+    padding: 15px;
+    font-size: 1.65rem;
+    background-color: var(--botao-base);
+    color: var(--branco);
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px 2px var(--shadow);
+    margin: 5px 0px;
+    transition: all .5s ease;
+}
+.container-total__botao-comprar:hover{
+    background-color: var(--botao-ativo);
+    box-shadow: 2px 2px 5px 3px var(--shadow);
+    transform: scale(1.05);
+    cursor: pointer;
 }

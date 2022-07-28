@@ -10,13 +10,13 @@ function escreverHTMLCombos(id){
     combosRamen[id].complementos.forEach(ingrediente => {
         itens.push(`<li class="combo_complementos__item">${ingrediente}</li>`);
     });
+    itens = itens.join(''); 
 
-    itens = itens.join('');
 
     let html_combos_carrosel = `
     <div class="carrosel_combos" onmouseenter="mostrarTelaHover('container_combos')" onmouseleave="ocultarTelaHover('container_combos')">
 
-        <div class="tela_hover" id="combo_${id_combo_ramen}" onclick="comprarCombo(${(id_combo_ramen+1)}); salvarObjeto(carrinho); redirect()">
+        <div class="tela_hover" id="combo_${id_combo_ramen}" onclick="comprarCombo(${(id_combo_ramen+1)}); abrirCarrinho(combosRamen[${id_combo_ramen}]);">
             <p class="combo_descricao">${descricao}</p>
         </div>
         <div class="tela_principal" style="background-image: url(${imagem});">
