@@ -59,3 +59,17 @@
     color: var(--branco-transparente);
     text-shadow: 2px 2px 3px var(--shadow);
 }
+
+@media screen and (max-width: 1024px) {
+    .conteudo-principal__ofertas{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        max-height: none;
+    }
+    .conteudo-principal__ofertas-oferta--principal, .conteudo-principal__ofertas-oferta--secundaria{
+        width: 100%;
+        float: none;
+        margin: 20px 0px;
+    }
+}

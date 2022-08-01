@@ -11,6 +11,7 @@
     padding: 5px;
     box-sizing: border-box;
     text-align: left;
+    overflow: hidden;
 }
 .item-comprado__cancelar{
     font-size: 2em;
@@ -39,4 +40,21 @@
 
 .item-comprado__cancelar:hover{
     cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+    .item-comprado__imagem{
+        display: none;
+    }
+    .item-comprado__info{
+        max-width: 85%;
+        padding: 5px;
+    }
+    .item-comprado__texto{
+        margin: 0;
+        max-height: 100%;
+    }
+    .item-comprado__texto--item.item-comprado__texto--quantidade{
+        display: none;
+    }
 }

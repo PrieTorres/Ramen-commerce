@@ -1,6 +1,6 @@
 .conteudo-principal-topo__container-bg{
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background: url('../../img/ramens/ramen-picante.jpg') no-repeat;
     background-size: cover;
 }
@@ -20,7 +20,7 @@
 .conteudo-principal-topo__container--texto{
     font-family: var(--fonte-padrao);
     font-size: 5em;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 .conteudo-principal-topo__container--botao{
@@ -34,4 +34,22 @@
 .conteudo-principal-topo__container--botao:hover{
     background-color: var(--botao-base);
     color: var(--branco);
+}
+
+@media screen and (max-width: 1024px) {
+    .conteudo-principal-topo__container--caixa-texto{
+        max-width: 70%;
+        margin: 0 15%;
+        text-align: center;
+        max-height: calc(100%-240px);
+    }
+    .conteudo-principal-topo__container--texto{
+        font-size: 5.25em;
+    }
+    .conteudo-principal-topo__container-bg{
+        height: 60vh;
+    }
+    .conteudo-principal-topo__container{
+        padding: 5vh 30px;
+    }
 }

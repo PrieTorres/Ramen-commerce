@@ -39,3 +39,21 @@
     border-radius: 15px;
     z-index: 99;
 }
+
+
+.container-caixa-item__caixa-quantidade{
+    margin-top: 10px;
+}
+
+@media screen and (max-width:1024px) {
+    /*.container-caixa-item__imagem{
+        display: none;
+    }
+    .caixa-item__info{
+        max-width: none;
+    }*/
+    .container-caixa-item__descricao{
+        display: none;
+    }
+    
+}

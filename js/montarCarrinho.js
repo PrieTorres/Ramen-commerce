@@ -110,7 +110,8 @@ function montarCarrinho(){
         id++;
 
     });
-
+    
+    montarTotal()
     
 }
 
@@ -157,7 +158,7 @@ function montarTotal(){
                 <div class="item-comprado__texto">
                     <p class="item-comprado__texto--item item-comprado__texto--nome">${item.nome}</p>
                     <p class="item-comprado__texto--item item-comprado__texto--tamanho">${tamanho}</p>
-                    <p class="item-comprado__texto--item item-comprado__texto--preco">R$${valor.toFixed(2)}</p><br>
+                    <p class="item-comprado__texto--item item-comprado__texto--preco">R$${valor}</p><br>
                     <p class="item-comprado__texto--item item-comprado__texto--quantidade">${item.quantidade}</p>
                 </div>
             </div>
