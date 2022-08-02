@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/carrinho/total-compra.css">
     <link rel="stylesheet" href="css/carrinho/carrinho.css">
     <link rel="stylesheet" href="css/carrinho/itens-comprados.css">
+    <link rel="stylesheet" href="css/compra/compra.css">
+    <link rel="stylesheet" href="css/compra/compra__selecao_pagamento.css">
     <!-- scrits importantes-->
     <script src="js/ramens_json.js"></script>
     <script src="js/montarCarrinho.js"></script>
@@ -59,6 +61,29 @@
             <button class="container-total__botao-comprar">Comprar</button>
         </aside>
 
+
+        <!-- inicio tela de comprar o pedido -->
+        <div class="compra-bg"></div>
+        <div class="compra">
+            <div class="compra__selecao-pagamento">
+                <p class="compra__selecao-pagamento__texto">Selecione o método de pagamento <span class="compra__selecao-pagamento__cancelar" onclick="fecharCompraAlert()">X</span></p>
+
+                <label class="compra__selecao-pagamento__opcao">Na entrega
+                    <input type="radio" name="pagamento" value="entrega" id="">
+                </label>
+                <label class="compra__selecao-pagamento__opcao">Online
+                    <input type="radio" name="pagamento" value="online" id="">
+                </label>
+            </div>
+
+            <!--
+                <form class="compra__infos-form" action="" method="get">
+                    <input type="text">
+                </form>
+            -->
+        </div>
+        <!-- fim tela de comprar pedido -->
+
     </main>
     <footer class="rodape-principal">
         <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
@@ -66,6 +91,7 @@
     <script src="js/quantifier.js"></script>
     <script src="js/montarCarrinho.js"></script>
     <script src="js/alterarTamanho.js"></script>
+    <script src="js/abrirOuFecharCompra.js"></script>
     <script>montarCarrinho();</script>
 </body>
 </html>
