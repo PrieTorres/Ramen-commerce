@@ -20,7 +20,7 @@ class Ramen {
             this.precos[1]=37.4+(parseInt(this.complementos.length)*0.8);
         
         
-            this.precos[2]=42.5+(parseInt(this.complementos.length));
+            this.precos[2]=45.5+(parseInt(this.complementos.length));
         
     }
 }

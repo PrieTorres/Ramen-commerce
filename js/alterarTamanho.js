@@ -19,6 +19,6 @@ function alterarTamanho(tamanho, id){
 
     }
 
-    window.localStorage.setItem("objeto", JSON.stringify(carrinho));
-    reloadCarrinho();
+    salvarObjeto(carrinho);
+   montarCarrinho();
 }

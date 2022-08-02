@@ -2,6 +2,8 @@ function montarCarrinho(){
     let html_carrinho_container = document.body.querySelector("#carrinho-de-itens");
     id=0;
 
+    html_carrinho_container.innerHTML = '';
+
     carrinho.forEach(ramen => {
         let imagem_ramen = ramen.imagem;
         let descricao_ramen = ramen.descricao;
@@ -139,9 +141,11 @@ function montarTotal(){
     definirPreco();
 
     let container_itens = document.body.querySelector('.itens-comprados');
+    container_itens.innerHTML = '';
+    let id_totals = 0;
     
     carrinho.forEach(item => {
-        let id = 0;
+        
         let valor = item.preco*item.quantidade;
         let tamanho = '';
         
@@ -151,59 +155,20 @@ function montarTotal(){
 
         valor = valor.toFixed(2);
         let html = `
-        <div class="item-comprado item-comprado-${id}">
-            <div class="item-comprado__cancelar" onclick="removerItem(${id})">X</div>
+        <div class="item-comprado item-comprado-${id_totals}">
+            <div class="item-comprado__cancelar" onclick="removerItem(${id_totals})">X</div>
             <div class="item-comprado__info">
                 <img class="item-comprado__imagem" src="${item.imagem}" alt="ramen apetitoso">
                 <div class="item-comprado__texto">
-                    <p class="item-comprado__texto--item item-comprado__texto--nome">${item.nome}</p>
-                    <p class="item-comprado__texto--item item-comprado__texto--tamanho">${tamanho}</p>
+                    <p class="item-comprado__texto--item item-comprado__texto--nome">${item.quantidade} ${item.nome}</p>
+                    <p class="item-comprado__texto--item item-comprado__texto--tamanho">${tamanho}</p><br>
                     <p class="item-comprado__texto--item item-comprado__texto--preco">R$${valor}</p><br>
-                    <p class="item-comprado__texto--item item-comprado__texto--quantidade">${item.quantidade}</p>
                 </div>
             </div>
         </div>
         `
         container_itens.innerHTML += html
-        id++;
-    });
-
-    alterarTotal();
-}
-
-function reloadCarrinho(){
-    definirPreco();
-
-    let container_itens = document.body.querySelector('.itens-comprados');
-    container_itens.innerHTML = '';
-
-    carrinho.forEach(item => {
-        let id = 0;
-        let valor = item.preco*item.quantidade;
-        let tamanho = '';
-        
-        if(item.tipo != 'combo'){
-            tamanho = item.tamanho.toUpperCase();
-        }
-
-        valor = valor.toFixed(2);
-
-        let html = `
-        <div class="item-comprado item-comprado-${id}">
-            <div class="item-comprado__cancelar" onclick="removerItem(${id})">X</div>
-            <div class="item-comprado__info">
-                <img class="item-comprado__imagem" src="${item.imagem}" alt="ramen apetitoso">
-                <div class="item-comprado__texto">
-                    <p class="item-comprado__texto--item item-comprado__texto--nome">${item.nome}</p>
-                    <p class="item-comprado__texto--item item-comprado__texto--tamanho">${tamanho}</p>
-                    <p class="item-comprado__texto--item item-comprado__texto--preco">R$${valor}</p><br>
-                    <p class="item-comprado__texto--item item-comprado__texto--quantidade">${item.quantidade}</p>
-                </div>
-            </div>
-        </div>
-        `
-        container_itens.innerHTML += html
-        id++;
+        id_totals++;
     });
 
     alterarTotal();
@@ -222,11 +187,14 @@ function alterarTotal(){
 }
 
 function removerItem(id){
+    console.log(id);
+
     carrinho.splice(id, 1);
+
     let html_carrinho_container = document.body.querySelector("#carrinho-de-itens");
 
     html_carrinho_container.innerHTML = '';
 
-    reloadCarrinho();
+    salvarObjeto(carrinho);
     montarCarrinho();
 }

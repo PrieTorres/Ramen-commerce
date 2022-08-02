@@ -13,5 +13,7 @@ function alterarQuantidade(operacao, id){
             carrinho[id].quantidade = num;
         }
     }
-    reloadCarrinho();
+
+    salvarObjeto(carrinho);
+    montarTotal();
 }

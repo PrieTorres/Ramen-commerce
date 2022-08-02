@@ -6,7 +6,6 @@ function abrirCarrinho(ramen){
     carrinho.style.display = 'flex';
 
     let imagem_carrinho = document.body.querySelector('.carrinho-alert__confere');
-    let texto_carrinho = document.body.querySelector('.carrinho-alert__texto');
 
     if(ramen.imagem != undefined || ramen.imagem != null){
         imagem_carrinho.innerHTML = '';

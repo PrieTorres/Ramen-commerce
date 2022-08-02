@@ -1,5 +1,3 @@
-let ramen_montado; //variável global que depois vai ser passado para o carrinho
-
 function montarRamen(){  
     let carne = document.body.querySelector('input.carne:checked').value;
     let caldo = document.body.querySelector('input.caldo:checked').value;
@@ -20,8 +18,6 @@ function montarRamen(){
     ramen.calcularPreco();
 
     ramensJson_personalizado.push(ramen);
-
-    ramen_montado = ramen;
 
     ramen.nome = `Ramen ${caldo} de ${carne}`
 }

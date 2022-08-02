@@ -23,7 +23,7 @@
 .item-comprado__info{
     display: flex;
     height: 100%;
-    max-width: 80%;
+    max-width: 90%;
 }
 .item-comprado__imagem{
     max-height: 90%;
