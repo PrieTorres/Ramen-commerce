@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="css/carrinho/carrinho.css">
     <link rel="stylesheet" href="css/carrinho/itens-comprados.css">
     <link rel="stylesheet" href="css/compra/compra.css">
-    <link rel="stylesheet" href="css/compra/compra__selecao_pagamento.css">
     <!-- scrits importantes-->
     <script src="js/ramens_json.js"></script>
     <script src="js/montarCarrinho.js"></script>
@@ -58,7 +57,7 @@
                 <!---->
             </div>
             <strong class="container-total__valor-total">R$<strong id="valor_total">00,00</strong></strong><br>
-            <button class="container-total__botao-comprar">Comprar</button>
+            <button class="container-total__botao-comprar" onclick="abrirComprAlert()">Comprar</button>
         </aside>
 
 
@@ -68,12 +67,15 @@
             <div class="compra__selecao-pagamento">
                 <p class="compra__selecao-pagamento__texto">Selecione o método de pagamento <span class="compra__selecao-pagamento__cancelar" onclick="fecharCompraAlert()">X</span></p>
 
-                <label class="compra__selecao-pagamento__opcao">Na entrega
-                    <input type="radio" name="pagamento" value="entrega" id="">
-                </label>
-                <label class="compra__selecao-pagamento__opcao">Online
-                    <input type="radio" name="pagamento" value="online" id="">
-                </label>
+                <div class="compra__selecao-pagamento__opcoes">
+                    <label class="compra__selecao-pagamento__opcao">Na entrega
+                        <input type="radio" name="pagamento" value="entrega" class="compra__selecao-pagamento__opcao__radio">
+                    </label>
+                    <label class="compra__selecao-pagamento__opcao">Online
+                        <input type="radio" name="pagamento" value="online" class="compra__selecao-pagamento__opcao__radio">
+                    </label>
+                </div>
+                
             </div>
 
             <!--

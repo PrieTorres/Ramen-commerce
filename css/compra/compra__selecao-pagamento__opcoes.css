@@ -1,0 +1,18 @@
+.compra__selecao-pagamento__opcoes{
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: center;
+}
+.compra__selecao-pagamento__opcao{
+  margin: 0px 20px;
+}
+.compra__selecao-pagamento__opcao::before{
+  content: '';
+  display: block;
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 0 auto;
+}
