@@ -69,15 +69,25 @@
 
                 <div class="compra__selecao-pagamento__opcoes">
                     <label class="compra__selecao-pagamento__opcao entrega"
-                    id="entrega">Na entrega
+                    onclick="selecionarPagamento('entrega')">Na entrega
                         <input type="radio" name="pagamento" value="entrega" class="compra__selecao-pagamento__opcao__radio">
                     </label>
                     <label class="compra__selecao-pagamento__opcao online"
-                    id="online">Online
+                    onclick="selecionarPagamento('online')">Online
                         <input type="radio" name="pagamento" value="online" class="compra__selecao-pagamento__opcao__radio">
                     </label>
                 </div>
-                
+
+                <div class="pagamento-online">
+                    <div class="pagamento-online__formulario">
+                        <input type="text" class="pagamento-online__formulario__titular-cartao" required>
+                        <input type="number" class="pagamento-online__formulario__numero-cartao" minlength="16" maxlength="16" required>
+                        <input type="date" class="pagamento-online__formulario__validade-cartao" required>
+                        <input type="text" class="pagamento-online__formulario__codigo-seguranca" required>
+                    </div>
+                </div>
+                <div class="pagamento-entrega"></div>
+
             </div>
 
             <!--
@@ -96,6 +106,7 @@
     <script src="js/montarCarrinho.js"></script>
     <script src="js/alterarTamanho.js"></script>
     <script src="js/abrirOuFecharCompra.js"></script>
+    <script src="js/seletorPagamento.js"></script>
     <script>montarCarrinho();</script>
 </body>
 </html>

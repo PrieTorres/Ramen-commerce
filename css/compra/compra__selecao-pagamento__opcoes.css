@@ -7,17 +7,40 @@
 .compra__selecao-pagamento__opcao{
   margin: 10px 20px;
   text-align: center;
+  padding: 10px;
+  transition: all .5s ease;
+  font-size: 1.2rem;
 }
+.compra__selecao-pagamento__opcao__radio{
+  display: none;
+}
+
 .compra__selecao-pagamento__opcao::before{
   content: '';
   display: block;
-  width: 7vw;
-  height: 7vw;
+  width: 5vw;
+  height: 5vw;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 15px solid #00000000;
   margin: 5px auto;
   transition: all .5s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #4242424d;
 }
 .compra__selecao-pagamento__opcao.ativo::before{
   box-shadow: 0px 0px 4px 2px var(--checked);
+  background-color: #42424283;
+}
+.compra__selecao-pagamento__opcao.ativo{
+  transform: scale(1.1);
+}
+
+/*icons*/
+.compra__selecao-pagamento__opcao.online::before{
+  background-image: url('../../img/icons/online-icon.png');
+}
+.compra__selecao-pagamento__opcao.entrega::before{
+  background-image: url('../../img/icons/icone-entrega.png');
 }
