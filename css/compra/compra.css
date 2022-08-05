@@ -1,5 +1,6 @@
 @import './compra__selecao-pagamento__opcoes.css';
 @import './compra__selecao_pagamento.css';
+@import './pagamento-online/pagamento-online.css';
 
 .compra{
   width: 70vw;
@@ -11,6 +12,7 @@
   background-color: var(--branco);
   box-shadow: 0px 0px 4px 4px var(--shadow);
   transition: all .5s ease;
+  padding: 10px;
   /*display: none;
     opacity: 0;*/
 }
@@ -27,3 +29,32 @@
     opacity: 0;*/
 }
 
+.input-pagamento{
+  height: 24px;
+  border-radius: 10px;
+  padding: 3px 7px;
+  border: 2px solid var(--branco-escuro);
+}
+
+.prosseguir-compra-botao{
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  background-color: var(--checked);
+  border: 10px solid #00000000;
+  background-image: url('../../img/icons/prosseguir-icon-white.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0px 0px 3px 1px var(--shadow);
+}
+
+input.input-pagamento:focus-visible,
+input.input-pagamento:focus,
+input.input-pagamento:focus-within{
+  border: 2px solid var(--branco-escuro);
+  box-shadow: none;
+}

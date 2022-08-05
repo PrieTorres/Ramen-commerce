@@ -72,6 +72,14 @@ html,body{
     box-shadow: 0px 0px 2px 2px black;
 }
 
+.texto-invisivel{
+    position: absolute;
+    top: -500px;
+    width: 1;
+    height: 1;
+    color: #00000000;
+}
+
 @keyframes aumenta-diminui{
     0%{
         /*transform: scaleY(0.9) scaleX(1);*/

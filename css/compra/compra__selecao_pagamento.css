@@ -3,7 +3,7 @@
   padding: 10px;
   background-color: var(--botao-base);
   color: var(--branco);
-  margin: 10px;
+
 }
 .compra__selecao-pagamento__cancelar{
   float: right;

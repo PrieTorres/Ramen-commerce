@@ -1,0 +1,22 @@
+.pagamento-online__formulario{
+  padding: 0 5%;
+}
+
+.container-inputs{
+  display: inline;
+  margin: 0 auto;
+}
+
+.pagamento-online__formulario__titular-cartao{
+  width: 40vw;
+  text-transform: uppercase;
+}
+
+.pagamento-online__formulario__mini-infos{
+  display: flex;
+  justify-content: space-between;
+}
+.pagamento-online__formulario__validade-cartao,
+.pagamento-online__formulario__codigo-seguranca{
+  width: 8vw;
+}

@@ -1,0 +1,13 @@
+@import './pagamento-online__formulario.css';
+
+.pagamento-online{
+  display: none; /*troca pra block*/
+}
+
+.label-input{
+  width: auto;
+  max-width: 100%;
+  display: inline-block;
+  margin: 5px 20px;
+  margin-left: 0;
+}

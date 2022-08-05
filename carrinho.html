@@ -78,23 +78,59 @@
                     </label>
                 </div>
 
+                <!-- inicio pagamento online-->
                 <div class="pagamento-online">
-                    <div class="pagamento-online__formulario">
-                        <input type="text" class="pagamento-online__formulario__titular-cartao" required>
-                        <input type="number" class="pagamento-online__formulario__numero-cartao" minlength="16" maxlength="16" required>
-                        <input type="date" class="pagamento-online__formulario__validade-cartao" required>
-                        <input type="text" class="pagamento-online__formulario__codigo-seguranca" required>
-                    </div>
-                </div>
-                <div class="pagamento-entrega"></div>
+                    <form class="pagamento-online__formulario">
 
+                        <div class="container-inputs">
+                            <label class="label-input">
+                                Titular do cartão: <br>
+                                <input type="text" class="pagamento-online__formulario__titular-cartao  input-pagamento" maxlength="80" required>
+                            </label>
+    
+                            <label class="label-input">
+                                Numero do cartão: <br>
+                                <input type="text" class="pagamento-online__formulario__numero-cartao  input-pagamento" minlength="16" maxlength="16" required>
+                            </label>
+    
+                            <label class="formulario__label__validade-cartao label-input">
+                                Validade do cartão: <br>
+                                <input type="text" class="pagamento-online__formulario__validade-cartao input-pagamento" minlength="6" maxlength="7" required>
+                            </label>
+                            
+                            <label class="formulario__label__codigo-seguranca label-input">
+                                Código de segurança: <br>
+                                <input type="text" class="pagamento-online__formulario__codigo-seguranca input-pagamento" required>
+                            </label>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- inicio pagamento entrega-->
+                <div class="pagamento-entrega">
+
+                    <div class="pagamento-entrega__escolha-forma-pagamento">
+                        <label class="pagamento-entrega__escolha-forma-pagamento__label">
+                            Dinheiro
+                            <input type="radio" 
+                            name="pagamento-entrega__escolha-forma-pagamento" 
+                            class="pagamento-entrega__escolha-forma-pagamento__input">
+                        </label>
+                        <label class="pagamento-entrega__escolha-forma-pagamento__label">
+                            Cartão
+                            <input type="radio" 
+                            name="pagamento-entrega__escolha-forma-pagamento" 
+                            class="pagamento-entrega__escolha-forma-pagamento__input">
+                        </label>
+                    </div>
+
+                </div>
+
+
+                <button class="prosseguir-compra-botao"><p class="texto-invisivel">prosseguir compra</p></button>
             </div>
 
-            <!--
-                <form class="compra__infos-form" action="" method="get">
-                    <input type="text">
-                </form>
-            -->
         </div>
         <!-- fim tela de comprar pedido -->
 
