@@ -1,6 +1,7 @@
 @import './compra__selecao-pagamento__opcoes.css';
 @import './compra__selecao_pagamento.css';
 @import './pagamento-online/pagamento-online.css';
+@import './pagamento-entrega/pagamento-entrega.css';
 
 .compra{
   width: 70vw;

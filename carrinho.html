@@ -125,6 +125,39 @@
                         </label>
                     </div>
 
+                    <!-- form dinheiro -->
+                    <div class="pagamento-entrega__form-dinheiro">
+                        <fieldset class="form-dinheiro__troco">
+                            <legend>Vai precisar de troco?</legend>
+
+                            <label>
+                                Sim
+                                <input type="radio" name="troco" value="precisa_troco">
+                            </label>
+                            <label>
+                                Não
+                                <input type="radio" name="troco"
+                                value="precisa_troco">
+                            </label>
+                        </fieldset>
+
+                        <div class="form-troco">
+                            <label>
+                                Precisa de troco para quanto?
+                                <!-- TODO: melhorar input para aceitar apenas valores válidos -->
+                                <input type="text" name="valor-troco" id="valor-troco" class="input-pagamento"
+                                maxlength="6">
+                            </label>
+                        </div>
+                    </div>
+                    <!-- fim form dinheiro -->
+
+                    <!-- form cartao -->
+                    <div class="pagamento-entrega__form-cartao">
+
+                    </div>
+                    <!-- fim form cartao -->
+
                 </div>
 
 
