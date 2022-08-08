@@ -80,6 +80,11 @@ html,body{
     color: #00000000;
 }
 
+.visificador{
+    display: block !important;
+    opacity: 1 !important;
+}
+
 @keyframes aumenta-diminui{
     0%{
         /*transform: scaleY(0.9) scaleX(1);*/

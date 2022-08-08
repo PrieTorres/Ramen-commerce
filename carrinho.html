@@ -111,13 +111,17 @@
                 <div class="pagamento-entrega">
 
                     <div class="pagamento-entrega__escolha-forma-pagamento">
-                        <label class="pagamento-entrega__escolha-forma-pagamento__label">
+                        <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick='
+                        adicionarClasse("visificador", "pagamento-entrega__form-dinheiro");
+                         removerClasse("visificador","pagamento-entrega__form-cartao")'>
                             Dinheiro
                             <input type="radio" 
                             name="pagamento-entrega__escolha-forma-pagamento" 
                             class="pagamento-entrega__escolha-forma-pagamento__input">
                         </label>
-                        <label class="pagamento-entrega__escolha-forma-pagamento__label">
+                        <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick='
+                        adicionarClasse("visificador","pagamento-entrega__form-cartao"); 
+                        removerClasse("visificador", "pagamento-entrega__form-dinheiro")'>
                             Cartão
                             <input type="radio" 
                             name="pagamento-entrega__escolha-forma-pagamento" 
@@ -130,11 +134,11 @@
                         <fieldset class="form-dinheiro__troco">
                             <legend>Vai precisar de troco?</legend>
 
-                            <label>
+                            <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick="adicionarClasse('visificador', 'form-troco')">
                                 Sim
                                 <input type="radio" name="troco" value="precisa_troco">
                             </label>
-                            <label>
+                            <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick="removerClasse('visificador', 'form-troco')">
                                 Não
                                 <input type="radio" name="troco"
                                 value="precisa_troco">
@@ -154,7 +158,20 @@
 
                     <!-- form cartao -->
                     <div class="pagamento-entrega__form-cartao">
-
+                         <div class="form-cartao__escolha-cartao">
+                            <label>
+                                MasterCard
+                                <input type="radio" name="escolha-cartao" value="mastercard">
+                            </label>
+                            <label>
+                                Elo
+                                <input type="radio" name="escolha-cartao" value="elo">
+                            </label>
+                            <label>
+                                ViaCred
+                                <input type="radio" name="escolha-cartao" value="mastercard">
+                            </label>
+                         </div>
                     </div>
                     <!-- fim form cartao -->
 
@@ -176,6 +193,7 @@
     <script src="js/alterarTamanho.js"></script>
     <script src="js/abrirOuFecharCompra.js"></script>
     <script src="js/seletorPagamento.js"></script>
+    <script src="js/distribuidorDeClasses.js"></script>
     <script>montarCarrinho();</script>
 </body>
 </html>
