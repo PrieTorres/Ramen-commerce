@@ -51,6 +51,7 @@
   bottom: 20px;
   right: 20px;
   box-shadow: 0px 0px 3px 1px var(--shadow);
+  opacity: 0.5;
 }
 
 input.input-pagamento:focus-visible,

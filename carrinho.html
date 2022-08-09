@@ -69,20 +69,19 @@
 
                 <div class="compra__selecao-pagamento__opcoes">
                     <label class="compra__selecao-pagamento__opcao entrega"
-                    onclick="selecionarPagamento('entrega')">Na entrega
+                    onclick="selecionarPagamento('entrega'); adicionarClasse('form-ativo','pagamento-entrega'); removerClasse('form-ativo', 'pagamento-online')">Na entrega
                         <input type="radio" name="pagamento" value="entrega" class="compra__selecao-pagamento__opcao__radio">
                     </label>
                     <label class="compra__selecao-pagamento__opcao online"
-                    onclick="selecionarPagamento('online')">Online
+                    onclick="selecionarPagamento('online'); adicionarClasse('form-ativo','pagamento-online'); removerClasse('form-ativo', 'pagamento-entrega')">Online
                         <input type="radio" name="pagamento" value="online" class="compra__selecao-pagamento__opcao__radio">
                     </label>
                 </div>
 
                 <!-- inicio pagamento online-->
                 <div class="pagamento-online">
-                    <form class="pagamento-online__formulario">
+                    <div class="pagamento-online__formulario">
 
-                        <div class="container-inputs">
                             <label class="label-input">
                                 Titular do cartão: <br>
                                 <input type="text" class="pagamento-online__formulario__titular-cartao  input-pagamento" maxlength="80" required>
@@ -102,9 +101,8 @@
                                 Código de segurança: <br>
                                 <input type="text" class="pagamento-online__formulario__codigo-seguranca input-pagamento" required>
                             </label>
-                        </div>
 
-                    </form>
+                        </div>
                 </div>
 
                 <!-- inicio pagamento entrega-->
@@ -117,7 +115,7 @@
                             Dinheiro
                             <input type="radio" 
                             name="pagamento-entrega__escolha-forma-pagamento" 
-                            class="pagamento-entrega__escolha-forma-pagamento__input">
+                            class="pagamento-entrega__escolha-forma-pagamento__input" value="dinheiro">
                         </label>
                         <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick='
                         adicionarClasse("visificador","pagamento-entrega__form-cartao"); 
@@ -125,7 +123,7 @@
                             Cartão
                             <input type="radio" 
                             name="pagamento-entrega__escolha-forma-pagamento" 
-                            class="pagamento-entrega__escolha-forma-pagamento__input">
+                            class="pagamento-entrega__escolha-forma-pagamento__input" value="cartao">
                         </label>
                     </div>
 
@@ -136,12 +134,12 @@
 
                             <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick="adicionarClasse('visificador', 'form-troco')">
                                 Sim
-                                <input type="radio" name="troco" value="precisa_troco">
+                                <input type="radio" name="troco" value="precisa_troco" class="pagamento-entrega__input-valor">
                             </label>
                             <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick="removerClasse('visificador', 'form-troco')">
                                 Não
                                 <input type="radio" name="troco"
-                                value="precisa_troco">
+                                value="precisa_troco" class="pagamento-entrega__input-valor">
                             </label>
                         </fieldset>
 
@@ -149,7 +147,7 @@
                             <label>
                                 Precisa de troco para quanto?
                                 <!-- TODO: melhorar input para aceitar apenas valores válidos -->
-                                <input type="text" name="valor-troco" id="valor-troco" class="input-pagamento"
+                                <input type="text" name="valor-troco" id="valor-troco" class="input-pagamento pagamento-entrega__input-valor"
                                 maxlength="6">
                             </label>
                         </div>
@@ -161,15 +159,15 @@
                          <div class="form-cartao__escolha-cartao">
                             <label>
                                 MasterCard
-                                <input type="radio" name="escolha-cartao" value="mastercard">
+                                <input type="radio" class="pagamento-entrega__input-valor" name="escolha-cartao" value="mastercard">
                             </label>
                             <label>
                                 Elo
-                                <input type="radio" name="escolha-cartao" value="elo">
+                                <input type="radio" class="pagamento-entrega__input-valor" name="escolha-cartao" value="elo">
                             </label>
                             <label>
                                 ViaCred
-                                <input type="radio" name="escolha-cartao" value="mastercard">
+                                <input type="radio" class="pagamento-entrega__input-valor" name="escolha-cartao" value="mastercard">
                             </label>
                          </div>
                     </div>
@@ -178,7 +176,7 @@
                 </div>
 
 
-                <button class="prosseguir-compra-botao"><p class="texto-invisivel">prosseguir compra</p></button>
+                <button class="prosseguir-compra-botao" onclick="verificadorProsseguir()"><p class="texto-invisivel">prosseguir compra</p></button>
             </div>
 
         </div>
@@ -194,6 +192,7 @@
     <script src="js/abrirOuFecharCompra.js"></script>
     <script src="js/seletorPagamento.js"></script>
     <script src="js/distribuidorDeClasses.js"></script>
+    <script src="js/verificadorProsseguir.js"></script>
     <script>montarCarrinho();</script>
 </body>
 </html>

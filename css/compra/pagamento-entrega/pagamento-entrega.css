@@ -1,4 +1,5 @@
 @import './form-dinheiro.css';
+@import './form-cartao.css';
 
 .pagamento-entrega{
     display: none;

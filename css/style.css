@@ -85,6 +85,17 @@ html,body{
     opacity: 1 !important;
 }
 
+.botao-ativado{
+    opacity: 1;
+}
+.botao-ativador:hover{
+    cursor: pointer;
+}
+
+.botao-desativado{
+    opacity: 0.5;
+}
+
 @keyframes aumenta-diminui{
     0%{
         /*transform: scaleY(0.9) scaleX(1);*/
