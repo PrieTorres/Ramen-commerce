@@ -82,3 +82,25 @@
         transform: scale(0.7);
     }
 }
+
+@media screen and (max-width: 768px) {
+    .conteudo_principal_ramens-titulo{
+        font-size: 3rem;
+    }
+    .conteudo_principal_ramens-container-caixa{
+        max-width: 99%;
+    }
+    .conteudo_principal_ramens-container{
+        max-width: 75%;
+        padding: 30px 0px;
+    }
+    .conteudo_principal_ramens-container-caixa .ramens-caixa-titulo{
+        font-size: 2rem;
+    }
+    .conteudo_principal_ramens-container-caixa .ramens-caixa_preco{
+        font-size: 1.25rem;
+    }
+    .conteudo_principal_ramens{
+        transform: scale(1);
+    }
+}

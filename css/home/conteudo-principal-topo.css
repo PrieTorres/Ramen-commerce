@@ -9,7 +9,8 @@
     width: 100%;
     box-sizing: border-box;
     background: var(--linear-preto-Mbranco);
-    padding: 120px 50px;
+    padding: 90px 50px;
+    padding-bottom: 0;
 }
 
 .conteudo-principal-topo__container--caixa-texto{
@@ -51,5 +52,20 @@
     }
     .conteudo-principal-topo__container{
         padding: 5vh 30px;
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .conteudo-principal-topo__container--texto{
+        font-size: 3.5em;
+    }
+    .conteudo-principal-topo__container{
+        background: #ffffffad;
+    }
+    .conteudo-principal-topo__container--botao{
+        margin-top: 2rem;
+        font-size: 1rem;
+        padding: 10px;
     }
 }
