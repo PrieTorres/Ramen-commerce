@@ -1,6 +1,6 @@
-.descrisao-ramen{
+/* .descrisao-ramen{
+} */
 
-}
 .descrisao-ramen__container{
     background: var(--branco);
     width: 60vw;
@@ -35,4 +35,12 @@
     font-weight: 400;
     flex-grow: 1;
     width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .descrisao-ramen__container{
+        width: 100%;
+        padding: 50px 8vw;
+        box-sizing: border-box;
+    }
 }

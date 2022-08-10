@@ -34,3 +34,14 @@
     text-transform: uppercase;
 }
 
+@media screen and (max-width: 768px) {
+    .conteudo-principal__populares-container{
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .conteudo-principal__populares-container-imagem{
+        max-width: none;
+        margin: 0;
+        width: 100%;
+    }   
+}
