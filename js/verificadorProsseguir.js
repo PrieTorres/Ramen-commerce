@@ -1,19 +1,35 @@
 function verificadorProsseguir(){
-    let all_divs = document.body.querySelectorAll('.form-ativo>div');
+    let botao = document.body.querySelector('.prosseguir-compra-botao');
 
-    if(all_divs.length <= 0){
-        alert('preencha os campos para prosseguir')
+    if(formulario.pagamento == 'entrega'){
+
+        if(formulario.entrega.pagamento.length > 0 && formulario.entrega.troco.length > 0 && formulario.entrega.cartao.length > 0)
+        {
+            botao.classList.remove('botao-desativado');
+            botao.classList.add('botao-ativado');
+            botao.onclick = '';
+        }else{
+            botao.classList.add('botao-desativado');
+            botao.classList.remove('botao-ativado');
+            botao.onclick = '';
+        }
+
+
+    }else if(formulario.pagamento == 'online'){
+
+        if(formulario.online.titular_cartao.length > 0 && 
+            formulario.online.numero_cartao.length > 0 &&
+            formulario.online.validade_cartao.length > 0 &&
+            formulario.online.cod_seguranca.length > 0)
+        {
+            botao.classList.remove('botao-desativado');
+            botao.classList.add('botao-ativado');
+            botao.onclick = '';
+        }else{
+            botao.classList.add('botao-desativado');
+            botao.classList.remove('botao-ativado');
+            botao.onclick = '';
+        }
+
     }
-
-    let all_inputs = [];
-
-    if(document.body.querySelectorAll('.form-ativo')[0].classList[0] == 'pagamento-entrega'){
-
-
-        
-    }else{
-        all_inputs = document.body.querySelectorAll('.')
-    }
-
-    console.log(all_inputs);
 }

@@ -1,11 +1,15 @@
 function adicionarClasse(classeAdicionada, classeElemento){
-    let elemento = document.body.querySelector(`.${classeElemento}`);
+    let elementos = document.body.querySelectorAll(`.${classeElemento}`);
 
-    elemento.classList.add(classeAdicionada);
+    elementos.forEach(elemento => {
+        elemento.classList.add(classeAdicionada);
+    });
 }
 
 function removerClasse(classeRemovida, classeElemento){
-    let elemento = document.body.querySelector(`.${classeElemento}`);
+    let elementos = document.body.querySelectorAll(`.${classeElemento}`);
 
-    elemento.classList.remove(classeRemovida);
+    elementos.forEach(elemento => {
+        elemento.classList.remove(classeRemovida);
+    });
 }

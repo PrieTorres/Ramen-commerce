@@ -24,12 +24,14 @@
     <script src="js/ramens_json.js"></script>
     <script src="js/montarCarrinho.js"></script>
     <script src="js/manipuladorObjeto.js"></script>
+    <script src="js/oo/Form.js"></script>
     <!---->
     <script>
         carregarObjeto();
+        const formulario = new Formulario_pagamento();
     </script>
 </head>
-<body>
+<body onclick="verificadorProsseguir()">
     <header class="cabecalho-principal">
         <h1 class="cabecalho-principal__titulo"><span class="cabecalho-principal__titulo-content">Ramen-lhama</span></h1>
         <nav class="cabecalho-principal__nav">
@@ -63,17 +65,17 @@
 
         <!-- inicio tela de comprar o pedido -->
         <div class="compra-bg"></div>
-        <div class="compra">
+        <div class="compra" onkeydown="verificadorProsseguir()">
             <div class="compra__selecao-pagamento">
                 <p class="compra__selecao-pagamento__texto">Selecione o método de pagamento <span class="compra__selecao-pagamento__cancelar" onclick="fecharCompraAlert()">X</span></p>
 
                 <div class="compra__selecao-pagamento__opcoes">
                     <label class="compra__selecao-pagamento__opcao entrega"
-                    onclick="selecionarPagamento('entrega'); adicionarClasse('form-ativo','pagamento-entrega'); removerClasse('form-ativo', 'pagamento-online')">Na entrega
+                    onclick="selecionarPagamento('entrega'); formulario.pagamento = 'entrega'">Na entrega
                         <input type="radio" name="pagamento" value="entrega" class="compra__selecao-pagamento__opcao__radio">
                     </label>
                     <label class="compra__selecao-pagamento__opcao online"
-                    onclick="selecionarPagamento('online'); adicionarClasse('form-ativo','pagamento-online'); removerClasse('form-ativo', 'pagamento-entrega')">Online
+                    onclick="selecionarPagamento('online'); formulario.pagamento = 'online'">Online
                         <input type="radio" name="pagamento" value="online" class="compra__selecao-pagamento__opcao__radio">
                     </label>
                 </div>
@@ -84,22 +86,22 @@
 
                             <label class="label-input">
                                 Titular do cartão: <br>
-                                <input type="text" class="pagamento-online__formulario__titular-cartao  input-pagamento" maxlength="80" required>
+                                <input type="text" onchange="formulario.online.titular_cartao = document.body.querySelector('.pagamento-online__formulario__titular-cartao').value" class="pagamento-online__formulario__titular-cartao  input-pagamento" maxlength="80" required>
                             </label>
     
                             <label class="label-input">
                                 Numero do cartão: <br>
-                                <input type="text" class="pagamento-online__formulario__numero-cartao  input-pagamento" minlength="16" maxlength="16" required>
+                                <input type="text" onchange="formulario.online.numero_cartao = document.body.querySelector('.pagamento-online__formulario__numero-cartao').value" class="pagamento-online__formulario__numero-cartao  input-pagamento" minlength="16" maxlength="16" required>
                             </label>
     
                             <label class="formulario__label__validade-cartao label-input">
                                 Validade do cartão: <br>
-                                <input type="text" class="pagamento-online__formulario__validade-cartao input-pagamento" minlength="6" maxlength="7" required>
+                                <input type="text" onchange="formulario.online.validade_cartao = document.body.querySelector('.pagamento-online__formulario__validade-cartao').value" class="pagamento-online__formulario__validade-cartao input-pagamento" minlength="6" maxlength="7" required>
                             </label>
                             
                             <label class="formulario__label__codigo-seguranca label-input">
                                 Código de segurança: <br>
-                                <input type="text" class="pagamento-online__formulario__codigo-seguranca input-pagamento" required>
+                                <input type="text" onchange="formulario.online.cod_seguranca = document.body.querySelector('.pagamento-online__formulario__codigo-seguranca').value" class="pagamento-online__formulario__codigo-seguranca input-pagamento" required>
                             </label>
 
                         </div>
@@ -111,7 +113,7 @@
                     <div class="pagamento-entrega__escolha-forma-pagamento">
                         <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick='
                         adicionarClasse("visificador", "pagamento-entrega__form-dinheiro");
-                         removerClasse("visificador","pagamento-entrega__form-cartao")'>
+                         removerClasse("visificador","pagamento-entrega__form-cartao"); formulario.entrega.pagamento = "dinheiro"; formulario.entrega.cartao = "nao"; formulario.entrega.troco = ""'>
                             Dinheiro
                             <input type="radio" 
                             name="pagamento-entrega__escolha-forma-pagamento" 
@@ -119,7 +121,7 @@
                         </label>
                         <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick='
                         adicionarClasse("visificador","pagamento-entrega__form-cartao"); 
-                        removerClasse("visificador", "pagamento-entrega__form-dinheiro")'>
+                        removerClasse("visificador", "pagamento-entrega__form-dinheiro"); formulario.entrega.pagamento = "cartao"; formulario.entrega.cartao = ""; formulario.entrega.troco = "nao"'>
                             Cartão
                             <input type="radio" 
                             name="pagamento-entrega__escolha-forma-pagamento" 
@@ -132,14 +134,14 @@
                         <fieldset class="form-dinheiro__troco">
                             <legend>Vai precisar de troco?</legend>
 
-                            <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick="adicionarClasse('visificador', 'form-troco')">
+                            <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick="adicionarClasse('visificador', 'form-troco'); formulario.entrega.troco = ''">
                                 Sim
-                                <input type="radio" name="troco" value="precisa_troco" class="pagamento-entrega__input-valor">
+                                <input type="radio" name="troco" value="precisa_troco" class="pagamento-entrega__input-escolha">
                             </label>
-                            <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick="removerClasse('visificador', 'form-troco')">
+                            <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick="removerClasse('visificador', 'form-troco'); formulario.entrega.troco = 'nao'">
                                 Não
                                 <input type="radio" name="troco"
-                                value="precisa_troco" class="pagamento-entrega__input-valor">
+                                value="precisa_troco" class="pagamento-entrega__input-escolha">
                             </label>
                         </fieldset>
 
@@ -147,8 +149,8 @@
                             <label>
                                 Precisa de troco para quanto?
                                 <!-- TODO: melhorar input para aceitar apenas valores válidos -->
-                                <input type="text" name="valor-troco" id="valor-troco" class="input-pagamento pagamento-entrega__input-valor"
-                                maxlength="6">
+                                <input type="text" onchange="formulario.entrega.troco = document.body.querySelector('#valor-troco').value" name="valor-troco" id="valor-troco" class="input-pagamento pagamento-entrega__input-valor"
+                                maxlength="6" minlength="2">
                             </label>
                         </div>
                     </div>
@@ -157,17 +159,17 @@
                     <!-- form cartao -->
                     <div class="pagamento-entrega__form-cartao">
                          <div class="form-cartao__escolha-cartao">
-                            <label>
+                            <label onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value" >
                                 MasterCard
-                                <input type="radio" class="pagamento-entrega__input-valor" name="escolha-cartao" value="mastercard">
+                                <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao" value="mastercard">
                             </label>
-                            <label>
+                            <label onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value" >
                                 Elo
-                                <input type="radio" class="pagamento-entrega__input-valor" name="escolha-cartao" value="elo">
+                                <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao" value="elo">
                             </label>
-                            <label>
+                            <label onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value" >
                                 ViaCred
-                                <input type="radio" class="pagamento-entrega__input-valor" name="escolha-cartao" value="mastercard">
+                                <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao" value="mastercard">
                             </label>
                          </div>
                     </div>
@@ -176,7 +178,7 @@
                 </div>
 
 
-                <button class="prosseguir-compra-botao" onclick="verificadorProsseguir()"><p class="texto-invisivel">prosseguir compra</p></button>
+                <button class="prosseguir-compra-botao botao-desativado" onclick=""><p class="texto-invisivel">prosseguir compra</p></button>
             </div>
 
         </div>

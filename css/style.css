@@ -87,9 +87,13 @@ html,body{
 
 .botao-ativado{
     opacity: 1;
+    transition: all .5s ease;
 }
-.botao-ativador:hover{
+
+.botao-ativado:hover{
     cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 6px 4px #fff;
 }
 
 .botao-desativado{
