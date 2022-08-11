@@ -150,7 +150,7 @@
                                 Precisa de troco para quanto?
                                 <!-- TODO: melhorar input para aceitar apenas valores válidos -->
                                 <input type="text" onchange="formulario.entrega.troco = document.body.querySelector('#valor-troco').value" name="valor-troco" id="valor-troco" class="input-pagamento pagamento-entrega__input-valor"
-                                maxlength="6" minlength="2">
+                                maxlength="8" minlength="2" onfocus="formatarInputValor('pagamento-entrega__input-valor')">
                             </label>
                         </div>
                     </div>
@@ -195,6 +195,7 @@
     <script src="js/seletorPagamento.js"></script>
     <script src="js/distribuidorDeClasses.js"></script>
     <script src="js/verificadorProsseguir.js"></script>
+    <script src="js/formatarInputValor.js"></script>
     <script>montarCarrinho();</script>
 </body>
 </html>
