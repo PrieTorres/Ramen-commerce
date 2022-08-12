@@ -1,5 +1,8 @@
 function verificadorProsseguir(){
     let botao = document.body.querySelector('.prosseguir-compra-botao');
+    let formulario = window.localStorage.getItem("formulario");
+    formulario = JSON.parse(formulario);
+    
 
     if(formulario.pagamento == 'entrega'){
 

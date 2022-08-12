@@ -29,9 +29,10 @@
     <script>
         carregarObjeto();
         const formulario = new Formulario_pagamento();
+        salvarForm(formulario);
     </script>
 </head>
-<body onclick="verificadorProsseguir()">
+<body onclick="verificadorProsseguir(); salvarForm(formulario)">
     <header class="cabecalho-principal">
         <h1 class="cabecalho-principal__titulo"><span class="cabecalho-principal__titulo-content">Ramen-lhama</span></h1>
         <nav class="cabecalho-principal__nav">
