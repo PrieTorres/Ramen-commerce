@@ -39,8 +39,8 @@
 
 /*icons*/
 .compra__selecao-pagamento__opcao.online::before{
-  background-image: url('../../img/icons/online-icon.png');
+  background-image: url('../../../img/icons/online-icon.png');
 }
 .compra__selecao-pagamento__opcao.entrega::before{
-  background-image: url('../../img/icons/icone-entrega.png');
+  background-image: url('../../../img/icons/icone-entrega.png');
 }

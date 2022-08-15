@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/carrinho/total-compra.css">
     <link rel="stylesheet" href="css/carrinho/carrinho.css">
     <link rel="stylesheet" href="css/carrinho/itens-comprados.css">
-    <link rel="stylesheet" href="css/compra/compra.css">
+    <link rel="stylesheet" href="css/carrinho/compra/compra.css">
     <!-- scrits importantes-->
     <script src="js/ramens_json.js"></script>
     <script src="js/montarCarrinho.js"></script>
@@ -97,7 +97,7 @@
     
                             <label class="formulario__label__validade-cartao label-input">
                                 Validade do cartão: <br>
-                                <input type="text" onchange="formulario.online.validade_cartao = document.body.querySelector('.pagamento-online__formulario__validade-cartao').value" class="pagamento-online__formulario__validade-cartao input-pagamento" minlength="6" maxlength="7" required>
+                                <input type="text" onfocus="formatarInputData('pagamento-online__formulario__validade-cartao')" onchange="formulario.online.validade_cartao = document.body.querySelector('.pagamento-online__formulario__validade-cartao').value" class="pagamento-online__formulario__validade-cartao input-pagamento" minlength="6" maxlength="7" required>
                             </label>
                             
                             <label class="formulario__label__codigo-seguranca label-input">
@@ -197,6 +197,7 @@
     <script src="js/distribuidorDeClasses.js"></script>
     <script src="js/verificadorProsseguir.js"></script>
     <script src="js/formatarInputValor.js"></script>
+    <script src="js/formatarData.js"></script>
     <script>montarCarrinho();</script>
 </body>
 </html>

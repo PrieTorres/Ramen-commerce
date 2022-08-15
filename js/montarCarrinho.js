@@ -8,6 +8,7 @@ function montarCarrinho(){
         let imagem_ramen = ramen.imagem;
         let descricao_ramen = ramen.descricao;
         let quantidade_ramen = ramen.quantidade;
+        let nome_ramen = ramen.nome;
         let lista_ingredientes = [];
         let ul_ingredientes = '';
         let html_escolha_tamanho = '';
@@ -91,6 +92,7 @@ function montarCarrinho(){
         let html = `
         <div class="container-caixa-item">
             <img src="${imagem_ramen}" alt="ramen comprado" class="container-caixa-item__imagem">
+            <p class="container-caixa-item__titulo">${nome_ramen}</p>
             <div class="caixa-item__info">
                 ${ul_ingredientes}
                 <p class='container-caixa-item__descricao'>
