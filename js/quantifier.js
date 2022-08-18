@@ -1,17 +1,16 @@
 function alterarQuantidade(operacao, id){
     let quantidade_box = document.body.querySelector(`#ramen-container-${id}`);//
     let num = carrinho[id].quantidade;
-    if(operacao=='mais'){
+
+    if(operacao=='mais' && num < 20){
         num++;
         quantidade_box.innerHTML = num;
         carrinho[id].quantidade = num;
     }else
-    if(operacao=='menos'){
-        if(num>1){
-            num--;
-            quantidade_box.innerHTML = num;
-            carrinho[id].quantidade = num;
-        }
+    if(operacao=='menos' && num > 1){
+        num--;
+        quantidade_box.innerHTML = num;
+        carrinho[id].quantidade = num;  
     }
 
     salvarObjeto(carrinho);
