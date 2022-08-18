@@ -5,3 +5,11 @@
     padding: 20px;
     box-sizing: border-box;
 }
+
+@media screen and (max-width:768px){
+    .conteudo-principal{
+        width: 100vw;
+        flex: auto;
+        min-height: 0;
+    }
+}

@@ -12,6 +12,7 @@
     box-sizing: border-box;
     text-align: left;
     overflow: hidden;
+    margin-bottom: 5px;
 }
 .item-comprado__cancelar{
     font-size: 2em;

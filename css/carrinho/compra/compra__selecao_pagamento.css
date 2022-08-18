@@ -12,3 +12,9 @@
 .compra__selecao-pagamento__cancelar:hover{
   cursor: pointer;
 }
+
+@media screen and (max-width:768px){
+  .compra__selecao-pagamento__texto{
+    font-size: 1.5rem;
+  }
+}
