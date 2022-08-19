@@ -17,12 +17,12 @@ Este projeto foi feito inteiramnete para treino de habilidades adquiridas atrav�
     <li>Figma - básico</li>
     <li>Javascript orientado a objetos</li>
     <li>Javascript localstorage</li>
+    <li>Responsividade</li>
 </ul>
 <hr>
 
 <h2>habilidades que serão futuramente implementadas:</h2>
 <ul>
-    <li>Responsividade</li>
     <li>acessibilidade Web</li>
 </ul>
 
