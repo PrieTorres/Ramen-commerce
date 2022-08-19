@@ -3,7 +3,7 @@
 !!!!Projeto ainda em andamento!!!
 <hr>
 
-<img src="img/picasion.com_9aece9da051ed5eb6c34fa252f88b802.gif">
+<img src="src/pages/img/picasion.com_9aece9da051ed5eb6c34fa252f88b802.gif">
 
 <p>
 Este projeto foi feito inteiramnete para treino de habilidades adquiridas através de curso  
@@ -33,13 +33,11 @@ Este projeto foi feito inteiramnete para treino de habilidades adquiridas atrav�
 
 abra o git bash e digite 'git clone https://github.com/PrieTorres/Ramen-commerce.git'
 
-de um npm install no terminal
+de um  ``` npm install ``` no terminal
 
-e npm run dev
+e ```npm run dev```
 
-```
-
-- todo o CRUD ainda não está pronto e não foi implementado -
-# futuramente sistema de login e cadastro para realização de pedidos #
-
+```diff
+-todo o CRUD ainda não está pronto e não foi implementado
++futuramente sistema de login e cadastro para realização de pedidos
 ```
