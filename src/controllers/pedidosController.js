@@ -1,5 +1,4 @@
-import mongoose from 'mongoose';
-import pedidos from '../models/Pedidos';
+import pedidos from '../models/Pedidos.js';
 
 class pedidosControllers {
 

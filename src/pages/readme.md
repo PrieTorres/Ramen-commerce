@@ -18,7 +18,6 @@ Este projeto foi feito inteiramnete para treino de habilidades adquiridas atrav�
     <li>Javascript orientado a objetos</li>
     <li>Javascript localstorage</li>
     <li>Responsividade</li>
-    <li>NodeJS</li>
 </ul>
 <hr>
 
@@ -32,14 +31,3 @@ Este projeto foi feito inteiramnete para treino de habilidades adquiridas atrav�
 ## Quer abrir o projeto e ver como ele funciona?
 
 abra o git bash e digite 'git clone https://github.com/PrieTorres/Ramen-commerce.git'
-
-de um npm install no terminal
-
-e npm run dev
-
-```
-
-- todo o CRUD ainda não está pronto e não foi implementado -
-# futuramente sistema de login e cadastro para realização de pedidos #
-
-```
