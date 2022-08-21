@@ -40,7 +40,7 @@
                 <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="index.html">Home</a></li>
                 <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="montagem.html">Monte o seu Rámen!</a></li>
                 <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="menu.html">Menu <p class="texto-invisivel">cardápio com todos os rámens e combos</p></a></li>
-                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="trabalhe_conosco.html">Trabalhe conosco</a></li>
+                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link" href="meus_pedidos.html">Meus Pedidos</a></li>
             </ul>
         </nav>
     </header>
@@ -92,12 +92,12 @@
     
                             <label class="label-input">
                                 Numero do cartão: <br>
-                                <input type="text" onchange="formulario.online.numero_cartao = document.body.querySelector('.pagamento-online__formulario__numero-cartao').value" class="pagamento-online__formulario__numero-cartao  input-pagamento" minlength="16" maxlength="16" required>
+                                <input type="number" onchange="formulario.online.numero_cartao = document.body.querySelector('.pagamento-online__formulario__numero-cartao').value" class="pagamento-online__formulario__numero-cartao  input-pagamento" minlength="15" maxlength="16" required >
                             </label>
     
                             <label class="formulario__label__validade-cartao label-input">
                                 Validade do cartão: <br>
-                                <input type="text" onfocus="formatarInputData('pagamento-online__formulario__validade-cartao')" onchange="formulario.online.validade_cartao = document.body.querySelector('.pagamento-online__formulario__validade-cartao').value" class="pagamento-online__formulario__validade-cartao input-pagamento" minlength="6" maxlength="7" required>
+                                <input type="text" onfocus="formatarInputData('pagamento-online__formulario__validade-cartao')" onchange="formulario.online.validade_cartao = document.body.querySelector('.pagamento-online__formulario__validade-cartao').value" class="pagamento-online__formulario__validade-cartao input-pagamento" minlength="8" maxlength="10" required readonly>
                             </label>
                             
                             <label class="formulario__label__codigo-seguranca label-input">

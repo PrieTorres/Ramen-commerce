@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const pedidos = new mongoose.Schema (
+const pedidosSchema = new mongoose.Schema (
     {
         id: {type: String},
         itens: {type: Array},
@@ -10,6 +10,8 @@ const pedidos = new mongoose.Schema (
         cliente: {type: mongoose.Schema.Types.ObjectId, ref: 'usuarios', required: true}
     }
 );
+
+const pedidos = mongoose.model('pedidos', pedidosSchema)
 
 export default pedidos;
 

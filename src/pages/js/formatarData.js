@@ -2,29 +2,48 @@ function formatarInputData(classeInput){
   let input = document.body.querySelector(`.${classeInput}`);
   let valor = '';
   let data = [];
+  let numbers = [];
+  input.value = '';
 
   input.addEventListener('keydown', e => {
 
-    if(['1','2','3','4','5','6','7','8','9','0'].includes(e.key) && valor.length <6 ){
-      valor += e.key;
-      data.push(valor);
-      if([2,4].includes(valor.length)){
+    if(['1','2','3','4','5','6','7','8','9','0'].includes(e.key) && valor.length < 10 ){
+      input.value = ''
+
+      numbers.push(e.key);
+
+      data.push(e.key);
+
+      if([2,5].includes(data.length)){
         data.push('/')
       }
 
-      input.value = '';
-    }
-    else if(e.key == 'Backspace'){
-      valor = valor.slice(0, -1);
+      valor = data.join('')
+
+      input.value = `${valor}`;
+    } else if(e.key == 'Backspace'){
+      numbers.pop();
+      let count = 0;
+      data = [];
+      
+      numbers.forEach(num => {
+        if(count == 2||count == 4){
+          data.push('/');
+        }
+        count++;
+        data.push(num);
+      });
+
+      valor = data.join('');
+
       input.value = valor;
-    } 
-    else{
-      if(valor.length < 1){
-        input.valor = ''
+    } else{
+      if(valor.length <= 0){
+        input.value = ''
       }else {
         input.value = valor
       }
     }
-
   });
+
 }

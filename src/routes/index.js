@@ -1,5 +1,7 @@
 import express from 'express';
 import pedidos from './pedidosRoutes.js';
+import usuarios from './usuariosRoutes.js'
+
 import path from 'path'
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -17,7 +19,8 @@ const routes = (app) => {
     app.use(
         express.json(),
         express.static(dirName + '/pages/'),
-        pedidos
+        pedidos,
+        usuarios
     )
 
 }
