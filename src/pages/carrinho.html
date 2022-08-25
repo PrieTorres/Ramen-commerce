@@ -32,7 +32,7 @@
         salvarForm(formulario);
     </script>
 </head>
-<body onclick="verificadorProsseguir(); salvarForm(formulario)">
+<body onchange="salvarForm(formulario); verificadorProsseguir()">
     <header class="cabecalho-principal">
         <h1 class="cabecalho-principal__titulo"><span class="cabecalho-principal__titulo-content">Ramen-lhama</span></h1>
         <nav class="cabecalho-principal__nav">
@@ -97,7 +97,7 @@
     
                             <label class="formulario__label__validade-cartao label-input">
                                 Validade do cartão: <br>
-                                <input type="text" onfocus="formatarInputData('pagamento-online__formulario__validade-cartao')" onchange="formulario.online.validade_cartao = document.body.querySelector('.pagamento-online__formulario__validade-cartao').value" class="pagamento-online__formulario__validade-cartao input-pagamento" minlength="8" maxlength="10" required readonly>
+                                <input type="text" onfocus="formatarInputData('pagamento-online__formulario__validade-cartao')" onchange="formulario.online.validade_cartao = document.body.querySelector('.pagamento-online__formulario__validade-cartao').value; document.body.querySelector('.pagamento-online__formulario__validade-cartao').value = formulario.online.validade_cartao" class="pagamento-online__formulario__validade-cartao input-pagamento" minlength="8" maxlength="10" required readonly>
                             </label>
                             
                             <label class="formulario__label__codigo-seguranca label-input">
@@ -198,6 +198,7 @@
     <script src="js/verificadorProsseguir.js"></script>
     <script src="js/formatarInputValor.js"></script>
     <script src="js/formatarData.js"></script>
+    <script src="js/prosseguirBotao.js"></script>
     <script>montarCarrinho();</script>
 </body>
 </html>

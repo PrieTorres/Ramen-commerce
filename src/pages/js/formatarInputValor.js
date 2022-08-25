@@ -1,6 +1,8 @@
 function formatarInputValor(classe){
   let input = document.body.querySelector(`.${classe}`);
   let valor = '';
+  let formulario = window.localStorage.getItem("formulario");
+  formulario = JSON.parse(formulario);
 
   input.addEventListener('keydown', e => {
     if(['1','2','3','4','5','6','7','8','9','0'].includes(e.key) && valor.length < 4){
@@ -20,6 +22,9 @@ function formatarInputValor(classe){
         input.value = `R$: ${valor},00`;
       }
     }
+
+    formulario.entrega.troco = input.value;
+    window.localStorage.setItem("formulario", JSON.stringify(formulario));
 
   });
  

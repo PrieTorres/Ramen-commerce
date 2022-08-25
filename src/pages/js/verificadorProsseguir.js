@@ -10,11 +10,11 @@ function verificadorProsseguir(){
         {
             botao.classList.remove('botao-desativado');
             botao.classList.add('botao-ativado');
-            botao.onclick = '';
+            botao.addEventListener('click', prosseguirFormulario);
         }else{
             botao.classList.add('botao-desativado');
             botao.classList.remove('botao-ativado');
-            botao.onclick = '';
+            botao.removeEventListener('click', prosseguirFormulario);
         }
 
 
@@ -22,16 +22,16 @@ function verificadorProsseguir(){
 
         if(formulario.online.titular_cartao.length > 0 && 
             formulario.online.numero_cartao.length > 0 &&
-            formulario.online.validade_cartao.length > 0 &&
+            formulario.online.validade_cartao.length > 8 &&
             formulario.online.cod_seguranca.length > 0)
         {
             botao.classList.remove('botao-desativado');
             botao.classList.add('botao-ativado');
-            botao.onclick = '';
+            botao.addEventListener('click', prosseguirFormulario);
         }else{
             botao.classList.add('botao-desativado');
             botao.classList.remove('botao-ativado');
-            botao.onclick = '';
+            botao.removeEventListener('click', prosseguirFormulario);
         }
 
     }

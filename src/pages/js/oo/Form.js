@@ -16,6 +16,5 @@ class Formulario_pagamento {
 }
 
 function salvarForm(formulario){
-  console.log('item salvo')
   window.localStorage.setItem("formulario", JSON.stringify(formulario));
 }

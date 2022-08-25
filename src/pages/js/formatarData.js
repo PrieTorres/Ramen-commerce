@@ -4,6 +4,8 @@ function formatarInputData(classeInput){
   let data = [];
   let numbers = [];
   input.value = '';
+  let formulario = window.localStorage.getItem("formulario");
+  formulario = JSON.parse(formulario);
 
   input.addEventListener('keydown', e => {
 
@@ -44,6 +46,9 @@ function formatarInputData(classeInput){
         input.value = valor
       }
     }
+
+    formulario.online.validade_cartao = valor;
+    window.localStorage.setItem("formulario", JSON.stringify(formulario));
   });
 
 }
