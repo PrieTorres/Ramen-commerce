@@ -28,11 +28,11 @@
     <!---->
     <script>
         carregarObjeto();
-        const formulario = new Formulario_pagamento();
+        let formulario = new Formulario_pagamento();
         salvarForm(formulario);
     </script>
 </head>
-<body onchange="salvarForm(formulario); verificadorProsseguir()">
+<body onchange="formulario = JSON.parse(localStorage.getItem('formulario'))">
     <header class="cabecalho-principal">
         <h1 class="cabecalho-principal__titulo"><span class="cabecalho-principal__titulo-content">Ramen-lhama</span></h1>
         <nav class="cabecalho-principal__nav">
@@ -66,7 +66,7 @@
 
         <!-- inicio tela de comprar o pedido -->
         <div class="compra-bg"></div>
-        <div class="compra" onkeydown="verificadorProsseguir()">
+        <div class="compra" onkeydown="verificadorProsseguir()" onchange="salvarForm(formulario); verificadorProsseguir()">
             <div class="compra__selecao-pagamento">
                 <p class="compra__selecao-pagamento__texto">Selecione o método de pagamento <span class="compra__selecao-pagamento__cancelar" onclick="fecharCompraAlert()">X</span></p>
 
@@ -151,7 +151,7 @@
                                 Precisa de troco para quanto?
                                 <!-- TODO: melhorar input para aceitar apenas valores válidos -->
                                 <input type="text" onchange="formulario.entrega.troco = document.body.querySelector('#valor-troco').value" name="valor-troco" id="valor-troco" class="input-pagamento pagamento-entrega__input-valor"
-                                maxlength="8" minlength="2" onfocus="formatarInputValor('pagamento-entrega__input-valor')">
+                                maxlength="8" minlength="2" onfocus="formatarInputValor('pagamento-entrega__input-valor', formulario.total)">
                             </label>
                         </div>
                     </div>
@@ -199,6 +199,6 @@
     <script src="js/formatarInputValor.js"></script>
     <script src="js/formatarData.js"></script>
     <script src="js/prosseguirBotao.js"></script>
-    <script>montarCarrinho();</script>
+    <script>montarCarrinho(formulario, salvarForm);</script>
 </body>
 </html>

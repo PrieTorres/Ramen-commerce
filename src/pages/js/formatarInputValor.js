@@ -1,6 +1,6 @@
-function formatarInputValor(classe){
+function formatarInputValor(classe, valorMinimo=0){
   let input = document.body.querySelector(`.${classe}`);
-  let valor = '';
+  let valor = `${valorMinimo}`;
   let formulario = window.localStorage.getItem("formulario");
   formulario = JSON.parse(formulario);
 
@@ -21,6 +21,10 @@ function formatarInputValor(classe){
       }else{
         input.value = `R$: ${valor},00`;
       }
+    }
+
+    if(valor < valorMinimo){
+      input.style.color = "red"
     }
 
     formulario.entrega.troco = input.value;

@@ -1,6 +1,7 @@
-function montarCarrinho(){
+function montarCarrinho(form, salvarForm){
     let html_carrinho_container = document.body.querySelector("#carrinho-de-itens");
     id=0;
+    var salvarForm = (form) => {salvarForm(form)};
 
     html_carrinho_container.innerHTML = '';
 
@@ -115,7 +116,7 @@ function montarCarrinho(){
 
     });
     
-    montarTotal()
+    montarTotal(form)
     
 }
 
@@ -139,7 +140,7 @@ function definirPreco(){
 
 }
 
-function montarTotal(){
+function montarTotal(form){
     definirPreco();
 
     let container_itens = document.body.querySelector('.itens-comprados');
@@ -173,17 +174,20 @@ function montarTotal(){
         id_totals++;
     });
 
-    alterarTotal();
+    alterarTotal(form);
 }
 
-function alterarTotal(){
+function alterarTotal(form){
     let total_container = document.body.querySelector("#valor_total");
 
     let valor_total = 0;
     carrinho.forEach(item =>{
         valor_total += (item.preco*item.quantidade);
     })
-    valor_total = valor_total.toFixed(2)
+    valor_total = valor_total.toFixed(2);
+
+    form = {...form, total:valor_total}; 
+    salvarForm(form);
 
     total_container.innerHTML = valor_total;
 }
