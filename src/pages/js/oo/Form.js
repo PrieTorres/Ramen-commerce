@@ -16,11 +16,16 @@ class Formulario_pagamento {
   }
 }
 
+const formulario = new Formulario_pagamento();
+
 function salvarForm(formulario){
   window.localStorage.setItem("formulario", JSON.stringify(formulario));
 }
 
-function alterarForm({formulario, chave, valor}){
+function alterarForm(formulario, chave, valor){
+  if(localStorage.getItem("formulario")){
+    formulario = JSON.parse(localStorage.getItem("formulario"));
+  }
 
   formulario.keys(obj).forEach(function(key) {
 

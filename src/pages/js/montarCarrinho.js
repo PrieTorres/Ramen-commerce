@@ -1,7 +1,7 @@
 function montarCarrinho(form, salvarForm){
     let html_carrinho_container = document.body.querySelector("#carrinho-de-itens");
     id=0;
-    var salvarForm = (form) => {salvarForm(form)};
+    var salvarForm = (form, key, value) => {salvarForm(form, key, value)};
 
     html_carrinho_container.innerHTML = '';
 
@@ -187,7 +187,7 @@ function alterarTotal(form){
     valor_total = valor_total.toFixed(2);
 
     form = {...form, total:valor_total}; 
-    salvarForm(form);
+    salvarForm(form, total, valor_total);
 
     total_container.innerHTML = valor_total;
 }
