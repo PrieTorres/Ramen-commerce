@@ -12,11 +12,15 @@ class Formulario_pagamento {
       validade_cartao: '',
       cod_seguranca: ''
     }
+    this.cliente = {
+      nome: "",
+      telefone: "",
+      cep: "",
+      endereco: ""
+    }
     this.total = 0;
   }
 }
-
-const formulario = new Formulario_pagamento();
 
 function salvarForm(formulario){
   window.localStorage.setItem("formulario", JSON.stringify(formulario));
@@ -28,13 +32,12 @@ function alterarForm(formulario, chave, valor){
   }
 
   formulario.keys(obj).forEach(function(key) {
-
     //console.log(key, obj[key]);
     if(key == chave){
       obj[key] = valor;
     }
-  
   });
 
+  console.log(formulario);
   salvarForm(formulario);
 }
