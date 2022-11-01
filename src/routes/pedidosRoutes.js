@@ -5,7 +5,7 @@ const router = Express.Router();
 
 router
     .get('/pedidos', pedidosControllers.listarPedido)
-    .put('/pedidos', pedidosControllers.salvarPedido)
+    .post('/pedidos', pedidosControllers.salvarPedido)
 
 
 export default router

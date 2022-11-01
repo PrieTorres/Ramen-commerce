@@ -5,7 +5,7 @@ const router = Express.Router();
 
 router
     .get('/usuarios', usuariosController.listarUsuarios)
-    .put('/usuarios', usuariosController.cadastrarUsuario)
+    .post('/usuarios', usuariosController.cadastrarUsuario)
 
 
 

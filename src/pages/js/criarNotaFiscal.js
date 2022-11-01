@@ -3,7 +3,7 @@ var notaFiscalText = ""
 function saveNota(text) {
     var blob = new Blob( [text], { type:'text/plain;charset=utf-8' } );
     console.log(blob);
-    saveAs(blob, 'notaFiscal.txt');
+    FileSaver.saveAs(blob, 'notaFiscal.txt');
 }
 
 function criarNotaFiscal() {
