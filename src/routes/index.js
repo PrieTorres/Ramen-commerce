@@ -19,6 +19,7 @@ const routes = (app) => {
     app.use(
         express.json(),
         express.static(dirName + '/pages/'),
+        express.static(dirName + '/node_modules/file-saver'),
         pedidos,
         usuarios
     )

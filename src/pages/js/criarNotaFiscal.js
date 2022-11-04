@@ -1,9 +1,9 @@
-var notaFiscalText = ""
+var notaFiscalText = "";
 
 function saveNota(text) {
     var blob = new Blob( [text], { type:'text/plain;charset=utf-8' } );
     console.log(blob);
-    FileSaver.saveAs(blob, 'notaFiscal.txt');
+    saveAs(blob, 'notaFiscal.txt');
 }
 
 function criarNotaFiscal() {
