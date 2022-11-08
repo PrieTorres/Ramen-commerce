@@ -1,8 +1,13 @@
-function verificadorProsseguir(){
+const botaoProsseguir = document.body.querySelector('.prosseguir-compra-botao');
+
+function verificadorProsseguir(form){
     let botao = document.body.querySelector('.prosseguir-compra-botao');
-    let formulario = window.localStorage.getItem("formulario");
-    formulario = JSON.parse(formulario);
-    
+    let formulario = form;
+
+    if(!form){
+        formulario = window.localStorage.getItem("formulario");
+        formulario = JSON.parse(formulario);
+    }
 
     if(formulario.pagamento == 'entrega'){
 
@@ -25,14 +30,24 @@ function verificadorProsseguir(){
             formulario.online.validade_cartao.length > 8 &&
             formulario.online.cod_seguranca.length > 0)
         {
-            botao.classList.remove('botao-desativado');
-            botao.classList.add('botao-ativado');
-            botao.addEventListener('click', prosseguirFormulario);
+            ativarBotaoProsseguir();
         }else{
-            botao.classList.add('botao-desativado');
-            botao.classList.remove('botao-ativado');
-            botao.removeEventListener('click', prosseguirFormulario);
+           desativarBotaoProsseguir();
         }
 
     }
+}
+
+function ativarBotaoProsseguir(){
+    let botao = botaoProsseguir;
+    botao.classList.remove('botao-desativado');
+    botao.classList.add('botao-ativado');
+    botao.addEventListener('click', prosseguirFormulario);
+}
+
+function desativarBotaoProsseguir(){
+    let botao = botaoProsseguir;
+    botao.classList.add('botao-desativado');
+    botao.classList.remove('botao-ativado');
+    botao.removeEventListener('click', prosseguirFormulario);
 }

@@ -80,6 +80,10 @@ html,body{
     color: #00000000;
 }
 
+.container_invisivel{
+    display: none;
+    opacity: 0;
+}
 .visificador{
     display: block !important;
     opacity: 1 !important;

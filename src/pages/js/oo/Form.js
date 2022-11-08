@@ -26,18 +26,34 @@ function salvarForm(formulario){
   window.localStorage.setItem("formulario", JSON.stringify(formulario));
 }
 
-function alterarForm(formulario, chave, valor){
-  if(localStorage.getItem("formulario")){
-    formulario = JSON.parse(localStorage.getItem("formulario"));
+function alterarForm( chave, subchave, valor){
+  //if(localStorage.getItem("formulario")){
+    let formulario = JSON.parse(localStorage.getItem("formulario"));
+  //}
+
+
+  if(!subchave){
+    formulario[chave] = valor;
+  }else{
+    formulario[chave][subchave] = valor;
   }
 
-  formulario.keys(obj).forEach(function(key) {
-    //console.log(key, obj[key]);
-    if(key == chave){
-      obj[key] = valor;
-    }
-  });
+  // console.log(`
+  // formulario.${chave}.${subchave}
+  // form.${chave}: ${formulario[chave]}
+  // form.${chave}.${subchave}: ${formulario[chave][subchave]}
+  // `)
+  // console.log('--------------------')
 
-  console.log(formulario);
   salvarForm(formulario);
+}
+
+function alterarFormComClasse(classe, formulario, chave, sub){
+  const input = document.body.querySelector(`.${classe}`);
+
+  input.addEventListener('keydown', e => {
+    let text;
+    e.key!='Backspace'? text=input.value+e.key : text=input.value;
+    alterarForm( chave, sub, text);
+  })
 }

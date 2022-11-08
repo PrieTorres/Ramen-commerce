@@ -29,10 +29,10 @@
     <!---->
     <script>
         carregarObjeto();
-        const formulario = new Formulario_pagamento();
+        let formulario = new Formulario_pagamento();
     </script>
 </head>
-<body onchange="salvarForm(formulario)">
+<body onchange="formulario = JSON.parse(localStorage.getItem('formulario')); salvarForm(formulario)">
     <header class="cabecalho-principal">
         <h1 class="cabecalho-principal__titulo"><span class="cabecalho-principal__titulo-content">Ramen-lhama</span></h1>
         <nav class="cabecalho-principal__nav">
@@ -66,17 +66,27 @@
 
         <!-- inicio tela de comprar o pedido -->
         <div class="compra-bg"></div>
-        <div class="compra" onkeydown="verificadorProsseguir()" onchange="verificadorProsseguir()">
+        <div class="compra" onchange="verificadorProsseguir(formulario)">
             <div class="compra__selecao-pagamento">
                 <p class="compra__selecao-pagamento__texto">Selecione o método de pagamento <span class="compra__selecao-pagamento__cancelar" onclick="fecharCompraAlert()">X</span></p>
 
                 <div class="compra__selecao-pagamento__opcoes">
                     <label class="compra__selecao-pagamento__opcao entrega"
-                    onclick="selecionarPagamento('entrega'); formulario.pagamento = 'entrega'">Na entrega
+                    onclick="
+                    selecionarPagamento('entrega'); 
+                    formulario.pagamento = 'entrega';
+                    desativarBotaoProsseguir();
+                    verificadorProsseguir({...formulario, pagamento: 'entrega'})
+                    ">Na entrega
                         <input type="radio" name="pagamento" value="entrega" class="compra__selecao-pagamento__opcao__radio">
                     </label>
                     <label class="compra__selecao-pagamento__opcao online"
-                    onclick="selecionarPagamento('online'); formulario.pagamento = 'online'">Online
+                    onclick="
+                    selecionarPagamento('online'); 
+                    formulario.pagamento = 'online'; 
+                    desativarBotaoProsseguir(); 
+                    verificadorProsseguir({...formulario, pagamento: 'online'})
+                    ">Online
                         <input type="radio" name="pagamento" value="online" class="compra__selecao-pagamento__opcao__radio">
                     </label>
                 </div>
@@ -183,17 +193,17 @@
                     <!-- form cartao -->
                     <div class="pagamento-entrega__form-cartao">
                          <div class="form-cartao__escolha-cartao" onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
-                            <label >
+                            <label onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
                                 MasterCard
                                 <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao" value="mastercard">
                             </label>
-                            <label >
+                            <label onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
                                 Elo
                                 <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao" value="elo">
                             </label>
-                            <label >
+                            <label onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
                                 ViaCred
-                                <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao" value="mastercard">
+                                <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao" value="viacred">
                             </label>
                          </div>
                     </div>
@@ -211,31 +221,38 @@
                     Informe o seu nome: <br>
                     <input 
                     type="text" 
-                    onchange="(e) => {alterarForm(formulario, 'cliente[`nome`]', e.target.value)}" 
-                    class="input-pagamento" maxlength="80" required>
+                    onfocus="alterarFormComClasse('input_cliente_nome', formulario, 'cliente', 'nome')" 
+                    class="input-pagamento input_cliente_nome" maxlength="80" required>
                 </label>
 
                 <label class="label-input">
                     Numero de telefone: <br>
                     <input 
                     type="number" 
-                    onchange="(e) => {alterarForm(formulario, 'cliente[`telefone`]', e.target.value)}" 
-                    class="input-pagamento" minlength="15" maxlength="16" required >
+                    onfocus="alterarFormComClasse('input_cliente_tel', formulario, 'cliente', 'telefone')" 
+                    class="input-pagamento input_cliente_tel" minlength="15" maxlength="16" required >
                 </label>
 
                 <label class="label-input">
                     CEP: <br>
                     <input 
-                    type="text" 
-                    onchange="(e) => {alterarForm(formulario, 'cliente[`cep`]', e.target.value)}" 
-                    class="input-pagamento" minlength="8" maxlength="12" required readonly>
+                    type="number"
+                    onfocus="alterarFormComClasse('input_endereco_cep', formulario, 'cliente', 'cep'); buscarCepComClasse('input_endereco_cep', formulario)"
+                    class="input-pagamento input_endereco_cep" minlength="8" maxlength="8" required >
                 </label>
                 
+                
                 <label class="label__formulario__endereco label-input">
-                    Endereço: <br>
+                    Numero predio: <br>
                     <input type="text" 
-                    onkeydown="e => formulario.cliente.endereco = e.value; salvarForm(formulario)" class="input-pagamento" required>
+                    onfocus="alterarFormComClasse('input_endereco_endereco', formulario, 'cliente', 'numero_predio')"
+                    class="input-pagamento input_endereco_endereco" required>
                 </label>
+                
+
+                <div class="resposta_endereco container_invisivel">
+                    <h2>confira se o endereco abaixo está correto</h2>
+                </div>
 
                 <button class="botao" onclick="criarNotaFiscal()">Pronto!</button>
             </div>
@@ -259,6 +276,7 @@
     <script src="js/prosseguirBotao.js"></script>
     <script src="js/lib/FileSaver/FileSaver.js"></script>
     <script src="js/criarNotaFiscal.js"></script>
+    <script src="js/buscarCEP.js"></script>
     <script>montarCarrinho(formulario, alterarForm);</script>
 </body>
 </html>
