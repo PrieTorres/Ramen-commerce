@@ -48,12 +48,20 @@ function alterarForm( chave, subchave, valor){
   salvarForm(formulario);
 }
 
-function alterarFormComClasse(classe, formulario, chave, sub){
+function alterarFormComClasse(classe, formulario, chave, sub, keypressEvent=false){
   const input = document.body.querySelector(`.${classe}`);
 
-  input.addEventListener('keydown', e => {
-    let text;
-    e.key!='Backspace'? text=input.value+e.key : text=input.value;
-    alterarForm( chave, sub, text);
-  })
+  if(!keypressEvent){
+    input.addEventListener('keydown', e => {
+      let text;
+      e.key!=('Backspace'||'tab')? text=input.value+e.key : text=input.value;
+      alterarForm( chave, sub, text);
+    })
+  }else{
+    input.addEventListener('keypress', e => {
+      let text;
+      e.key!=('Backspace'||'tab')? text=input.value+e.key : text=input.value;
+      alterarForm( chave, sub, text);
+    })
+  }
 }

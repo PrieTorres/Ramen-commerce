@@ -76,7 +76,8 @@
                     selecionarPagamento('entrega'); 
                     formulario.pagamento = 'entrega';
                     desativarBotaoProsseguir();
-                    verificadorProsseguir({...formulario, pagamento: 'entrega'})
+                    verificadorProsseguir({...formulario, pagamento: 'entrega'});
+                    salvarForm(formulario)
                     ">Na entrega
                         <input type="radio" name="pagamento" value="entrega" class="compra__selecao-pagamento__opcao__radio">
                     </label>
@@ -85,7 +86,8 @@
                     selecionarPagamento('online'); 
                     formulario.pagamento = 'online'; 
                     desativarBotaoProsseguir(); 
-                    verificadorProsseguir({...formulario, pagamento: 'online'})
+                    verificadorProsseguir({...formulario, pagamento: 'online'});
+                    salvarForm(formulario)
                     ">Online
                         <input type="radio" name="pagamento" value="online" class="compra__selecao-pagamento__opcao__radio">
                     </label>
@@ -221,7 +223,7 @@
                     Informe o seu nome: <br>
                     <input 
                     type="text" 
-                    onfocus="alterarFormComClasse('input_cliente_nome', formulario, 'cliente', 'nome')" 
+                    onfocus="alterarFormComClasse('input_cliente_nome', formulario, 'cliente', 'nome', true)" 
                     class="input-pagamento input_cliente_nome" maxlength="80" required>
                 </label>
 
@@ -254,7 +256,10 @@
                     <h2>confira se o endereco abaixo está correto</h2>
                 </div>
 
-                <button class="botao" onclick="criarNotaFiscal()">Pronto!</button>
+                <div class="save-nota-fiscal container_invisivel"></div>
+
+                <button class="botao" onclick="criarNotaFiscal()">salvar nota fiscal</button>
+                <button class="botao" onclick="salvarPedido()">Finalizar pedido</button>
             </div>
 
         </div>
@@ -277,6 +282,7 @@
     <script src="js/lib/FileSaver/FileSaver.js"></script>
     <script src="js/criarNotaFiscal.js"></script>
     <script src="js/buscarCEP.js"></script>
+    <script src="js/salvarPedido.js"></script>
     <script>montarCarrinho(formulario, alterarForm);</script>
 </body>
 </html>

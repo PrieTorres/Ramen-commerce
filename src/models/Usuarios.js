@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+// muito descontinuado
 
 const usuariosSchema = new mongoose.Schema(
     {

@@ -3,7 +3,7 @@
 @import './pagamento-online/pagamento-online.css';
 @import './pagamento-entrega/pagamento-entrega.css';
 
-.compra{
+.compra, .save-nota-fiscal{
   width: 70vw;
   height: 70vh;
   position: absolute;

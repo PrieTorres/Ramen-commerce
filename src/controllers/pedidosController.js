@@ -4,7 +4,7 @@ class pedidosControllers {
 
     static listarPedido = (req, res) => {
         pedidos.find()
-        .populate('cliente')
+        //.populate('cliente')
         .exec((err, pedidos) => {
             if(err){
                 res.status(500).send({message: `falha ao listar pedidos, log: ${err.message}`})
@@ -15,7 +15,7 @@ class pedidosControllers {
     }
 
     static salvarPedido = (req, res) => {
-        let pedido = req.body;
+        let pedido = new pedidos(req.body);
 
         pedido.save((err) => {
             if(err){

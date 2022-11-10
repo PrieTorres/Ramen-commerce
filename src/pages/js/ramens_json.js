@@ -60,6 +60,7 @@ let ramensJson = [
         ],
         precos:[32.14,41.17,58.99],
         tamanho: 'medio',
+        preco: 41.17,
         descricao: 'Um ramen pra você que assim como adora um quentinho no coração também adora um quentinho na boca, picancia garantida, recomendado a todos os fortes e corajosos, considere como um desafio',
         imagem: 'img/ramens/ramen_apimentado_png.png',
         quantidade: 1
@@ -82,6 +83,7 @@ let ramensJson = [
         precos:[30.00,37.46,51.20],
         tamanho: 'medio',
         quantidade: 1,
+        preco: 37.46,
         imagem: 'img/ramens/ramen_tradicional_1.png',
         descricao: 'Um ramen tradicional pra você que sempre teve um pouco de curiosidade para provar como é e quer provar o sabor mais próximo de como é servido na China, divirta-se'
     },
@@ -102,6 +104,7 @@ let ramensJson = [
         quantidade: 1,
         precos:[24.42,46.20,52.80],
         tamanho: 'medio',
+        preco: 46.20,
         imagem: 'img/ramens/ramen_4.png',
         descricao: 'Um ramen de Nitamago agridoce pra você, os detalhes? bom você só vai saber depois de experimentar'
     },
@@ -122,6 +125,7 @@ let ramensJson = [
         quantidade: 1,
         precos:[22.05,44.10,49.60],
         tamanho: 'medio',
+        preco: 44.10,
         imagem: 'img/ramens/ramen_apimentado_2.png',
         descricao: 'O Extreme é para qualquer um que goste de sabores fortes, um dos rámens mais vendidos aqui, e a sua popularidade não é atoa'
     },
@@ -146,6 +150,7 @@ let ramensJson = [
         quantidade: 1,
         precos:[28.09,43.60,48.30],
         tamanho: 'medio',
+        preco: 43.60,
         imagem: 'img/ramens/ramen_6.png',
         descricao: 'O Vegetablerr é para você, nosso colega vegetariano ou que apenas não quer carne hoje mas ainda quer desfrutar de uma completa e deliciosa refeição com uma certa picância, recomendado apenas para os fortes'
     },
@@ -169,6 +174,7 @@ let ramensJson = [
         quantidade: 1,
         precos:[21.60,39.90,54.20],
         tamanho: 'medio',
+        preco: 39.90,
         imagem: 'img/ramens/ramen_7.png',
         descricao: 'Esse rámen é para você, que é o diferentão do grupo e curte algo um pouco mais diferente do padrão, não é estranho, é exótico, e é melhor ainda que seja só você que goste porque assim ninguém te pede um pouco ;)'
     },
@@ -190,6 +196,7 @@ let ramensJson = [
         quantidade: 1,
         precos:[23.30,36.90,54.80],
         tamanho: 'medio',
+        preco: 36.90,
         imagem: 'img/ramens/ramen_11.png',
         descricao: 'Um ramen quase vegetaranio para você que não quer carne mas não quer abrir mão de um ovo, uma escolha muito popular devido a ser, de fato, gostoso'
     },
@@ -215,6 +222,7 @@ let ramensJson = [
         quantidade: 1,
         precos:[39.00,47.56,57.25],
         tamanho: 'medio',
+        preco: 47.56,
         imagem: 'img/ramens/ramen_10.png',
         descricao: 'Simplesmente o mais famoso da casa, levemente escondido do público para ter um leve mistério envolvido, boatos dizem que foi este rámen que tornou Chuck Norris tão poderoso'
     }

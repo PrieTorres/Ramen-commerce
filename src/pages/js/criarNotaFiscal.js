@@ -9,17 +9,24 @@ function saveNota(text) {
 function criarNotaFiscal() {
     const infoCliente = JSON.parse(localStorage.getItem("formulario"));
     const infoPedido = [...JSON.parse(localStorage.getItem("carrinho"))];
-    const compraContainer = document.body.querySelector('.compra');
+    const compraContainer = document.body.querySelector('.compra__selecao-pagamento');
+    const notaFiscalHtmlContainer = document.body.querySelector('.save-nota-fiscal');
+
+    if(!infoCliente.cliente.nome || !infoCliente.cliente.endereco){
+        console.log(infoCliente.cliente.nome, infoCliente.cliente.endereco)
+        alert('preencha os campos!');
+        return;
+    }
 
     const notaFiscal = {
         nomeCliente: infoCliente.cliente.nome,
-        enderecoCliente: infoCliente.cliente.endereco,
+        enderecoCliente: (infoCliente.cliente.endereco.bairro? infoCliente.cliente.endereco.bairro+" " : "")+(infoCliente.cliente.endereco.logradouro? infoCliente.cliente.endereco.logradouro+" " : "")+(infoCliente.cliente.numero_predio ? infoCliente.cliente.numero_predio : ""),
         itensPedido: [],
         total: 0
     }
 
     infoPedido.forEach(ramen => {
-        notaFiscal.itensPedido.push((`${ramen.quantidade} ${ramen.nome} ${ramen.tamanho}...... ${ramen.preco*ramen.quantidade}`))
+        notaFiscal.itensPedido.push((`${ramen.quantidade} ${ramen.nome} ${ramen.tamanho? ramen.tamanho : ''}...... ${ramen.preco*ramen.quantidade}`))
     })
 
     infoPedido.forEach(ramen => {notaFiscal.total += (ramen.preco*ramen.quantidade)});
@@ -52,21 +59,34 @@ function criarNotaFiscal() {
     `;
 
     notaFiscalText = `
-    ${notaFiscal.nomeCliente.toUpperCase()}
-    ${notaFiscal.enderecoCliente.toUpperCase()}
+${notaFiscal.nomeCliente.toUpperCase()}
+${notaFiscal.enderecoCliente.toUpperCase()}
 
-    ${bb}
+${bb}
 
-    Total: ${notaFiscal.total.toFixed(2)}
+Total: ${notaFiscal.total.toFixed(2)}
     `;
 
-    compraContainer.innerHTML = `
-    
-    <span class="compra__selecao-pagamento__cancelar" onclick="fecharCompraAlert()">X</span>
+
+    compraContainer.style.display = 'none';
+    notaFiscalHtmlContainer.innerHTML = `
+    <span class="compra__selecao-pagamento__cancelar" onclick="fecharContainerNotaFiscal()">X</span>
 
     ${notaFiscalHTML}
 
     <button onclick="saveNota(notaFiscalText)">Salvar nota fiscal</button>
-    
-    `
+    `;
+
+    notaFiscalHtmlContainer.classList.remove('container_invisivel');
+    notaFiscalHtmlContainer.classList.add('visificador');
+}
+
+function fecharContainerNotaFiscal() {
+    const compraContainer = document.body.querySelector('.compra');
+    const notaFiscalHtmlContainer = document.body.querySelector('.save-nota-fiscal');
+
+    notaFiscalHtmlContainer.classList.remove('visificador');
+    notaFiscalHtmlContainer.classList.add('container_invisivel');
+
+    compraContainer.style.display = 'block';
 }
