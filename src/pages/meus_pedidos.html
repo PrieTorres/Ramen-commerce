@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>trabalhe conosco - vagas restaurante</title>
+    <title>Seus pedidos</title>
     <link rel="shortcut icon" href="img/logo/Item_Ramen_Tonkotsu.webp" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cabecalho.css">
     <link rel="stylesheet" href="css/rodape.css">
+    <link rel="stylesheet" href="css/meus-pedidos/pedido-containers.css">
+    <link rel="stylesheet" href="css/meus-pedidos/container-pedidos.css">
+
+    <script src="./js/carregarPedidos.js"></script>
+    <script>
+        const meusPedidos = carregarPedidos();
+    </script>
 </head>
 <body>
     <header class="cabecalho-principal">
@@ -22,11 +29,23 @@
             </ul>
         </nav>
     </header>
-    <main>
-        
-        
-
-
+    <main class="container-pedidos" onload="//renderizarPedidos(meusPedidos, 'container-pedidos')">
+        <div class="pedido-container">
+            <div class="imagem-pedido">
+                <img src="./img/ramens/desenho-ramen.png" alt="ramen delicioso">
+            </div>
+            <div class="infos-pedido">
+                <p class="hora-pedido">Pedido feito às 21:34</p>
+                <ul class="itens-pedido">
+                    <li class="item-pedido">Ramen de frango médio apimentado</li>
+                    <li class="item-pedido">Ramen de Chashu grande tradicional</li>
+                    <li class="item-pedido">Combo Familia</li>
+                </ul>
+                <p class="info-pagamento">
+                    Total: R$  ---- Pagamento na entrega                
+                </p>
+            </div>
+        </div>
     </main>
     <footer class="rodape-principal">
         <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
