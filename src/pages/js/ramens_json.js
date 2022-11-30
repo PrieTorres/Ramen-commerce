@@ -32,8 +32,8 @@ let ramensJson = [
     {
         id: 0,
         nome: "Ramen vegetariano",
-        caldo: 'vegetariano tradicional',
-        carne: 'Vegetariano',
+        caldo: 'tradicional',
+        carne: 'Legumes Orientais',
         complementos: [
             'Shitake',
             'Cebolinha',
@@ -50,7 +50,7 @@ let ramensJson = [
     {
         id: 1,
         nome: "Ramen Apimentado",
-        caldo: 'Apimentado',
+        caldo: 'Picante',
         carne: 'Chasu (porco)',
         complementos: [
             'Cebola crispy',
@@ -67,7 +67,7 @@ let ramensJson = [
     },
     {
         id: 2,
-        nome: "Ramen tradicional",
+        nome: "Ramen Original",
         caldo: 'Tradicional',
         carne: 'Nitamago (porco e ovos)',
         complementos: [
@@ -89,7 +89,7 @@ let ramensJson = [
     },
     {
         id: 3,
-        nome: "Ramen Nitamago Agridoce",
+        nome: "Ramen Semi Tradicional",
         caldo: 'Agridoce',
         carne: 'Nitamago (porco e ovos)',
         complementos: [

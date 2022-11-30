@@ -8,7 +8,7 @@ function salvarPedido () {
     infoCarrinho.forEach(item => {
         if(!item.preco) throw new Error('itens should have a price!');
 
-        total+=item.preco;
+        total+=item.preco*item.quantidade;
         itens.push({
             preco: item.preco,
             nome: item.nome + (item.carne? " "+item.carne : "") + (item.caldo? " "+item.caldo : ""),
@@ -23,7 +23,8 @@ function salvarPedido () {
         preco: total,
         pagamento: infoCompra.pagamento,
         horaPedido: new Date(),
-        cliente: infoCliente
+        cliente: infoCliente,
+        imagem: `${infoCarrinho[0].imagem}`
     }
 
     fetch(`${window.location.origin}/pedidos`, {

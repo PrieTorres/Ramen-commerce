@@ -7,6 +7,7 @@ const pedidosSchema = new mongoose.Schema (
         preco: {type: String},
         pagamento: {type: String, required: true},
         horaPedido: {type: Date},
+        imagem: {type: String},
         //cliente: {type: mongoose.Schema.Types.ObjectId, ref: 'usuarios'}
         cliente: {type: Object}
     }

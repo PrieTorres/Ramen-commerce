@@ -14,7 +14,7 @@
 
     <script src="./js/carregarPedidos.js"></script>
     <script>
-        const meusPedidos = carregarPedidos();
+        //renderizarPedidos(meusPedidos, 'container-pedidos')
     </script>
 </head>
 <body>
@@ -29,7 +29,7 @@
             </ul>
         </nav>
     </header>
-    <main class="container-pedidos" onload="//renderizarPedidos(meusPedidos, 'container-pedidos')">
+    <main class="container-pedidos" >
         <div class="pedido-container">
             <div class="imagem-pedido">
                 <img src="./img/ramens/desenho-ramen.png" alt="ramen delicioso">
@@ -51,4 +51,7 @@
         <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
     </footer>
 </body>
+<script>
+    renderizarPedidos(undefined, 'container-pedidos');
+</script>
 </html>

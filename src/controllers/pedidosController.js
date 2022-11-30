@@ -26,6 +26,17 @@ class pedidosControllers {
         });
     }
 
+    static excluirPedido = (req, res) => {
+        let id = req.params.id;
+        pedidos.findByIdAndDelete(id, (err) => {
+            if(err){
+              res.status(500).send({message: `O pedido ${id} nao foi deletado`});
+            }else{
+              res.status(200).send({message: 'Pedido deletado com sucesso'});
+            }
+          });
+    }
+
 }
 
 export default pedidosControllers;
