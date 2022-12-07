@@ -6,7 +6,8 @@ dotenv.config();
 const user = process.env.DB_USER;
 const password = process.env.DB_PASSWORD;
 
-mongoose.connect(`mongodb+srv://${user}:${password}@cluster0.ynfdedz.mongodb.net/test`);
+//mongoose.connect(`mongodb+srv://${user}:${password}@cluster0.ynfdedz.mongodb.net/test`);
+mongoose.connect(`mongodb+srv://user:user@principal.mwdxnup.mongodb.net/?retryWrites=true&w=majority`);
 
 const db = mongoose.connection;
 
