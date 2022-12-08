@@ -1,0 +1,2 @@
+var images=["img/ramens/dish-6799805_1920.jpg","img/ramens/ramen-picante.jpg","img/ramens/ramen-picante.jpg","img/ramens/ramen-tradicional.jpg","img/ramens/ramen-vegetariano.jpg","img/ramens/ramen-3561894_1920.jpg","img/ramens/ramen-4593402_1920.jpg","img/ramens/ramen-7187810_1920.jpg"];function trocarImagem(){var e=document.body.querySelector(".descrisao-ramen__container-imagem"),a=0;setInterval((function(m){e.style.backgroundImage="url(".concat(images[a],")"),++a>=parseInt(images.length)-1&&(a=0)}),5e3)}
+//# sourceMappingURL=index.baac55f9.js.map
