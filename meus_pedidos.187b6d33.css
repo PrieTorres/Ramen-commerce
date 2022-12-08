@@ -1,0 +1,2 @@
+.pedido-container{height:200px;border:1px solid #000;padding:20px;display:flex;position:relative}.imagem-pedido{height:100%;box-sizing:border-box;display:inline-block;overflow:hidden}.imagem-pedido img{max-height:100%;box-sizing:border-box;overflow:hidden}.infos-pedido{padding:20px}.itens-pedido,.item-pedido{list-style:disc!important}.item-pedido{padding-left:5px}.item-pedido:before{content:"• "}
+/*# sourceMappingURL=meus_pedidos.187b6d33.css.map */
