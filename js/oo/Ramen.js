@@ -13,14 +13,8 @@ class Ramen {
 
 
     calcularPreco(){
-        
-            this.precos[0]=28.9+(parseInt(this.complementos.length)*0.7);
-        
-        
-            this.precos[1]=37.4+(parseInt(this.complementos.length)*0.8);
-        
-        
-            this.precos[2]=45.5+(parseInt(this.complementos.length));
-        
+        this.precos[0]=28.9+(parseInt(this.complementos.length)*0.7);
+        this.precos[1]=37.4+(parseInt(this.complementos.length)*1.15);
+        this.precos[2]=45.5+(parseInt(this.complementos.length)*2);
     }
 }

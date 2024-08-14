@@ -29,7 +29,7 @@
 .carrinho-alert__confere{
     box-shadow: 1px 1px 8px 3px var(--shadow);
     background-size: cover;
-    background-image: url('');
+    background-image: url('../img/ramens/ramen_6.png');
     background-repeat: no-repeat;
     display: inline-block;
     padding: 20%;
