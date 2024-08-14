@@ -1,15 +1,57 @@
 @import './pagamento-online__formulario.css';
 
-.pagamento-online{
-  display: none; /*troca pra block*/
+.pagamento-online {
+  display: none;
+  /*troca pra block*/
   opacity: 0;
   transition: opacity .8s;
 }
 
-.label-input{
+.label-input {
   width: auto;
   max-width: 100%;
   display: inline-block;
   margin: 5px 20px;
   margin-left: 0;
+}
+
+.form-prosseguir {
+  min-height: 100%;
+}
+
+.form-prosseguir > .label-input {
+  padding: 8px;
+  border: 1px solid #00000070;
+  border-radius: 8px;
+  margin: 12px 8px 12px 0px;
+}
+
+.form-prosseguir > .label-input > input {
+  width: -webkit-fill-available;
+}
+
+.form-prosseguir .botao{
+  padding: 12px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  background: var(--botao-base);
+  color: var(--branco);
+  transition: all .5s ease;
+}
+
+.form-prosseguir .botao:hover{
+  background-color: var(--botao-ativo);
+}
+
+.form-prosseguir-header {
+  position: relative;
+  background-color: var(--botao-base);
+  color: var(--branco);
+  border: 2px solid var(--preto);
+  min-height: 40px;
+  padding: 10px;
+}
+
+.form-prosseguir-header > * {
+  max-width: calc(100% - 40px);
 }

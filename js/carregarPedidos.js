@@ -4,7 +4,7 @@ async function carregarPedidos() {
     const localPedidos = JSON.parse(localStorage.getItem("pedidos")) ?? [];
 
     await fetch("/pedidos")
-        .then(res => res = res.json())
+        .then(res => res.json())
         .catch(err => { console.log(err); return err })
         .then(data => { pedidos.push(...Object.values(data)); return pedidos })
 
@@ -18,13 +18,10 @@ async function renderizarPedidos(pedidos, classeContainer) {
     if (!pedidos) {
         pedidos = await carregarPedidos();
     }
-    console.log("pedidos --> ", pedidos);
 
 
     pedidos.forEach(pedido => {
         let text_itens = "";
-        console.log('entrou aqui', pedido);
-
 
         pedido.itens.forEach(item => {
             text_itens += `<li class="item-pedido">${item.nome}</li>`
