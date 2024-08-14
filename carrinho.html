@@ -206,7 +206,10 @@
                     <!-- form cartao -->
                     <div class="pagamento-entrega__form-cartao">
                         <div class="form-cartao__escolha-cartao"
-                            onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
+                            onclick="
+                                formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value;
+                                salvarForm(formulario)
+                            ">
                             <label
                                 onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
                                 MasterCard
@@ -247,29 +250,40 @@
                     <legend>Informe o seu nome:</legend>
                     <input type="text"
                         onfocus="alterarFormComClasse('input_cliente_nome', formulario, 'cliente', 'nome', true)"
-                        class="input-pagamento input_cliente_nome" maxlength="300" required>
+                        class="input-pagamento input_cliente_nome" maxlength="300" required
+                        onchange="removerClasse('label-input:has(.input_cliente_nome)', 'input-pagamento')"
+                    />
                 </fieldset>
 
                 <fieldset class="label-input" style="width: 180px;">
                     <legend>Numero de telefone:</legend>
                     <input type="number"
                         onfocus="alterarFormComClasse('input_cliente_tel', formulario, 'cliente', 'telefone')"
-                        class="input-pagamento input_cliente_tel" minlength="15" maxlength="16" required>
+                        class="input-pagamento input_cliente_tel" minlength="15" maxlength="16" required
+                        onchange="removerClasse('label-input:has(.input_cliente_tel)', 'input-pagamento')"
+                    />
                 </fieldset>
 
                 <fieldset class="label-input" style="width: 140px;">
                     <legend>CEP:</legend>
                     <input type="number"
-                        onfocus="alterarFormComClasse('input_endereco_cep', formulario, 'cliente', 'cep'); buscarCepComClasse('input_endereco_cep', formulario)"
-                        class="input-pagamento input_endereco_cep" minlength="8" maxlength="8" required>
+                        onfocus="
+                            alterarFormComClasse('input_endereco_cep', formulario, 'cliente', 'cep'); 
+                            buscarCepComClasse('input_endereco_cep', formulario)
+                        "
+                        class="input-pagamento input_endereco_cep" minlength="8" maxlength="8" required
+                        onchange="removerClasse('label-input:has(.input_endereco_cep)', 'input-pagamento')"    
+                    />
                 </fieldset>
 
 
                 <fieldset class="label__formulario__endereco label-input" style="width: 60px;">
                     <legend>Numero predio:</legend>
                     <input type="text"
-                        onfocus="alterarFormComClasse('input_endereco_endereco', formulario, 'cliente', 'numero_predio')"
-                        class="input-pagamento input_endereco_endereco" required>
+                        onfocus="alterarFormComClasse('input_cliente_endereco', formulario, 'cliente', 'numero_predio')"
+                        class="input-pagamento input_cliente_endereco" required
+                        onchange="removerClasse('label-input:has(.input_cliente_endereco)', 'input-pagamento')"    
+                    />
                 </fieldset>
 
 

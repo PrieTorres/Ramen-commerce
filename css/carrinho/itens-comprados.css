@@ -5,7 +5,8 @@
 }
 .item-comprado{
     border: 1px solid black;
-    height: 100px;
+    min-height: 100px;
+    max-height: 200px;
     width: 100%;
     display: block;
     padding: 5px;

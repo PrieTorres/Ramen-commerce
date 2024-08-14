@@ -11,5 +11,6 @@
         width: 100vw;
         flex: auto;
         min-height: 0;
+        min-height: calc(100vw - 550px );
     }
 }

@@ -9,10 +9,10 @@
 
 .label-input {
   width: auto;
-  max-width: 100%;
   display: inline-block;
   margin: 5px 20px;
   margin-left: 0;
+  max-width: -webkit-fill-available;
 }
 
 .form-prosseguir {
@@ -54,4 +54,8 @@
 
 .form-prosseguir-header > * {
   max-width: calc(100% - 40px);
+}
+
+.label-input.invalid{
+  border: 1px solid #fc1a1aa9;
 }

@@ -12,10 +12,6 @@
     width: 50vw;
     height: 0;
     display: none;
-    /*
-    height: 80vh;
-    display: flex;
-    */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -52,7 +48,7 @@
     color: var(--branco);
     border-radius: 15px;
     font-size: 1.15rem;
-    margin: 0px 5px;
+    margin: 5px;
     flex-shrink: 2;
 }
 .carrinho-alert__texto{

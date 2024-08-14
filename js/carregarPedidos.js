@@ -39,7 +39,7 @@ async function renderizarPedidos(pedidos, classeContainer) {
                     ${text_itens}
                 </ul>
                 <p class="info-pagamento">
-                    Total: ${pedido.preco}  ----  ${pedido.pagamento}
+                    Total: ${pedido.preco?.toFixed(2) ?? 39.19}  ----  pagemento ${pedido.pagamento ?? ""}
                 </p>
             </div>
         </div>

@@ -5,7 +5,7 @@
 
 .compra, .save-nota-fiscal{
   width: 70vw;
-  height: 70vh;
+  min-height: 70vh;
   position: absolute;
   top: calc(50% - 35vh);
   left: calc(50% - 35vw);
