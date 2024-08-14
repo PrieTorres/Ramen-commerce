@@ -2,4 +2,5 @@
     padding: 20px;
     box-sizing: border-box;
     width: calc(100vw - 20px);
+    min-height: calc(100vh - 200px);
 }
