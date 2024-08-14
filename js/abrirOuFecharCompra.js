@@ -1,4 +1,7 @@
 function abrirComprAlert(){
+  const carrinho = JSON.parse(localStorage.getItem("carrinho"));
+  if(!carrinho?.length) return;
+
   let container_compra = document.body.querySelector('.compra');
   let container_compra_bg = document.body.querySelector('.compra-bg');
 

@@ -249,18 +249,18 @@
                 <fieldset class="label-input" style="width: 300px;">
                     <legend>Informe o seu nome:</legend>
                     <input type="text"
-                        onfocus="alterarFormComClasse('input_cliente_nome', formulario, 'cliente', 'nome', true)"
+                        onfocus="alterarFormComClasse('input_cliente_nome', formulario, 'cliente', 'nome', true);
+                         removerClasse('invalid','label-input:has(.input_cliente_nome)', 'input-pagamento')"
                         class="input-pagamento input_cliente_nome" maxlength="300" required
-                        onchange="removerClasse('label-input:has(.input_cliente_nome)', 'input-pagamento')"
                     />
                 </fieldset>
 
                 <fieldset class="label-input" style="width: 180px;">
                     <legend>Numero de telefone:</legend>
                     <input type="number"
-                        onfocus="alterarFormComClasse('input_cliente_tel', formulario, 'cliente', 'telefone')"
+                        onfocus="alterarFormComClasse('input_cliente_tel', formulario, 'cliente', 'telefone');
+                        removerClasse('invalid','label-input:has(.input_cliente_tel)')"
                         class="input-pagamento input_cliente_tel" minlength="15" maxlength="16" required
-                        onchange="removerClasse('label-input:has(.input_cliente_tel)', 'input-pagamento')"
                     />
                 </fieldset>
 
@@ -268,11 +268,11 @@
                     <legend>CEP:</legend>
                     <input type="number"
                         onfocus="
-                            alterarFormComClasse('input_endereco_cep', formulario, 'cliente', 'cep'); 
-                            buscarCepComClasse('input_endereco_cep', formulario)
+                            alterarFormComClasse('input_cliente_cep', formulario, 'cliente', 'cep'); 
+                            buscarCepComClasse('input_cliente_cep', formulario);
+                            removerClasse('invalid','label-input:has(.input_cliente_cep)');
                         "
-                        class="input-pagamento input_endereco_cep" minlength="8" maxlength="8" required
-                        onchange="removerClasse('label-input:has(.input_endereco_cep)', 'input-pagamento')"    
+                        class="input-pagamento input_cliente_cep" minlength="8" maxlength="8" required
                     />
                 </fieldset>
 
@@ -280,9 +280,9 @@
                 <fieldset class="label__formulario__endereco label-input" style="width: 60px;">
                     <legend>Numero predio:</legend>
                     <input type="text"
-                        onfocus="alterarFormComClasse('input_cliente_endereco', formulario, 'cliente', 'numero_predio')"
-                        class="input-pagamento input_cliente_endereco" required
-                        onchange="removerClasse('label-input:has(.input_cliente_endereco)', 'input-pagamento')"    
+                        onfocus="alterarFormComClasse('input_cliente_endereco', formulario, 'cliente', 'numero_predio'); 
+                        removerClasse('invalid', 'label-input:has(.input_cliente_endereco)')"
+                        class="input-pagamento input_cliente_endereco" required    
                     />
                 </fieldset>
 

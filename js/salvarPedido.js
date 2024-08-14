@@ -3,9 +3,10 @@ function salvarPedido() {
     const infoCarrinho = [...JSON.parse(localStorage.getItem("carrinho"))];
     const infoCompra = JSON.parse(localStorage.getItem("formulario"));
     if(!infoCliente?.cep || !infoCliente?.endereco || !infoCliente?.nome || !infoCliente?.telefone){
-        document.querySelector(".alert-missing-client-info").classList.add("ativo");
+        //document.querySelector(".alert-missing-client-info")?.classList?.add("ativo");
         if(!infoCliente?.cep) document.querySelector(".label-input:has(.input_cliente_cep)").classList.add("invalid");
-        if(!infoCliente?.endereco) document.querySelector(".label-input:has(.input_cliente_endereco)").classList.add("invalid");
+        if(!infoCliente?.endereco) document.querySelector(".label-input:has(.input_cliente_cep)").classList.add("invalid");
+        if(!infoCliente?.numero_predio) document.querySelector(".label-input:has(.input_cliente_endereco)").classList.add("invalid");
         if(!infoCliente?.nome) document.querySelector(".label-input:has(.input_cliente_nome)").classList.add("invalid");
         if(!infoCliente?.telefone) document.querySelector(".label-input:has(.input_cliente_tel)").classList.add("invalid");
         return;
@@ -19,7 +20,7 @@ function salvarPedido() {
         total += item.preco * item.quantidade;
         itens.push({
             preco: item.preco,
-            nome: item.nome + (item.carne ? " " + item.carne : "") + (item.caldo ? " " + item.caldo : ""),
+            nome: item.nome + (item.carne ? " " + item.carne : "") + (item.caldo ? " " + item.caldo : "") + (item.tamanho ? ` ${item.tamanho}` : ""),
             ingredientes: [...item.complementos],
             quantidade: item.quantidade,
             tamanho: item.tamanho
