@@ -62,7 +62,7 @@ let ramensJson = [
         tamanho: 'medio',
         preco: 41.17,
         descricao: 'Um ramen pra você que assim como adora um quentinho no coração também adora um quentinho na boca, picancia garantida, recomendado a todos os fortes e corajosos, considere como um desafio',
-        imagem: 'img/ramens/ramen_apimentado_png.png',
+        imagem: 'img/ramens/Ramen_apimentado_png.png',
         quantidade: 1
     },
     {
