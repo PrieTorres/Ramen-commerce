@@ -1,4 +1,4 @@
-function salvarPedido () {
+function salvarPedido() {
     const infoCliente = JSON.parse(localStorage.getItem("formulario")).cliente;
     const infoCarrinho = [...JSON.parse(localStorage.getItem("carrinho"))];
     const infoCompra = JSON.parse(localStorage.getItem("formulario"));
@@ -6,19 +6,19 @@ function salvarPedido () {
     let total = 0;
     let itens = [];
     infoCarrinho.forEach(item => {
-        if(!item.preco) throw new Error('itens should have a price!');
+        if (!item.preco) throw new Error('itens should have a price!');
 
-        total+=item.preco*item.quantidade;
+        total += item.preco * item.quantidade;
         itens.push({
             preco: item.preco,
-            nome: item.nome + (item.carne? " "+item.carne : "") + (item.caldo? " "+item.caldo : ""),
+            nome: item.nome + (item.carne ? " " + item.carne : "") + (item.caldo ? " " + item.caldo : ""),
             ingredientes: [...item.complementos],
             quantidade: item.quantidade,
             tamanho: item.tamanho
         })
     });
 
-    let output = {
+    const output = {
         itens: itens,
         preco: total,
         pagamento: infoCompra.pagamento,
@@ -30,13 +30,17 @@ function salvarPedido () {
     fetch(`${window.location.origin}/pedidos`, {
         method: 'POST',
         headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify(output)
+    }).catch(err => {
+        const pedidos = JSON.parse(localStorage.getItem("pedidos")) ?? [];
+        pedidos.push({ id: Math.floor(Math.random() * 99999999999), ...output, errMessage: err?.message, errCode: err?.code });
+        localStorage.setItem("pedidos", JSON.stringify(pedidos));
     });
 
+    localStorage.removeItem("carrinho");
     window.location.reload();
-    window.location.href(window.location.origin+'/index.html');
-
+    window.location.href(window.location.origin + '/index.html');
 }
