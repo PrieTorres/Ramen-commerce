@@ -17,6 +17,24 @@
   display: none;
   opacity: 0;
 }
+.save-nota-fiscal{
+  box-sizing: border-box;
+}
+.save-nota-fiscal .compra__selecao-pagamento__cancelar{
+  color: var(--preto);
+}
+.save-nota-fiscal > * {
+  margin-bottom: 8px;
+}
+.save-nota-fiscal button {
+  padding: 8px;
+  border-radius: 8px;
+  margin: 12px auto;
+}
+.save-nota-fiscal .infos-nota-fiscal {
+  margin-top: 3rem;
+}
+
 .compra-bg{
   width: 100vw;
   height: 100vh;
