@@ -28,6 +28,7 @@
 }
 
 .conteudo-principal__ofertas-oferta--principal:hover {
+    background-color: orange;
     background: url('https://c.tenor.com/IP1cFAOQQWsAAAAC/anime-food.gif') no-repeat;
     background-size: cover;
     background-position: center;

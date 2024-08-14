@@ -2,161 +2,154 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seus pedidos!</title>
-    <!--css principais-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/cabecalho.css">
-    <link rel="stylesheet" href="css/rodape.css">
-    <!---->
-    <link rel="shortcut icon" href="img/logo/Item_Ramen_Tonkotsu.webp" type="image/x-icon">
-    <link rel="stylesheet" href="css/carrinho/conteudo-principal.css">
-    <link rel="stylesheet" href="css/carrinho/container-caixa-itens.css">
-    <link rel="stylesheet" href="css/carrinho/container-itens.css">
-    <link rel="stylesheet" href="css/quantifier.css">
-    <link rel="stylesheet" href="css/opcoes-tamanho.css">
-    <link rel="stylesheet" href="css/carrinho/total-compra.css">
-    <link rel="stylesheet" href="css/carrinho/carrinho.css">
-    <link rel="stylesheet" href="css/carrinho/itens-comprados.css">
-    <link rel="stylesheet" href="css/carrinho/compra/compra.css">
-    <!-- scrits importantes-->
-    <script src="js/ramens_json.js"></script>
-    <script src="js/montarCarrinho.js"></script>
-    <script src="js/manipuladorObjeto.js"></script>
-    <script src="js/oo/Form.js"></script>
-    <script src="js/FileSaver.js"></script>
-    <!---->
-    <script>
-        carregarObjeto();
-        let formulario = new Formulario_pagamento();
-    </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seus pedidos!</title>
+  <!--css principais-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cabecalho.css">
+  <link rel="stylesheet" href="css/rodape.css">
+  <!---->
+  <link rel="shortcut icon" href="img/logo/Item_Ramen_Tonkotsu.webp" type="image/x-icon">
+  <link rel="stylesheet" href="css/carrinho/conteudo-principal.css">
+  <link rel="stylesheet" href="css/carrinho/container-caixa-itens.css">
+  <link rel="stylesheet" href="css/carrinho/container-itens.css">
+  <link rel="stylesheet" href="css/quantifier.css">
+  <link rel="stylesheet" href="css/opcoes-tamanho.css">
+  <link rel="stylesheet" href="css/carrinho/total-compra.css">
+  <link rel="stylesheet" href="css/carrinho/carrinho.css">
+  <link rel="stylesheet" href="css/carrinho/itens-comprados.css">
+  <link rel="stylesheet" href="css/carrinho/compra/compra.css">
+  <!-- scrits importantes-->
+  <script src="js/ramens_json.js"></script>
+  <script src="js/montarCarrinho.js"></script>
+  <script src="js/manipuladorObjeto.js"></script>
+  <script src="js/oo/Form.js"></script>
+  <script src="js/FileSaver.js"></script>
+  <!---->
+  <script>
+    carregarObjeto();
+    let formulario = new Formulario_pagamento();
+  </script>
 </head>
 
 <body onchange="formulario = JSON.parse(localStorage.getItem('formulario')); salvarForm(formulario)">
-    <header class="cabecalho-principal">
-        <h1 class="cabecalho-principal__titulo"><span class="cabecalho-principal__titulo-content">Ramen-lhama</span>
-        </h1>
-        <nav class="cabecalho-principal__nav">
-            <ul class="cabecalho-principal__nav-lista">
-                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link"
-                        href="index.html">Home</a></li>
-                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link"
-                        href="montagem.html">Monte o seu Rámen!</a></li>
-                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link"
-                        href="menu.html">Menu <p class="texto-invisivel">cardápio com todos os rámens e combos</p></a>
-                </li>
-                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link ativo"
-                        href="carrinho.html">Carrinho</a></li>
-                <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link"
-                        href="meus_pedidos.html">Meus Pedidos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="carrinho">
+  <header class="cabecalho-principal">
+    <h1 class="cabecalho-principal__titulo"><span class="cabecalho-principal__titulo-content">Ramen-lhama</span>
+    </h1>
+    <nav class="cabecalho-principal__nav">
+      <ul class="cabecalho-principal__nav-lista">
+        <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link"
+            href="index.html">Home</a></li>
+        <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link"
+            href="montagem.html">Monte o seu Rámen!</a></li>
+        <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link"
+            href="menu.html">Menu <p class="texto-invisivel">cardápio com todos os rámens e combos</p></a>
+        </li>
+        <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link ativo"
+            href="carrinho.html">Carrinho</a></li>
+        <li class="cabecalho-principal__nav-lista-item"><a class="cabecalho-principal__nav-lista-link"
+            href="meus_pedidos.html">Meus Pedidos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="carrinho">
 
-        <div class="conteudo-principal">
-            <div class="container-itens" id="carrinho-de-itens">
-                <!-- itens comprados -->
-            </div>
-        </div>
+    <div class="conteudo-principal">
+      <div class="container-itens" id="carrinho-de-itens">
+        <!-- itens comprados -->
+      </div>
+    </div>
 
-        <aside class="container-total"><!-- janela do total da compra -->
-            <h2 class="container-total__titulo">Total</h2>
-            <div class="itens-comprados">
-                <!-- itens comprados -->
+    <aside class="container-total"><!-- janela do total da compra -->
+      <h2 class="container-total__titulo">Total</h2>
+      <div class="itens-comprados">
+        <!-- itens comprados -->
 
-                <!---->
-            </div>
-            <strong class="container-total__valor-total">R$<strong id="valor_total">00,00</strong></strong><br>
-            <button class="container-total__botao-comprar" onclick="abrirComprAlert()">Comprar</button>
-        </aside>
+        <!---->
+      </div>
+      <strong class="container-total__valor-total">R$<strong id="valor_total">00,00</strong></strong><br>
+      <button class="container-total__botao-comprar" onclick="abrirComprAlert()">Comprar</button>
+    </aside>
 
 
-        <!-- inicio tela de comprar o pedido -->
-        <div class="compra-bg"></div>
-        <div class="compra" onchange="verificadorProsseguir(formulario)">
-            <div class="compra__selecao-pagamento">
-                <p class="compra__selecao-pagamento__texto">Selecione o método de pagamento <span
-                        class="compra__selecao-pagamento__cancelar" onclick="fecharCompraAlert()">X</span></p>
+    <!-- inicio tela de comprar o pedido -->
+    <div class="compra-bg"></div>
+    <div class="compra" onchange="verificadorProsseguir(formulario)">
+      <div class="compra__selecao-pagamento">
+        <p class="compra__selecao-pagamento__texto">Selecione o método de pagamento <span
+            class="compra__selecao-pagamento__cancelar" onclick="fecharCompraAlert()">X</span></p>
 
-                <div class="compra__selecao-pagamento__opcoes">
-                    <label class="compra__selecao-pagamento__opcao entrega" onclick="
+        <div class="compra__selecao-pagamento__opcoes">
+          <label class="compra__selecao-pagamento__opcao entrega" onclick="
                     selecionarPagamento('entrega'); 
                     formulario.pagamento = 'entrega';
                     desativarBotaoProsseguir();
                     verificadorProsseguir({...formulario, pagamento: 'entrega'});
                     salvarForm(formulario)
                     ">Na entrega
-                        <input type="radio" name="pagamento" value="entrega"
-                            class="compra__selecao-pagamento__opcao__radio">
-                    </label>
-                    <label class="compra__selecao-pagamento__opcao online" onclick="
+            <input type="radio" name="pagamento" value="entrega" class="compra__selecao-pagamento__opcao__radio">
+          </label>
+          <label class="compra__selecao-pagamento__opcao online" onclick="
                     selecionarPagamento('online'); 
                     formulario.pagamento = 'online'; 
                     desativarBotaoProsseguir(); 
                     verificadorProsseguir({...formulario, pagamento: 'online'});
                     salvarForm(formulario)
                     ">Online
-                        <input type="radio" name="pagamento" value="online"
-                            class="compra__selecao-pagamento__opcao__radio">
-                    </label>
-                </div>
+            <input type="radio" name="pagamento" value="online" class="compra__selecao-pagamento__opcao__radio">
+          </label>
+        </div>
 
-                <!-- inicio pagamento online-->
-                <div class="pagamento-online">
-                    <div class="pagamento-online__formulario">
+        <!-- inicio pagamento online-->
+        <div class="pagamento-online">
+          <div class="pagamento-online__formulario">
 
-                        <label class="label-input">
-                            Titular do cartão: <br>
-                            <input type="text"
-                                onchange="(e) => alterarForm(formulario, 'online[`titular_cartao`]', e.target.value)"
-                                class="pagamento-online__formulario__titular-cartao  input-pagamento" maxlength="80"
-                                required>
-                        </label>
+            <label class="label-input">
+              Titular do cartão: <br>
+              <input type="text" onchange="(e) => alterarForm(formulario, 'online[`titular_cartao`]', e.target.value)"
+                class="pagamento-online__formulario__titular-cartao  input-pagamento" maxlength="80" required>
+            </label>
 
-                        <label class="label-input">
-                            Numero do cartão: <br>
-                            <input type="number"
-                                onchange="(e) => alterarForm(formulario, 'online[`numero_cartao`]', e.target.value)"
-                                class="pagamento-online__formulario__numero-cartao  input-pagamento" minlength="15"
-                                maxlength="16" required>
-                        </label>
+            <label class="label-input">
+              Numero do cartão: <br>
+              <input type="number" onchange="(e) => alterarForm(formulario, 'online[`numero_cartao`]', e.target.value)"
+                class="pagamento-online__formulario__numero-cartao  input-pagamento" minlength="15" maxlength="16"
+                required>
+            </label>
 
-                        <label class="formulario__label__validade-cartao label-input">
-                            Validade do cartão: <br>
-                            <input type="text"
-                                onfocus="formatarInputData('pagamento-online__formulario__validade-cartao')" onchange="(e)=>{alterarForm(formulario, 'online[`validade_cartao`]', e.target.value)}; 
+            <label class="formulario__label__validade-cartao label-input">
+              Validade do cartão: <br>
+              <input type="text" onfocus="formatarInputData('pagamento-online__formulario__validade-cartao')" onchange="(e)=>{alterarForm(formulario, 'online[`validade_cartao`]', e.target.value)}; 
                                 document.body.querySelector('.pagamento-online__formulario__validade-cartao').
                                 value = formulario.online.validade_cartao"
-                                class="pagamento-online__formulario__validade-cartao input-pagamento" minlength="8"
-                                maxlength="10" required readonly>
-                        </label>
+                class="pagamento-online__formulario__validade-cartao input-pagamento" minlength="8" maxlength="10"
+                required readonly>
+            </label>
 
-                        <label class="formulario__label__codigo-seguranca label-input">
-                            Código de segurança: <br>
-                            <input type="text"
-                                onchange="(e) => {alterarForm(formulario,'online[`cod_seguranca`]', e.target.value)}"
-                                class="pagamento-online__formulario__codigo-seguranca input-pagamento" required>
-                        </label>
+            <label class="formulario__label__codigo-seguranca label-input">
+              Código de segurança: <br>
+              <input type="text" onchange="(e) => {alterarForm(formulario,'online[`cod_seguranca`]', e.target.value)}"
+                class="pagamento-online__formulario__codigo-seguranca input-pagamento" required>
+            </label>
 
-                    </div>
-                </div>
+          </div>
+        </div>
 
-                <!-- inicio pagamento entrega-->
-                <div class="pagamento-entrega">
+        <!-- inicio pagamento entrega-->
+        <div class="pagamento-entrega">
 
-                    <div class="pagamento-entrega__escolha-forma-pagamento">
-                        <label class="pagamento-entrega__escolha-forma-pagamento__label"
-                            onclick='
+          <div class="pagamento-entrega__escolha-forma-pagamento">
+            <label class="pagamento-entrega__escolha-forma-pagamento__label"
+              onclick='
                         adicionarClasse("visificador", "pagamento-entrega__form-dinheiro");
                          removerClasse("visificador","pagamento-entrega__form-cartao"); formulario.entrega.pagamento = "dinheiro"; formulario.entrega.cartao = "nao"; formulario.entrega.troco = ""; salvarForm(formulario)'>
-                            Dinheiro
-                            <input type="radio" name="pagamento-entrega__escolha-forma-pagamento"
-                                class="pagamento-entrega__escolha-forma-pagamento__input" value="dinheiro">
-                        </label>
-                        <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick='
+              Dinheiro
+              <input type="radio" name="pagamento-entrega__escolha-forma-pagamento"
+                class="pagamento-entrega__escolha-forma-pagamento__input" value="dinheiro">
+            </label>
+            <label class="pagamento-entrega__escolha-forma-pagamento__label" onclick='
                             adicionarClasse("visificador","pagamento-entrega__form-cartao"); 
                             removerClasse("visificador", "pagamento-entrega__form-dinheiro"); 
                             formulario.entrega.pagamento = "cartao"; 
@@ -164,163 +157,187 @@
                             formulario.entrega.troco = "nao"; 
                             salvarForm(formulario);
                         '>
-                            Cartão
-                            <input type="radio" name="pagamento-entrega__escolha-forma-pagamento"
-                                class="pagamento-entrega__escolha-forma-pagamento__input" value="cartao">
-                        </label>
-                    </div>
+              Cartão
+              <input type="radio" name="pagamento-entrega__escolha-forma-pagamento"
+                class="pagamento-entrega__escolha-forma-pagamento__input" value="cartao">
+            </label>
+          </div>
 
-                    <!-- form dinheiro -->
-                    <div class="pagamento-entrega__form-dinheiro">
-                        <fieldset class="form-dinheiro__troco">
-                            <legend>Vai precisar de troco?</legend>
+          <!-- form dinheiro -->
+          <div class="pagamento-entrega__form-dinheiro">
+            <fieldset class="form-dinheiro__troco">
+              <legend>Vai precisar de troco?</legend>
 
-                            <label class="pagamento-entrega__escolha-forma-pagamento__label"
-                                onclick="adicionarClasse('visificador', 'form-troco'); formulario.entrega.troco = ''; salvarForm(formulario)">
-                                Sim
-                                <input type="radio" name="troco" value="precisa_troco"
-                                    class="pagamento-entrega__input-escolha">
-                            </label>
-                            <label class="pagamento-entrega__escolha-forma-pagamento__label"
-                                onclick="removerClasse('visificador', 'form-troco'); formulario.entrega.troco = 'nao'; salvarForm(formulario)">
-                                Não
-                                <input type="radio" name="troco" value="precisa_troco"
-                                    class="pagamento-entrega__input-escolha">
-                            </label>
-                        </fieldset>
+              <label class="pagamento-entrega__escolha-forma-pagamento__label"
+                onclick="adicionarClasse('visificador', 'form-troco'); formulario.entrega.troco = ''; salvarForm(formulario)">
+                Sim
+                <input type="radio" name="troco" value="precisa_troco" class="pagamento-entrega__input-escolha">
+              </label>
+              <label class="pagamento-entrega__escolha-forma-pagamento__label"
+                onclick="removerClasse('visificador', 'form-troco'); formulario.entrega.troco = 'nao'; salvarForm(formulario)">
+                Não
+                <input type="radio" name="troco" value="precisa_troco" class="pagamento-entrega__input-escolha">
+              </label>
+            </fieldset>
 
-                        <div class="form-troco">
-                            <label>
-                                Precisa de troco para quanto?
-                                <!-- TODO: melhorar input para aceitar apenas valores válidos -->
-                                <input type="text"
-                                    onchange="(e) => {alterarForm(formulario, 'entrega[`troco`]', e.target.value)}"
-                                    name="valor-troco" id="valor-troco"
-                                    class="input-pagamento pagamento-entrega__input-valor" maxlength="8" minlength="2"
-                                    onfocus="formatarInputValor('pagamento-entrega__input-valor', formulario.total)">
-                            </label>
-                        </div>
-                    </div>
-                    <!-- fim form dinheiro -->
-
-                    <!-- form cartao -->
-                    <div class="pagamento-entrega__form-cartao">
-                        <div class="form-cartao__escolha-cartao"
-                            onclick="
-                                formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value;
-                                salvarForm(formulario)
-                            ">
-                            <label
-                                onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
-                                MasterCard
-                                <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao"
-                                    value="mastercard">
-                            </label>
-                            <label
-                                onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
-                                Elo
-                                <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao"
-                                    value="elo">
-                            </label>
-                            <label
-                                onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
-                                ViaCred
-                                <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao"
-                                    value="viacred">
-                            </label>
-                        </div>
-                    </div>
-                    <!-- fim form cartao -->
-
-                </div>
-
-
-                <button class="prosseguir-compra-botao botao-desativado" onclick="">
-                    <p class="texto-invisivel">prosseguir compra</p>
-                </button>
+            <div class="form-troco">
+              <label>
+                Precisa de troco para quanto?
+                <!-- TODO: melhorar input para aceitar apenas valores válidos -->
+                <input type="text" onchange="(e) => {alterarForm(formulario, 'entrega[`troco`]', e.target.value)}"
+                  name="valor-troco" id="valor-troco" class="input-pagamento pagamento-entrega__input-valor"
+                  maxlength="8" minlength="2"
+                  onfocus="formatarInputValor('pagamento-entrega__input-valor', formulario.total)">
+              </label>
             </div>
+          </div>
+          <!-- fim form dinheiro -->
 
-            <div class="form-prosseguir" style="display: none;">
-                <div class="form-prosseguir-header">
-                    <span class="compra__selecao-pagamento__cancelar" onclick="fecharCompraAlert()">X</span>
-                    <h2>Vamos precisar de alguns dados para prosseguir</h2>
-                </div>
-                
-                <fieldset class="label-input" style="width: 300px;">
-                    <legend>Informe o seu nome:</legend>
-                    <input type="text"
-                        onfocus="alterarFormComClasse('input_cliente_nome', formulario, 'cliente', 'nome', true);
-                         removerClasse('invalid','label-input:has(.input_cliente_nome)', 'input-pagamento')"
-                        class="input-pagamento input_cliente_nome" maxlength="300" required
-                    />
-                </fieldset>
-
-                <fieldset class="label-input" style="width: 180px;">
-                    <legend>Numero de telefone:</legend>
-                    <input type="number"
-                        onfocus="alterarFormComClasse('input_cliente_tel', formulario, 'cliente', 'telefone');
-                        removerClasse('invalid','label-input:has(.input_cliente_tel)')"
-                        class="input-pagamento input_cliente_tel" minlength="15" maxlength="16" required
-                    />
-                </fieldset>
-
-                <fieldset class="label-input" style="width: 140px;">
-                    <legend>CEP:</legend>
-                    <input type="number"
-                        onfocus="
-                            alterarFormComClasse('input_cliente_cep', formulario, 'cliente', 'cep'); 
-                            buscarCepComClasse('input_cliente_cep', formulario);
-                            removerClasse('invalid','label-input:has(.input_cliente_cep)');
-                        "
-                        class="input-pagamento input_cliente_cep" minlength="8" maxlength="8" required
-                    />
-                </fieldset>
-
-
-                <fieldset class="label__formulario__endereco label-input" style="width: 60px;">
-                    <legend>Numero predio:</legend>
-                    <input type="text"
-                        onfocus="alterarFormComClasse('input_cliente_endereco', formulario, 'cliente', 'numero_predio'); 
-                        removerClasse('invalid', 'label-input:has(.input_cliente_endereco)')"
-                        class="input-pagamento input_cliente_endereco" required    
-                    />
-                </fieldset>
-
-
-                <div class="resposta_endereco container_invisivel">
-                    <h2>confira se o endereco abaixo está correto</h2>
-                </div>
-
-                <div class="save-nota-fiscal container_invisivel"></div>
-
-                <div style="display: flex; justify-content: space-between;padding: 10px; align-self: flex-end; position: absolute; width: -webkit-fill-available;bottom: 0;left: 0;">
-                    <button class="botao" onclick="criarNotaFiscal()">salvar nota fiscal</button>
-                    <button class="botao" onclick="salvarPedido()">Finalizar pedido</button>
-                </div>
+          <!-- form cartao -->
+          <div class="pagamento-entrega__form-cartao">
+            <div 
+              class="form-cartao__escolha-cartao" 
+              onclick="
+                formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value;
+                salvarForm(formulario)
+              "
+            >
+              <label
+                onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
+                MasterCard
+                <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao" value="mastercard">
+              </label>
+              <label
+                onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
+                Elo
+                <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao" value="elo">
+              </label>
+              <label
+                onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
+                ViaCred
+                <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao" value="viacred">
+              </label>
             </div>
+          </div>
+          <!-- fim form cartao -->
 
         </div>
-        <!-- fim tela de comprar pedido -->
 
-    </main>
-    <footer class="rodape-principal">
-        <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
-    </footer>
-    <script src="js/quantifier.js"></script>
-    <script src="js/montarCarrinho.js"></script>
-    <script src="js/alterarTamanho.js"></script>
-    <script src="js/abrirOuFecharCompra.js"></script>
-    <script src="js/seletorPagamento.js"></script>
-    <script src="js/distribuidorDeClasses.js"></script>
-    <script src="js/verificadorProsseguir.js"></script>
-    <script src="js/formatarInputValor.js"></script>
-    <script src="js/formatarData.js"></script>
-    <script src="js/prosseguirBotao.js"></script>
-    <script src="js/lib/FileSaver/FileSaver.js"></script>
-    <script src="js/criarNotaFiscal.js"></script>
-    <script src="js/buscarCEP.js"></script>
-    <script src="js/salvarPedido.js"></script>
-    <script>montarCarrinho(formulario, alterarForm);</script>
+
+        <button class="prosseguir-compra-botao botao-desativado" onclick="">
+          <p class="texto-invisivel">prosseguir compra</p>
+        </button>
+      </div>
+
+      <div class="form-prosseguir" style="display: none;">
+        <div class="form-prosseguir-header">
+          <span class="compra__selecao-pagamento__cancelar" onclick="fecharCompraAlert()">X</span>
+          <h2>Vamos precisar de alguns dados para prosseguir</h2>
+        </div>
+
+        <fieldset class="label-input" style="width: 300px;">
+          <legend>Informe o seu nome:</legend>
+          <input type="text" 
+            onfocus="
+              alterarFormComClasse('input_cliente_nome', formulario, 'cliente', 'nome', true);
+              removerClasse('invalid','label-input:has(.input_cliente_nome)', 'input-pagamento')"
+            class="input-pagamento input_cliente_nome" 
+            maxlength="300" 
+            required 
+          />
+        </fieldset>
+
+        <fieldset class="label-input" style="width: 180px;">
+          <legend>Numero de telefone:</legend>
+          <input type="text" 
+          onfocus="alterarFormComClasse('input_cliente_tel', formulario, 'cliente', 'telefone');
+            removerClasse('invalid','label-input:has(.input_cliente_tel)')"
+          class="input-pagamento input_cliente_tel" 
+          minlength="11" 
+          maxlength="11" 
+          pattern="[1-9\-\(]"
+          required 
+          oninput="criaMascara('Celular', '.input_cliente_tel')"
+          />
+        </fieldset>
+
+        <fieldset class="label-input" style="width: 140px;">
+          <legend>CEP:</legend>
+          <input 
+            type="text" 
+            onfocus="
+              alterarFormComClasse('input_cliente_cep', formulario, 'cliente', 'cep'); 
+              buscarCepComClasse('input_cliente_cep', formulario);
+              removerClasse('invalid','label-input:has(.input_cliente_cep)');
+            " 
+            class="input-pagamento input_cliente_cep" 
+            minlength="8" 
+            maxlength="8"
+            pattern="[1-9\-]" 
+            required
+            oninput="criaMascara('CEP', '.input_cliente_cep', 8)"
+          />
+        </fieldset>
+
+
+        <fieldset class="label__formulario__endereco label-input" style="width: 60px;">
+          <legend>Numero predio:</legend>
+          <input type="text" onfocus="alterarFormComClasse('input_cliente_endereco', formulario, 'cliente', 'numero_predio'); 
+                        removerClasse('invalid', 'label-input:has(.input_cliente_endereco)')"
+            class="input-pagamento input_cliente_endereco" required />
+        </fieldset>
+
+
+        <div class="resposta_endereco container_invisivel">
+          <h2>confira se o endereco abaixo está correto</h2>
+        </div>
+
+        <div class="save-nota-fiscal container_invisivel"></div>
+
+        <div
+          style="display: flex; justify-content: space-between;padding: 10px; align-self: flex-end; position: absolute; width: -webkit-fill-available;bottom: 0;left: 0;">
+          <button class="botao" onclick="criarNotaFiscal()">salvar nota fiscal</button>
+          <button class="botao" onclick="salvarPedido()">Finalizar pedido</button>
+        </div>
+      </div>
+
+    </div>
+    <!-- fim tela de comprar pedido -->
+
+  </main>
+  <footer class="rodape-principal">
+    <p class="rodape-principal__texto">&copy;Todos os direitos reservados 2022 ;)</p>
+  </footer>
+  <script src="js/quantifier.js"></script>
+  <script src="js/montarCarrinho.js"></script>
+  <script src="js/alterarTamanho.js"></script>
+  <script src="js/abrirOuFecharCompra.js"></script>
+  <script src="js/seletorPagamento.js"></script>
+  <script src="js/distribuidorDeClasses.js"></script>
+  <script src="js/verificadorProsseguir.js"></script>
+  <script src="js/formatarInputValor.js"></script>
+  <script src="js/formatarData.js"></script>
+  <script src="js/prosseguirBotao.js"></script>
+  <script src="js/lib/FileSaver/FileSaver.js"></script>
+  <script src="js/criarNotaFiscal.js"></script>
+  <script src="js/buscarCEP.js"></script>
+  <script src="js/salvarPedido.js"></script>
+  <script>montarCarrinho(formulario, alterarForm);</script>
+  <script>
+    function criaMascara(mascaraInput, selector, max) {
+      const maximoInput = max ?? document.querySelector(selector).maxLength;
+      let valorInput = document.querySelector(selector).value;
+      let valorSemPonto = document.querySelector(selector).value.replace(/([^0-9])+/g, "");
+      const mascaras = {
+        CPF: valorInput.replace(/[^\d]/g, "").replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4"),
+        Celular: valorInput.replace(/[^\d]/g, "").replace(/^(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"),
+        CEP: valorInput.replace(/[^\d]/g, "").replace(/(\d{5})(\d{3})/, "$1-$2"),
+      };
+      valorInput.length === maximoInput ?
+        document.querySelector(selector).value = mascaras[mascaraInput]
+        : document.querySelector(selector).value = valorSemPonto;
+    }
+  </script>
 </body>
 
 </html>

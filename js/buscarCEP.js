@@ -4,7 +4,7 @@ function buscarCepComClasse(classe) {
     let formulario = JSON.parse(localStorage.getItem('formulario'));
 
     input.addEventListener('keyup', e => {
-        if (input.value.length == 8) {
+        if (input.value.length >= 8) {
             let url = `https://viacep.com.br/ws/${input.value}/json/`
             let request = new XMLHttpRequest();
 
