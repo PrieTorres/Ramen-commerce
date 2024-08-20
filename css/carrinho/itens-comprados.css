@@ -26,6 +26,7 @@
     display: flex;
     height: 100%;
     max-width: 90%;
+    min-width: 50px;
 }
 .item-comprado__imagem{
     max-height: 90%;
@@ -35,6 +36,7 @@
 .item-comprado__texto{
     font-size: 1.15em;
     margin: 0 8px;
+    min-width: 100px;
 }
 .item-comprado__texto--item{
     display: inline-block;
@@ -42,6 +44,15 @@
 
 .item-comprado__cancelar:hover{
     cursor: pointer;
+}
+
+@media screen and (min-width:1024px) {
+    .item-comprado__imagem{
+        max-height: 90%;
+        align-self: center;
+        margin-left: 3px;
+        max-width: 40%;
+    }
 }
 
 @media screen and (max-width:1024px) {
@@ -58,5 +69,10 @@
     }
     .item-comprado__texto--item.item-comprado__texto--quantidade{
         display: none;
+    }
+    .container-caixa-item__titulo{
+        width: 100%;
+        text-align: center;
+        text-transform: capitalize;
     }
 }
