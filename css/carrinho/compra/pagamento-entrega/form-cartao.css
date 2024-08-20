@@ -2,3 +2,9 @@
     display: none;
     opacity: 0;
 }
+
+.pagamento-entrega__form-cartao-option{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+}

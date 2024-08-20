@@ -195,24 +195,21 @@
 
           <!-- form cartao -->
           <div class="pagamento-entrega__form-cartao">
-            <div 
-              class="form-cartao__escolha-cartao" 
-              onclick="
+            <div class="form-cartao__escolha-cartao" onclick="
                 formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value;
                 salvarForm(formulario)
-              "
-            >
-              <label
+              ">
+              <label class="pagamento-entrega__form-cartao-option"
                 onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
                 MasterCard
                 <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao" value="mastercard">
               </label>
-              <label
+              <label class="pagamento-entrega__form-cartao-option"
                 onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
                 Elo
                 <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao" value="elo">
               </label>
-              <label
+              <label class="pagamento-entrega__form-cartao-option"
                 onclick="formulario.entrega.cartao = document.body.querySelector('.pagamento-entrega__input-cartao:checked').value">
                 ViaCred
                 <input type="radio" class="pagamento-entrega__input-cartao" name="escolha-cartao" value="viacred">
@@ -237,46 +234,28 @@
 
         <fieldset class="label-input" style="width: 300px;">
           <legend>Informe o seu nome:</legend>
-          <input type="text" 
-            onfocus="
+          <input type="text" onfocus="
               alterarFormComClasse('input_cliente_nome', formulario, 'cliente', 'nome', true);
               removerClasse('invalid','label-input:has(.input_cliente_nome)', 'input-pagamento')"
-            class="input-pagamento input_cliente_nome" 
-            maxlength="300" 
-            required 
-          />
+            class="input-pagamento input_cliente_nome" maxlength="300" required />
         </fieldset>
 
         <fieldset class="label-input" style="width: 180px;">
           <legend>Numero de telefone:</legend>
-          <input type="text" 
-          onfocus="alterarFormComClasse('input_cliente_tel', formulario, 'cliente', 'telefone');
-            removerClasse('invalid','label-input:has(.input_cliente_tel)')"
-          class="input-pagamento input_cliente_tel" 
-          minlength="11" 
-          maxlength="11" 
-          pattern="[1-9\-\(]"
-          required 
-          oninput="criaMascara('Celular', '.input_cliente_tel')"
-          />
+          <input type="text" onfocus="alterarFormComClasse('input_cliente_tel', formulario, 'cliente', 'telefone');
+            removerClasse('invalid','label-input:has(.input_cliente_tel)')" class="input-pagamento input_cliente_tel"
+            minlength="11" maxlength="11" pattern="[1-9\-\(]" required
+            oninput="criaMascara('Celular', '.input_cliente_tel')" />
         </fieldset>
 
         <fieldset class="label-input" style="width: 140px;">
           <legend>CEP:</legend>
-          <input 
-            type="text" 
-            onfocus="
+          <input type="text" onfocus="
               alterarFormComClasse('input_cliente_cep', formulario, 'cliente', 'cep'); 
               buscarCepComClasse('input_cliente_cep', formulario);
               removerClasse('invalid','label-input:has(.input_cliente_cep)');
-            " 
-            class="input-pagamento input_cliente_cep" 
-            minlength="8" 
-            maxlength="8"
-            pattern="[1-9\-]" 
-            required
-            oninput="criaMascara('CEP', '.input_cliente_cep', 8)"
-          />
+            " class="input-pagamento input_cliente_cep" minlength="8" maxlength="8" pattern="[1-9\-]" required
+            oninput="criaMascara('CEP', '.input_cliente_cep', 8)" />
         </fieldset>
 
 
