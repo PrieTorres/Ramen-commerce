@@ -2,19 +2,23 @@ function salvarPedido() {
     const infoCliente = JSON.parse(localStorage.getItem("formulario")).cliente;
     const infoCarrinho = [...JSON.parse(localStorage.getItem("carrinho"))];
     const infoCompra = JSON.parse(localStorage.getItem("formulario"));
-    if(!infoCliente?.cep || !infoCliente?.endereco || !infoCliente?.nome || !infoCliente?.telefone){
+    if (!infoCliente?.cep || !infoCliente?.endereco || !infoCliente?.nome || !infoCliente?.telefone) {
         //document.querySelector(".alert-missing-client-info")?.classList?.add("ativo");
-        if(!infoCliente?.cep) document.querySelector(".label-input:has(.input_cliente_cep)").classList.add("invalid");
-        if(!infoCliente?.endereco) document.querySelector(".label-input:has(.input_cliente_cep)").classList.add("invalid");
-        if(!infoCliente?.numero_predio) document.querySelector(".label-input:has(.input_cliente_endereco)").classList.add("invalid");
-        if(!infoCliente?.nome) document.querySelector(".label-input:has(.input_cliente_nome)").classList.add("invalid");
-        if(!infoCliente?.telefone) document.querySelector(".label-input:has(.input_cliente_tel)").classList.add("invalid");
+        if (!infoCliente?.cep) document.querySelector(".label-input:has(.input_cliente_cep)").classList.add("invalid");
+        if (!infoCliente?.endereco) document.querySelector(".label-input:has(.input_cliente_cep)").classList.add("invalid");
+        if (!infoCliente?.numero_predio) document.querySelector(".label-input:has(.input_cliente_endereco)").classList.add("invalid");
+        if (!infoCliente?.nome) document.querySelector(".label-input:has(.input_cliente_nome)").classList.add("invalid");
+        if (!infoCliente?.telefone) document.querySelector(".label-input:has(.input_cliente_tel)").classList.add("invalid");
         return;
     }
 
     let total = 0;
     let itens = [];
     infoCarrinho.forEach(item => {
+        if (!item.preco) {
+            item.preco = getPrice(item);
+        }
+        
         if (!item.preco) throw new Error('itens should have a price!');
 
         total += item.preco * item.quantidade;
@@ -28,7 +32,7 @@ function salvarPedido() {
     });
 
     const output = {
-        pagamentoDetails: {...infoCompra},
+        pagamentoDetails: { ...infoCompra },
         itens: itens,
         preco: total,
         pagamento: infoCompra.pagamento,
@@ -53,4 +57,20 @@ function salvarPedido() {
     localStorage.removeItem("carrinho");
     window.location.reload();
     window.location.href(window.location.origin + '/index.html');
+}
+
+function getPrice(item) {
+    const { tamanho, precos } = (item ?? {});
+    let preco;
+    if (precos && tamanho) {
+        if (tamanho == 'pequeno') {
+            preco = precos[0];
+        } else if (tamanho == 'medio') {
+            preco = precos[1];
+        } else if (tamanho == 'grande') {
+            preco = precos[2];
+        }
+    }
+
+    return preco ?? 30;
 }
