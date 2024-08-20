@@ -65,3 +65,15 @@ function alterarFormComClasse(classe, formulario, chave, sub, keypressEvent=fals
     })
   }
 }
+
+function getLastValue(classe, chave, sub){
+  const input = document.body.querySelector(`.${classe}`);
+
+  
+    input.addEventListener('blur', e => {
+      //let text;
+      //e.key!=('Backspace'||'tab')? text=input.value+e.key : text=input.value;
+      alterarForm( chave, sub, input.value);
+    })
+  
+}
