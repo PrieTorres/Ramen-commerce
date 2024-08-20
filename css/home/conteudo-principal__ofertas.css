@@ -102,6 +102,7 @@
         padding: 5vw 10vw;
     }
 
+    .conteudo-principal__ofertas-oferta--principal-texto, 
     .conteudo-principal__ofertas-oferta--secundaria-texto {
         float: none;
         color: #eee;
