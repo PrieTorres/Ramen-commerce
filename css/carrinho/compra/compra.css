@@ -3,7 +3,8 @@
 @import './pagamento-online/pagamento-online.css';
 @import './pagamento-entrega/pagamento-entrega.css';
 
-.compra, .save-nota-fiscal{
+.compra,
+.save-nota-fiscal {
   width: 70vw;
   min-height: 70vh;
   position: absolute;
@@ -17,25 +18,30 @@
   display: none;
   opacity: 0;
 }
-.save-nota-fiscal{
+
+.save-nota-fiscal {
   box-sizing: border-box;
 }
-.save-nota-fiscal .compra__selecao-pagamento__cancelar{
+
+.save-nota-fiscal .compra__selecao-pagamento__cancelar {
   color: var(--preto);
 }
-.save-nota-fiscal > * {
+
+.save-nota-fiscal>* {
   margin-bottom: 8px;
 }
+
 .save-nota-fiscal button {
   padding: 8px;
   border-radius: 8px;
   margin: 12px auto;
 }
+
 .save-nota-fiscal .infos-nota-fiscal {
   margin-top: 3rem;
 }
 
-.compra-bg{
+.compra-bg {
   width: 100vw;
   height: 100vh;
   background-color: #0000008a;
@@ -48,14 +54,14 @@
   opacity: 0;
 }
 
-.input-pagamento{
+.input-pagamento {
   height: 24px;
   border-radius: 10px;
   padding: 3px 7px;
   border: 2px solid var(--branco-escuro);
 }
 
-.prosseguir-compra-botao{
+.prosseguir-compra-botao {
   width: 6vh;
   height: 6vh;
   border-radius: 50%;
@@ -74,7 +80,15 @@
 
 input.input-pagamento:focus-visible,
 input.input-pagamento:focus,
-input.input-pagamento:focus-within{
+input.input-pagamento:focus-within {
   border: 2px solid var(--branco-escuro);
   box-shadow: none;
+}
+
+@media (max-width: 428px) {
+  .compra {
+    min-height: 85vh;
+    top: calc(50% - 42.5vh);
+    left: calc(50% - 42.5vw);
+  }
 }
